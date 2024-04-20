@@ -20,12 +20,12 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen bg-[#eaeaea]">
+      <MainPage timeline={timeline} />
       {/* {loaderFinished ? (
         <MainPage timeline={timeline} />
       ) : (
         <Loader timeline={timeline} />
       )} */}
-       <Loader timeline={timeline} />
     </main>
   );
 }
