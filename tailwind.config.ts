@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#eaeaea",
+        secondary: "",
+        tertiary: "",
+      },
+      fontFamily: {
+        hauora: "var(--font-hauora)",
+        "quanta-grotesk": "var(--font-quanta-grotesk)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
