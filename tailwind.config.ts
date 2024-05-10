@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#eaeaea",
-        secondary: "",
-        tertiary: "",
+        light: {
+          primary: "#F8F4EC",
+          secondary: "#000",
+        },
+        dark: {
+          primary: "#FF6000"
+        }
       },
       fontFamily: {
         hauora: "var(--font-hauora)",

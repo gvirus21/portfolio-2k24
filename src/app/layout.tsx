@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers"
 import localFont from "next/font/local";
@@ -59,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${QuantaGroteskPro.variable} ${Hauora.variable}  bg-[#eaeaea] overflow-x-hidden font-hauora`}>
+      <body className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-black text-white overflow-x-hidden font-hauora`}>
         <Providers>{children}</Providers>
       </body>
     </html>

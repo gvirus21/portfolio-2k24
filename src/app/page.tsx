@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen w-screen bg-[#eaeaea]">
+    <main className="h-screen w-screen px-5">
       <MainPage timeline={timeline} />
       {/* {loaderFinished ? (
         <MainPage timeline={timeline} />

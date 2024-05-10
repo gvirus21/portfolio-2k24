@@ -29,7 +29,7 @@ const WorkSection = ({ timeline }: Props) => {
           </ul>
         </div>
 
-        <div className="absolute right-0 h-[50rem] min-w-[75rem] bg-white -z-10"></div>
+        <div className="absolute right-0 h-[50rem] min-w-[75rem] bg-white/50 -z-10"></div>
       </div>
     </div>
   );

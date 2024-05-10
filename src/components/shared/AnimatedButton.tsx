@@ -6,7 +6,7 @@ interface Props {
 
 const AnimatedButton: FC<Props> = ({ children }) => {
   return (
-    <div className="group relative text-[1.5rem] text-black h-6 tracking-wider uppercase leading-6 overflow-hidden cursor-pointer">
+    <div className="group relative text-[1.5rem] h-6 tracking-wider uppercase leading-6 overflow-hidden cursor-pointer">
       <span className="inline-block transition duration-500 ease-in-out group-hover:translate-y-[-300%]">
         {children}
       </span>

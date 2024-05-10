@@ -30,7 +30,7 @@ const HeroSection = ({ timeline }: Props) => {
   }, []);
 
   return (
-    <section className="flex justify-center h-screen w-screen text-black">
+    <section className="flex justify-center h-screen w-screen">
       <div className="relative h-[90vh] w-11/12 max-w-[140rem] mt-[14rem]">
         {/* Heading Text Block */}
         <div className="flex flex-col justify-between items-start h-[22rem] text-[6.2rem] font-medium tracking-[-0.025rem] capitalize leading-[5rem]">
