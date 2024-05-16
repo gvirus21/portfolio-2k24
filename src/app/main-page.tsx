@@ -12,7 +12,7 @@ interface Props {
 const MainPage = ({ timeline }: Props) => {
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection timeline={timeline} />
       <AboutSection timeline={timeline} />
       <WorkSection timeline={timeline} />
