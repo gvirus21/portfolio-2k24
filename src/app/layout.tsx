@@ -62,7 +62,7 @@ export default function RootLayout({
         className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-black text-white overflow-x-hidden font-hauora`}
       >
         <Providers>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </Providers>
       </body>
