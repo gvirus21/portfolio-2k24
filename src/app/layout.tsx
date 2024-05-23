@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/shared/_navbar";
 import "./globals.css";
-import Providers from "./providers"
+import Providers from "./providers";
 import localFont from "next/font/local";
 
 export const metadata: Metadata = {
@@ -46,10 +47,9 @@ const QuantaGroteskPro = localFont({
       path: "../../public/fonts/QuantaGroteskPro-LightItalic.ttf",
       weight: "600",
       style: "semibold",
-    }
-  ]
-})
-
+    },
+  ],
+});
 
 export default function RootLayout({
   children,
@@ -58,8 +58,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-black text-white overflow-x-hidden font-hauora`}>
-        <Providers>{children}</Providers>
+      <body
+        className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-black text-white overflow-x-hidden font-hauora`}
+      >
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
