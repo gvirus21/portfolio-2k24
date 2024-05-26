@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 import HamburgerMenu from "./hamburger-menu";
 import MobileExpandedMenu from "./mobile-expanded-menu";
@@ -54,22 +53,8 @@ const Navbar = () => {
         {menuIsOpen && <MobileExpandedMenu setMenuIsOpen={setMenuIsOpen} />}
       </AnimatePresence>
       <nav className="fixed flex justify-center items-center top-0 pt-10 pb-3 h-32 w-full font-light z-50">
-        <div className="flex justify-between items-start h-full w-full max-w-[100rem] mx-8 sm:mx-20">
-          {isBgWhite ? (
-            <Image
-              src="/assets/prismdev-black-logo.svg"
-              height={100}
-              width={100}
-              alt="hello"
-            />
-          ) : (
-            <Image
-              src="/assets/prismdev-white-logo.svg"
-              height={100}
-              width={100}
-              alt="logo"
-            />
-          )}
+        <div className="flex justify-between items-start h-full w-full max-w-[145rem] mx-6 sm:mx-10 2xl:mx-0">
+          <p>gourav kumar</p>
           <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">
             {menuLinks.map((link) => (
               <li

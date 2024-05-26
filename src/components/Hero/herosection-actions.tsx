@@ -30,7 +30,7 @@ const DesktopVersion = () => {
 
 const MobileVersion = () => {
   return (
-    <div className="sm:hidden absolute bottom-10 flex flex-col justify-between items-center w-full text-sm">
+    <div className="sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5">
       <button className="flex justify-between items-center h-12 w-full bg-black border border-white px-4 my-2 ">
         SEE MY WORK <ArrowIcon className="h-8 w-10" />
       </button>

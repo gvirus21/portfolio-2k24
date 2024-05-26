@@ -1,4 +1,3 @@
-import Navbar from "@/components/shared/Navbar";
 import HeroSection from "@/components/Hero";
 import AboutSection from "@/components/About";
 import WorkSection from "@/components/Work";
@@ -12,7 +11,6 @@ interface Props {
 const MainPage = ({ timeline }: Props) => {
   return (
     <div className="overflow-x-hidden">
-      {/* <Navbar /> */}
       <HeroSection timeline={timeline} />
       <AboutSection timeline={timeline} />
       <WorkSection timeline={timeline} />
