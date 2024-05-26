@@ -19,6 +19,7 @@ const config: Config = {
       },
       screens: {
         xs: "500px",
+        "3xl": "2000px",
       },
       fontFamily: {
         hauora: "var(--font-hauora)",

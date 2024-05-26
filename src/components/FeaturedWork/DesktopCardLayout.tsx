@@ -5,7 +5,8 @@ const data = [
     image: "",
     description:
       "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
-    containerStyle: "absolute top-0 left-0 w-[30rem]",
+    containerStyle:
+      "absolute top-0 left-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     imageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
   },
   {
@@ -14,7 +15,8 @@ const data = [
     image: "",
     description:
       "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
-    containerStyle: "absolute top-[32rem] 2xl:top-0 right-0 w-[30rem] 2xl:w-[50rem]",
+    containerStyle:
+      "absolute top-40 xl:top-[32rem] xl:top-[7rem] 2xl:top-20 right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     imageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
   },
   {
@@ -23,7 +25,8 @@ const data = [
     image: "",
     description:
       "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
-    containerStyle: "absolute top-[66rem] 2xl:top-auto 2xl:bottom-0 left-0 w-[30rem] 2xl:w-[36rem]",
+    containerStyle:
+      "absolute top-[30rem] xl:top-[36rem] 2xl:top-[36rem] 3xl:top-[48rem] left-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     imageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
   },
   {
@@ -32,15 +35,15 @@ const data = [
     image: "",
     description:
       "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
-    containerStyle:"absolute bottom-0 2xl:bottom-10 right-0 w-[30rem] 2xl:w-[32rem]",
+    containerStyle:
+      "absolute top-[40rem] xl:top-[46rem] 2xl:top-[41rem] 3xl:top-[53rem] right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     imageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
   },
 ];
 
 export const DesktopCardsLayout = () => {
   return (
-    <div className="hidden lg:block relative mx-auto h-[80rem] lg:h-[129rem] 2xl:h-[75rem] w-11/12 lg:max-w-[60rem] 2xl:min-w-[85rem] 2xl:max-w-[100rem] mt-60">
-      {/* Cards */}
+    <div className="hidden lg:block relative mx-auto h-[80rem] lg:h-[65rem] xl:h-[75rem] 2xl:h-[75rem] 3xl:h-[92rem] w-11/12 mt-32">
       {data.map((project) => (
         <div key={project.slNo} className={project.containerStyle}>
           <div className="flex justify-between items-center text-xl font-medium">

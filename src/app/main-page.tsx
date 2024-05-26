@@ -2,7 +2,7 @@ import Navbar from "@/components/shared/Navbar";
 import HeroSection from "@/components/Hero";
 import AboutSection from "@/components/About";
 import WorkSection from "@/components/Work";
-import RecentWorkSection from "@/components/RecentWork";
+import RecentWorkSection from "@/components/FeaturedWork";
 import ContactSection from "@/components/Contact";
 
 interface Props {

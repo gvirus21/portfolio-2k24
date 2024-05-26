@@ -12,15 +12,15 @@ const HeroSectionActions = () => (
 const DesktopVersion = () => {
   return (
     <div className="hidden sm:flex absolute bottom-0 xl:bottom-10 justify-between items-center h-20 w-full z-50 opacity-55">
-      <div className="relative w-full bg-blue-400">
-        <LinkHoverAnimation className="left-0 xl:text-2xl tracking-wider">
+      <div className="relative w-full">
+        <LinkHoverAnimation className="left-0 xl:text-xl tracking-wider">
           <p className="flex justify-between items-center">
-            SEE MY WORK <ArrowIcon className="h-8 xl:h-12 w-8 xl:w-16" />
+            SEE MY WORK <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
           </p>
         </LinkHoverAnimation>
-        <LinkHoverAnimation className="right-0 xl:text-2xl tracking-wider">
+        <LinkHoverAnimation className="right-0 xl:text-xl tracking-wider">
           <p className="flex justify-between items-center">
-            BOOK A FREE CALL <ArrowIcon className="h-8 xl:h-12 w-8 xl:w-16" />
+            BOOK A FREE CALL <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
           </p>
         </LinkHoverAnimation>
       </div>
