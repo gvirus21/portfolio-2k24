@@ -1,6 +1,5 @@
-import React from "react";
-import LinkHoverAnimation from "../shared/LinkHoverAnimation";
 import { IoIosArrowRoundForward as ArrowIcon } from "react-icons/io";
+import LinkHoverAnimation from "@/components/ui/LinkHoverAnimation";
 
 const HeroSectionActions = () => (
   <>
