@@ -2,7 +2,7 @@ interface Props {
   timeline: gsap.core.Timeline | null;
 }
 
-const ContactSection = ({ timeline }: Props) => {
+export const ContactSection = ({ timeline }: Props) => {
   return (
     <div className="h-[16rem] lg:h-[24rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-0 md:mt-[5rem] lg:pt-[4rem] mb-10">
       <div className="flex flex-col sm:flex-row justify-between items-center w-full mx-auto">

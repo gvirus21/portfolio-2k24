@@ -28,7 +28,7 @@ export const menuLinks = [
   },
 ];
 
-const Navbar = () => {
+export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const lenis = useLenis();
   const { isBgWhite } = useIsBgWhite();

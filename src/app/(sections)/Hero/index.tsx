@@ -8,7 +8,7 @@ interface Props {
   timeline: gsap.core.Timeline | null;
 }
 
-const HeroSection = ({ timeline }: Props) => {
+export const HeroSection = ({ timeline }: Props) => {
   useGSAP(() => {
     timeline?.add(textAppearAnimaton());
   }, []);

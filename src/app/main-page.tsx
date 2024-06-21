@@ -1,8 +1,12 @@
-import HeroSection from "@/components/Hero";
-import AboutSection from "@/components/About";
-import WorkSection from "@/components/Work";
-import RecentWorkSection from "@/components/FeaturedWork";
-import ContactSection from "@/components/Contact";
+"use client";
+
+import {
+  HeroSection,
+  AboutSection,
+  WorkSection,
+  FeaturedWorkSection,
+  ContactSection,
+} from "@/app/(sections)";
 
 interface Props {
   timeline: gsap.core.Timeline | null;
@@ -14,7 +18,7 @@ const MainPage = ({ timeline }: Props) => {
       <HeroSection timeline={timeline} />
       <AboutSection timeline={timeline} />
       <WorkSection timeline={timeline} />
-      <RecentWorkSection timeline={timeline} />
+      <FeaturedWorkSection timeline={timeline} />
       <ContactSection timeline={timeline} />
     </div>
   );

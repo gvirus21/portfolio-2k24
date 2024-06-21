@@ -4,7 +4,7 @@ interface Props {
   timeline: gsap.core.Timeline | null;
 }
 
-const AboutSection = ({ timeline }: Props) => {
+export const AboutSection = ({ timeline }: Props) => {
   return (
     <section
       className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between min-h-[90vh] lg:min-h-[70vh] 
