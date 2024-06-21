@@ -30,10 +30,10 @@ const DesktopVersion = () => {
 const MobileVersion = () => {
   return (
     <div className="sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5">
-      <button className="flex justify-between items-center h-12 w-full bg-black border border-white px-4 my-2 ">
+      <button className="flex justify-between items-center h-12 w-full border border-black px-4 my-2 ">
         SEE MY WORK <ArrowIcon className="h-8 w-10" />
       </button>
-      <button className="flex justify-between items-center h-12 w-full bg-black border border-white px-4 my-2">
+      <button className="flex justify-between items-center h-12 w-full border border-black px-4 my-2">
         BOOK A FREE CALL <ArrowIcon className="h-8 w-10" />
       </button>
     </div>

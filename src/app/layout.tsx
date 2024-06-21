@@ -59,10 +59,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-black text-white overflow-x-hidden font-hauora`}
+        className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-white font-hauora`}
       >
         <Providers>
-          {/* horizontal scrollbar is due to the Navbar component */}
           <Navbar />
           {children}
         </Providers>

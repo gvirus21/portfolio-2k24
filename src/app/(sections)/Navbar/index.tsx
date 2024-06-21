@@ -6,18 +6,16 @@ import HamburgerMenu from "./hamburger-menu";
 import MobileExpandedMenu from "./mobile-expanded-menu";
 import { useLenis } from "@studio-freight/react-lenis";
 import { cn } from "@/lib/utils";
-import useIsBgWhite from "@/hooks/useIsBgWhite";
-// import { useMouseHoverStore } from "@/hooks";
 
 export const menuLinks = [
   {
     id: "home",
     value: "Home",
   },
-  // {
-  //   id: "about",
-  //   value: "About",
-  // },
+  {
+    id: "about",
+    value: "About",
+  },
   {
     id: "services",
     value: "Services",
@@ -31,7 +29,6 @@ export const menuLinks = [
 export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const lenis = useLenis();
-  const { isBgWhite } = useIsBgWhite();
   // const { setIsMouseHovered } = useMouseHoverStore();
 
   // Disable scrolling when modal is open
@@ -60,10 +57,7 @@ export const Navbar = () => {
               <li
                 key={link.id}
                 className={cn(
-                  "duration-100",
-                  isBgWhite
-                    ? "text-black underline-hover-effect-1-black"
-                    : "text-white underline-hover-effect-1"
+                  "duration-100 text-black underline-hover-effect-1-black"
                 )}
                 onClick={(e) => {
                   e.stopPropagation();

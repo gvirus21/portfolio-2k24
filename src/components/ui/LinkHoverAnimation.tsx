@@ -39,7 +39,7 @@ export const LinkHoverAnimation = ({
         <div className="relative w-full">
           <div
             className={cn(
-              "absolute right-0 text-white h-[2px] transition-all duration-500 ease-out bg-white",
+              "absolute right-0 h-[2px] transition-all duration-500 ease-out bg-black",
               isAnimationStarting ? "delay-0" : "delay-200",
               isLinkHovered ? "w-0" : "w-full"
             )}
@@ -48,7 +48,7 @@ export const LinkHoverAnimation = ({
         <div className="relative w-full">
           <div
             className={cn(
-              "absolute left-0 text-white h-[2px] transition-all duration-500 delay-150 ease-out text-right bg-white",
+              "absolute left-0 h-[2px] transition-all duration-500 delay-150 ease-out text-right bg-black",
               isAnimationStarting ? "delay-200" : "delay-0",
               isLinkHovered ? "w-full" : "w-0"
             )}

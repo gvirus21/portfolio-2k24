@@ -45,9 +45,9 @@ export const MobileCardsLayout = () => {
             {/* image should be here */}
           </div>
           <div>
-            <div className="h-[1px] w-full bg-white mt-6 mb-4" />
+            <div className="h-[1px] w-full bg-black mt-6 mb-4" />
             <p className="text-sm w-11/12">{item.description}</p>
-            <div className="h-[1px] w-full bg-white my-4" />
+            <div className="h-[1px] w-full bg-black my-4" />
           </div>
         </div>
       ))}

@@ -16,7 +16,7 @@ const data = [
     description:
       "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
     containerStyle:
-      "absolute top-40 xl:top-[32rem] xl:top-[7rem] 2xl:top-20 right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
+      "absolute top-40 ---xl:top-[32rem] xl:top-[7rem] 2xl:top-24 right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     imageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
   },
   {
@@ -36,7 +36,7 @@ const data = [
     description:
       "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
     containerStyle:
-      "absolute top-[40rem] xl:top-[46rem] 2xl:top-[41rem] 3xl:top-[53rem] right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
+      "absolute top-[40rem] xl:top-[46rem] 2xl:top-[41rem] 3xl:top-[54rem] right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     imageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
   },
 ];
@@ -52,9 +52,9 @@ export const DesktopCardsLayout = () => {
           </div>
           <div className={project.imageStyle}>{/* image should be here */}</div>
           <div>
-            <div className="h-[1px] w-full bg-white/55 mt-6 mb-4" />
+            <div className="h-[1px] w-full bg-black mt-6 mb-4" />
             <p className="text-sm w-11/12">{project.description}</p>
-            <div className="h-[1px] w-full bg-white/55 my-4" />
+            <div className="h-[1px] w-full bg-black my-4" />
           </div>
         </div>
       ))}

@@ -83,7 +83,7 @@ const MobileExpandedMenu = (props: IProps) => {
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className="text-white text-5xl my-10"
+              className="text-black text-5xl my-10"
             >
               <p
                 onClick={(e) => {
@@ -150,7 +150,7 @@ const MobileExpandedMenu = (props: IProps) => {
         opacity: 0,
         transition: { duration: 0.5, delay: 0.5, ease: "easeInOut" },
       }}
-      className="fixed top-0 left-0 h-screen w-screen bg-black z-50 pl-8 pt-24 pb-10 flex flex-col justify-between"
+      className="fixed top-0 left-0 h-screen w-screen bg-white z-50 pl-8 pt-24 pb-10 flex flex-col justify-between"
     >
       <MenuLinks />
 
