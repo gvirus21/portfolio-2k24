@@ -3,6 +3,7 @@ import Navbar from "@/app/(sections)/Navbar";
 import "./globals.css";
 import Providers from "./providers";
 import localFont from "next/font/local";
+import Cursor from "@/components/Cursor";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -59,11 +60,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-white font-hauora`}
+        className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-white font-hauora cursor-none`}
       >
         <Providers>
           <Navbar />
           {children}
+          <Cursor />
         </Providers>
       </body>
     </html>
