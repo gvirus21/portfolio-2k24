@@ -158,7 +158,6 @@ const MobileExpandedMenu = (props: IProps) => {
         <SocialLinks />
 
         {/* phone & email */}
-
         <div className="mt- mb-4">
           <motion.ul
             exit={{
