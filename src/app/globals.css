@@ -27,6 +27,29 @@ body {
   }
 }
 
+.underline-link-hover-effect {
+  display: flex;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.underline-link-hover-effect::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 0.5px;
+  width: 0%;
+  background-color: #000;
+  transition: width 0.25s ease-out;
+}
+
+.underline-link-hover-effect:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
 .glassmorphism {
   background: rgba(67, 44, 44, 0.2); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Blur effect */

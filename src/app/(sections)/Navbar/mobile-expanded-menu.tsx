@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { linkVariant, containerVariant } from "./hamburger-variants";
 import { useWindowSize } from "@uidotdev/usehooks";
@@ -86,13 +87,20 @@ const MobileExpandedMenu = (props: IProps) => {
               }}
               className="text-black text-5xl my-6"
             >
-              <p
-                onClick={(e) => {
+              <ScrollLink
+                smooth="easeInOutQuart"
+                delay={40}
+                key={menuItem.id}
+                to={menuItem.target}
+                offset={-50}
+                duration={2500}
+                onClick={() => {
                   linkClickHandler({ menuItem: menuItem } as LinkProp);
                 }}
+                className="h-full w-full bg-red-400 inline-block"
               >
                 {menuItem.value}
-              </p>
+              </ScrollLink>
             </motion.li>
           );
         })}
@@ -209,7 +217,7 @@ const MobileExpandedMenu = (props: IProps) => {
             <HiOutlineMail size={20} />
             <Link
               href="mailto:gouravkumar21.dev@gmail.com"
-              className="underline-hover-effect-1-black ml-4"
+              className="underline-link-hover-effect ml-4"
             >
               gouravkumar21.dev@gmail.com
             </Link>

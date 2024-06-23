@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { upperMenubarVariant, lowerMenubarVariant } from "./hamburger-variants";
 import { cn } from "@/lib/utils";
-// import useIsBgWhite from "@/hooks/useIsBgWhite";
 
 interface HamburgerMenuProps {
   menuIsOpen: boolean;
@@ -11,7 +10,6 @@ interface HamburgerMenuProps {
 
 const HamburgerMenu = ({ menuIsOpen, setMenuIsOpen }: HamburgerMenuProps) => {
   const [menuAnimate, setMenuAnimate] = useState("closed");
-  // const { isBgWhite } = useIsBgWhite();
 
   useEffect(() => {
     if (menuIsOpen) {
@@ -38,11 +36,7 @@ const HamburgerMenu = ({ menuIsOpen, setMenuIsOpen }: HamburgerMenuProps) => {
         key="upperMenubar"
         variants={upperMenubarVariant}
         animate={menuAnimate}
-        className={cn(
-          "w-7 h-[1px] rounded bg-black",
-          // !menuIsOpen ? "bg-white" : "bg-black"
-          // !menuIsOpen && isBgWhite ? "bg-black" : "bg-white"
-        )}
+        className={cn("w-7 h-[1px] rounded bg-black")}
         exit={{
           y: 0,
           transition: { type: "tween", duration: 0.2 },
@@ -52,11 +46,7 @@ const HamburgerMenu = ({ menuIsOpen, setMenuIsOpen }: HamburgerMenuProps) => {
         key="lowerMenubar"
         variants={lowerMenubarVariant}
         animate={menuAnimate}
-        className={cn(
-          "w-7 h-[1px] z-10 rounded bg-black",
-          // !menuIsOpen ? "bg-white" : "bg-black"
-          // !menuIsOpen && isBgWhite ? "bg-black" : "bg-white"
-        )}
+        className={cn("w-7 h-[1px] z-10 rounded bg-black")}
         exit={{
           y: 0,
           transition: { type: "tween", duration: 0.2 },

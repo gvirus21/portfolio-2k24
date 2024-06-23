@@ -4,32 +4,42 @@ import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import HamburgerMenu from "./hamburger-menu";
 import MobileExpandedMenu from "./mobile-expanded-menu";
-import { useLenis } from "@studio-freight/react-lenis";
 import { cn } from "@/lib/utils";
+import { Link } from "react-scroll";
 
 export const menuLinks = [
   {
     id: "home",
     value: "Home",
+    target: "hero-section",
   },
   {
     id: "about",
     value: "About",
+    target: "about-section",
   },
   {
-    id: "services",
-    value: "Services",
+    id: "work",
+    value: "Work",
+    target: "work-section",
+  },
+  {
+    id: "projects",
+    value: "Projects",
+    target: "featured-work-section",
   },
   {
     id: "contact-us",
     value: "Contact us",
+    target: "contact-section",
   },
 ];
 
+type ActiveState = "home" | "projects" | "work" | "contact-us";
+
 export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const lenis = useLenis();
-  // const { setIsMouseHovered } = useMouseHoverStore();
+  const [activeState, setActiveState] = useState<ActiveState>("home"); //TODO: use activeState
 
   // Disable scrolling when modal is open
   useEffect(() => {
@@ -54,21 +64,20 @@ export const Navbar = () => {
           <p>gourav kumar</p>
           <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">
             {menuLinks.map((link) => (
-              <li
+              <Link
+                smooth="easeInOutQuart"
+                delay={40}
                 key={link.id}
+                to={link.target}
+                offset={-100}
+                duration={2500}
+                onSetActive={() => setActiveState(link.id as ActiveState)}
                 className={cn(
-                  "duration-100 text-black underline-hover-effect-1-black"
+                  "duration-100 text-black underline-link-hover-effect"
                 )}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  console.log(link.id);
-                  lenis?.scrollTo(`#${link.id}`, { lerp: 0.05 });
-                }}
-                // onMouseEnter={() => setIsMouseHovered(true)}
-                // onMouseLeave={() => setIsMouseHovered(false)}
               >
                 {link.value}
-              </li>
+              </Link>
             ))}
           </ul>
 
