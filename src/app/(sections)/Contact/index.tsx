@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   timeline: gsap.core.Timeline | null;
 }
@@ -21,17 +23,29 @@ export const ContactSection = ({ timeline }: Props) => {
           <div className="md:text-left">
             <h3 className="text-xl mb-4 font-medium">Social</h3>
             <ul className="text-sm">
-              <li className="mb-2">X / Twitter</li>
-              <li className="mb-2">Github</li>
-              <li className="mb-2">LinkedIn</li>
+              <li className="mb-2">
+                <Link href="">X / Twitter</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="">Github</Link>
+              </li>
+              <li className="mb-2">
+                <Link href="">LinkedIn</Link>
+              </li>
             </ul>
           </div>
 
           <div className="lg:text-left">
             <h3 className="text-xl mb-4 font-medium">Contact Details</h3>
             <ul className="text-sm">
-              <li className="mb-2">contact@mail.co</li>
-              <li className="mb-2">9249894413</li>
+              <li className="mb-2">
+                <a href="mailto:gouravkumar21.dev@gmail.com">
+                  gouravkumar21.dev@gmail.com
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="tel:+918249894413">+91 824-989-4413</a>
+              </li>
             </ul>
           </div>
         </div>

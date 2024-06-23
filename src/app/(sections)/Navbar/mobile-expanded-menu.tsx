@@ -6,7 +6,7 @@ import { useWindowSize } from "@uidotdev/usehooks";
 import { menuLinks } from ".";
 import { useLenis } from "@studio-freight/react-lenis";
 import { BsTwitterX } from "react-icons/bs";
-import { RiInstagramLine } from "react-icons/ri";
+import { RiGithubLine, RiLinkedinBoxFill } from "react-icons/ri";
 import { IoCall } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -41,16 +41,17 @@ const MobileExpandedMenu = (props: IProps) => {
     },
     {
       id: 1,
-      name: "Instagram",
+      name: "Github",
       link: "https://www.instagram.com/prismdevorg",
-      icon: <RiInstagramLine size={30} />,
+      icon: <RiGithubLine size={30} />,
     },
-    // {
-    //   id: 3,
-    //   name: "LinkedIn",
-    //   link: "https://www.linkedin.com/in/xyz/",
-    //   icon: <FiLinkedin />,
-    // },
+
+    {
+      id: 3,
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/xyz/",
+      icon: <RiLinkedinBoxFill size={30} />,
+    },
   ];
 
   const linkClickHandler = ({ menuItem }: LinkProp) => {
@@ -83,7 +84,7 @@ const MobileExpandedMenu = (props: IProps) => {
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className="text-black text-5xl my-10"
+              className="text-black text-5xl my-6"
             >
               <p
                 onClick={(e) => {
@@ -150,7 +151,7 @@ const MobileExpandedMenu = (props: IProps) => {
         opacity: 0,
         transition: { duration: 0.5, delay: 0.5, ease: "easeInOut" },
       }}
-      className="fixed top-0 left-0 h-screen w-screen bg-white z-50 pl-8 pt-24 pb-10 flex flex-col justify-between"
+      className="fixed top-0 left-0 h-screen w-screen bg-white z-50 pl-8 pt-20 pb-10 flex flex-col justify-between"
     >
       <MenuLinks />
 
@@ -177,49 +178,41 @@ const MobileExpandedMenu = (props: IProps) => {
               delay: 0.2,
               ease: "easeInOut",
             }}
-            className="flex justify-start my-4 w-[24rem]"
+            className="flex items-center my-4 w-[24rem]"
           >
             <IoCall size={20} />
-            <div className="ml-4">
-              <Link
-                href={"tel:+918249894413"}
-                className="underline-hover-effect-1-black"
-              >
-                +91 824-989-4413
-              </Link>
-              <Link
-                href={"tel:+918328846256"}
-                className="underline-hover-effect-1-black mt-1"
-              >
-                +91 832-884-6256
-              </Link>
-            </div>
+            <Link href={"tel:+918249894413"} className="ml-4">
+              +91 824-989-4413
+            </Link>
           </motion.ul>
 
-          <motion.ul exit={{
-                  opacity: 0,
-                  y: -50,
-                  transition: {
-                    duration: 0.2,
-                    delay: 0.3,
-                    ease: "easeInOut",
-                  },
-                }}
-                variants={linkVariant}
-                initial="initial"
-                animate="visible"
-                transition={{
-                  duration: 0.4,
-                  delay: 0.3,
-                  ease: "easeInOut",
-                }} className="flex h-[3rem] w-[20rem]">
+          <motion.ul
+            exit={{
+              opacity: 0,
+              y: -50,
+              transition: {
+                duration: 0.2,
+                delay: 0.3,
+                ease: "easeInOut",
+              },
+            }}
+            variants={linkVariant}
+            initial="initial"
+            animate="visible"
+            transition={{
+              duration: 0.4,
+              delay: 0.3,
+              ease: "easeInOut",
+            }}
+            className="flex items-center h-[3rem] w-[24rem]"
+          >
             <HiOutlineMail size={20} />
-            <a
-              href="mailto:prismdevorg@gmail.com"
-              className="underline-hover-effect-1-black uppercase ml-4"
+            <Link
+              href="mailto:gouravkumar21.dev@gmail.com"
+              className="underline-hover-effect-1-black ml-4"
             >
-              Prismdevorg@gmail.com
-            </a>
+              gouravkumar21.dev@gmail.com
+            </Link>
           </motion.ul>
         </div>
 
@@ -247,7 +240,7 @@ const MobileExpandedMenu = (props: IProps) => {
             className="absoulte text-lg mt-20 mb-20 underline-offset-4 underline"
             href="https://calendly.com/gouravkumar21-dev/prism-dev-consultancy"
           >
-            Book a Free Call with us.
+            Book a Free Meeting with me.
           </Link>
         </motion.p>
       </div>

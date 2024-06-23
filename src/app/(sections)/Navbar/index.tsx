@@ -49,7 +49,7 @@ export const Navbar = () => {
       <AnimatePresence>
         {menuIsOpen && <MobileExpandedMenu setMenuIsOpen={setMenuIsOpen} />}
       </AnimatePresence>
-      <nav className="fixed flex justify-center items-center top-0 pt-10 pb-3 h-32 w-full font-light z-50">
+      <nav className="fixed flex justify-center items-center top-0 pt-6 md:pt-10 pb-3 h-10 md:h-32 w-full font-light z-50">
         <div className="flex justify-between items-start h-full w-full max-w-[140rem] mx-6 sm:mx-10">
           <p>gourav kumar</p>
           <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">

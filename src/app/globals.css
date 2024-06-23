@@ -26,3 +26,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.glassmorphism {
+  background: rgba(67, 44, 44, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Border to enhance glass effect */
+}
