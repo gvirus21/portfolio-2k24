@@ -23,7 +23,7 @@ const config: Config = {
       },
       fontFamily: {
         hauora: "var(--font-hauora)",
-        "quanta-grotesk": "var(--font-quanta-grotesk)",
+        catalunya: "var(--font-catalunya)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

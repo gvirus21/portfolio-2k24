@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-// import Loader from "@/components/Loader";
 import MainPage from "./main-page";
+// import Loader from "@/components/Loader";
 
 export default function Home() {
   const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
@@ -19,7 +19,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen w-screen max-w-full px-5 bg-white text-black">
+    <main className="h-screen w-screen max-w-full px-5 text-black">
       {/* {loaderFinished ? (
         <MainPage timeline={timeline} />
       ) : (
@@ -33,12 +33,9 @@ export default function Home() {
 
 // TODO:
 
-// add nav links scroll to feature.
 // add images.
-// add hover animations to the navlink
 // add all other links and thier animations
 // add buttons interactions animations.
-// update fonts
 
 
 // update text content

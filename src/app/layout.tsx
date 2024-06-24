@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: "Gourav kumar",
 };
 
+const Catalunya = localFont({
+  variable: "--font-catalunya",
+  src: [
+    {
+      path: "../../public/fonts/catalunya.ttf",
+      weight: "400",
+    }
+  ]
+})
+
 const Hauora = localFont({
   variable: "--font-hauora",
   src: [
@@ -40,16 +50,6 @@ const Hauora = localFont({
   ],
 });
 
-const QuantaGroteskPro = localFont({
-  variable: "--font-quanta-grotesk",
-  src: [
-    {
-      path: "../../public/fonts/QuantaGroteskPro-LightItalic.ttf",
-      weight: "600",
-      style: "semibold",
-    },
-  ],
-});
 
 export default function RootLayout({
   children,
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${QuantaGroteskPro.variable} ${Hauora.variable} bg-white font-hauora`}
+        className={`${Hauora.variable} ${Catalunya.variable} font-hauora bg-[#F5F7F8]`}
       >
         <Providers>
           <Navbar />
