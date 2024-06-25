@@ -31,12 +31,6 @@ export default function Home() {
 }
 
 
-// TODO:
-
-// add images.
-// add all other links and thier animations
-// add buttons interactions animations.
-
 
 // update text content
 // add text animation / scroll animations

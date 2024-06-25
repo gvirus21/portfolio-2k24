@@ -1,5 +1,7 @@
 import React from "react";
 import { Element } from "react-scroll";
+import Image from "next/image";
+import profileImage from "/public/assets/gourav-kumar.webp";
 
 interface Props {
   timeline: gsap.core.Timeline | null;
@@ -24,7 +26,9 @@ export const AboutSection = ({ timeline }: Props) => {
           </div>
 
           {/* Profile photo */}
-          <div className="absolute top-20 md:top-28 lg:top-1/2 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-translate-y-[45%] 2xl:-translate-y-[40%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] bg-white rounded-md lg:rounded-lg" />
+          <div className="absolute top-20 md:top-28 lg:top-1/2 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-translate-y-[45%] 2xl:-translate-y-[40%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] bg-white rounded-md lg:rounded-lg">
+            <Image src={profileImage} fill alt="profile-image"  className="object-cover"/>
+          </div>
 
           {/* Desktop text seciton */}
           <div className="hidden lg:flex flex-col">

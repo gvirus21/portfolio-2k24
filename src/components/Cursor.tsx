@@ -5,13 +5,13 @@ import gsap from "gsap";
 import useCursorState from "@/store/useCursorState";
 
 const Cursor = () => {
-  const [cursorSize, setCursorSize] = useState(24);
   const { cursorState } = useCursorState();
+  const [cursorSize, setCursorSize] = useState(16);
 
   useEffect(() => {
     switch (cursorState) {
       case "regular":
-        setCursorSize(24);
+        setCursorSize(16);
         break;
       case "sm-hovered":
         setCursorSize(40);

@@ -1,3 +1,4 @@
+import AnimatedButton from "@/components/ui/AnimatedButton";
 import Link from "next/link";
 import { Element } from "react-scroll";
 interface Props {
@@ -14,10 +15,14 @@ export const ContactSection = ({ timeline }: Props) => {
             <p className="text-sm lg:text-base max-w-[24rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4">
               I WOULD LOVE TO HEAR FROM YOU, LET&apos;S WORK — TOGETHER.
             </p>
+            <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full capitalize">
+              Email Me
+            </AnimatedButton>
 
-            <button className="h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full">
+            {/* <button className="h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full">
               email me
-            </button>
+              <Text
+            </button> */}
           </div>
 
           <div className="hidden sm:flex text-sm md:text-base justify-between w-[30rem] lg:w-[26rem] xl:w-[22rem] mt-10">

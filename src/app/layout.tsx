@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Hauora.variable} ${Catalunya.variable} font-hauora bg-[#F5F7F8]`}
+        className={`${Hauora.variable} ${Catalunya.variable} font-hauora bg-[#d8d8d8ff]`}
       >
         <Providers>
           <Navbar />

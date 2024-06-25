@@ -97,7 +97,7 @@ const MobileExpandedMenu = (props: IProps) => {
                 onClick={() => {
                   linkClickHandler({ menuItem: menuItem } as LinkProp);
                 }}
-                className="h-full w-full bg-red-400 inline-block"
+                className="h-full w-full inline-block"
               >
                 {menuItem.value}
               </ScrollLink>
