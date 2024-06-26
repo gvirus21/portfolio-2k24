@@ -1,0 +1,55 @@
+const WORK_DATA = [
+  {
+    id: 1,
+    title: "Playgrounds Analytics",
+    jobTitle: "Lead Frontend developer",
+    image: "",
+    website: "",
+    description: [
+      "At Playgrounds, I led the frontend development for our products.",
+      "I developed a variety of web applications, including proprietary web products, web tools, and landing pages.",
+      "I was responsible for creating a comprehensive reusable design system using Next.js and Tailwind CSS.",
+      "I utilized several key technologies, such as Next.js, Framer Motion, React Query, Tailwind CSS, and Shadcn UI.",
+      "During my tenure, I also learned and built a part of our backend using Rust.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Bankless DAO",
+    image: "",
+    website: "",
+    jobTitle: "Freelance Frontend developer",
+    description: [
+      "I contributed to BanklessDAO as a paid open-source contributor, focusing on the frontend development of their upcoming official website.",
+      "In this project, I collaborated closely with fellow developers and the design team to update the site&#8217;s theme.",
+      "I was responsible for building various web pages, including the main homepage.",
+      "We utilized Next.js and Chakra UI for this project.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Forefront DAO",
+    image: "",
+    website: "",
+    jobTitle: "Freelance Frontend developer",
+    description: [
+      "Collaborated with the Forefront team as a freelance developer to build their &#8216;Squads&#8217; app.",
+      "Developed various pages for the Squads app.",
+      "Worked closely with the design team and senior developers on this project.",
+      "The project was built using Next.js, MUI, and Styled-components.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Codewalla",
+    image: "",
+    website: "",
+    jobTitle: "IOS developer - Intern",
+    description: [
+      "At Codewalla, I began my development career as an iOS developer intern.",
+      "This experience introduced me to corporate culture, including the do’s and don’ts of a professional environment.",
+      "I learned best practices and coding principles from senior developers.",
+      "I developed several innovative iOS apps using Swift and SwiftUI.",
+    ],
+  },
+];
