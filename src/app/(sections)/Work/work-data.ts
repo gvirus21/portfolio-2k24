@@ -1,4 +1,4 @@
-const WORK_DATA = [
+export const WORK_DATA = [
   {
     id: 1,
     title: "Playgrounds Analytics",
