@@ -3,7 +3,7 @@ export const WORK_DATA = [
     id: 1,
     title: "Playgrounds Analytics",
     jobTitle: "Lead Frontend developer",
-    image: "",
+    image: "/assets/",
     website: "",
     description: [
       "At Playgrounds, I led the frontend development for our products.",

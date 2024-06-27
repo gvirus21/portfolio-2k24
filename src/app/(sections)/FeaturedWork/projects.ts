@@ -2,7 +2,7 @@ export const Projects = [
   {
     slNo: "01",
     title: "Meron - Creative Photo agency",
-    image: "",
+    image: "/assets/projects/meron.webp",
     link: "https://meron-agency.vercel.app/",
     github: "https://github.com/gvirus21/meron",
     description:
@@ -14,7 +14,7 @@ export const Projects = [
   {
     slNo: "02",
     title: "V Meet - Your own Video collab platform",
-    image: "",
+    image: "/assets/projects/vmeet.webp",
     link: "https://v-meet-theta.vercel.app/",
     github: "https://github.com/gvirus21/v-meet",
     description:
@@ -26,7 +26,7 @@ export const Projects = [
   {
     slNo: "03",
     title: "Nepom - Best Tour agency",
-    image: "",
+    image: "/assets/projects/nepom.webp",
     link: "https://nepom-agency.vercel.app/",
     github: "https://github.com/gvirus21/Nepom",
     description:

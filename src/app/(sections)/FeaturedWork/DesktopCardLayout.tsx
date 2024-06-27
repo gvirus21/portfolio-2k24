@@ -1,10 +1,11 @@
+import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { RiGithubLine } from "react-icons/ri";
-import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { Projects } from "./projects";
+import { cn } from "@/lib/utils";
 
 export const DesktopCardsLayout = () => {
   const container = useRef(null);
@@ -49,10 +50,16 @@ export const DesktopCardsLayout = () => {
           <div
             className={cn(
               project.desktopImageStyle,
-              "shadow-md shadow-gray-500"
+              "shadow-md"
             )}
           >
             {/* image should be here */}
+            {/* <Image
+              src={project.image}
+              fill
+              className="object-cover"
+              alt="project"
+            /> */}
           </div>
           <div>
             <div className="h-[1px] w-full bg-black mt-6 mb-4" />
