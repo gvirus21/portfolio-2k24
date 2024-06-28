@@ -3,7 +3,7 @@ export const WORK_DATA = [
     id: 1,
     title: "Playgrounds Analytics",
     jobTitle: "Lead Frontend developer",
-    image: "/assets/",
+    image: "/assets/projects/meron.webp",
     website: "",
     description: [
       "At Playgrounds, I led the frontend development for our products.",
@@ -16,7 +16,7 @@ export const WORK_DATA = [
   {
     id: 2,
     title: "Bankless DAO",
-    image: "",
+    image: "/assets/projects/nepom.webp",
     website: "",
     jobTitle: "Freelance Frontend developer",
     description: [
@@ -29,7 +29,7 @@ export const WORK_DATA = [
   {
     id: 3,
     title: "Forefront DAO",
-    image: "",
+    image: "/assets/projects/vmeet.webp",
     website: "",
     jobTitle: "Freelance Frontend developer",
     description: [
