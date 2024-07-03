@@ -16,8 +16,8 @@ export const DesktopCardsLayout = () => {
   });
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -700]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -600]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -800]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -700]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -700]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, -700]);
 
   const yValues = [y1, y2, y3, y4];
@@ -47,12 +47,7 @@ export const DesktopCardsLayout = () => {
             <p>{project.slNo}</p>
             <p>{project.title}</p>
           </div>
-          <div
-            className={cn(
-              project.desktopImageStyle,
-              "shadow-md"
-            )}
-          >
+          <div className={cn(project.desktopImageStyle, "shadow-md")}>
             {/* image should be here */}
             {/* <Image
               src={project.image}
