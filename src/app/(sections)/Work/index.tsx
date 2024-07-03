@@ -11,7 +11,7 @@ export const WorkSection = ({ timeline }: Props) => {
   const workSectionContainer = useRef(null);
 
   return (
-    <Element name="work-section" className="relative lg:h-[180rem]">
+    <Element name="work-section" className="relative lg:h-[200vh]">
       <section
         id="work-section"
         ref={workSectionContainer}
