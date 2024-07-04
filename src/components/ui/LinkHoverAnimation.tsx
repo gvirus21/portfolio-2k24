@@ -33,7 +33,7 @@ export const LinkHoverAnimation = ({
         setIsLinkHovered(false);
       }}
     >
-      <Link href={href}>{children}</Link>
+      {href ? <Link href={href}>{children}</Link> : <div>{children}</div>}
 
       <div className="flex flex-col pt-2">
         <div className="relative w-full">

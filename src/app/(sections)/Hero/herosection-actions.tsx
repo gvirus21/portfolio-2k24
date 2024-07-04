@@ -1,5 +1,6 @@
 import { IoIosArrowRoundForward as ArrowIcon } from "react-icons/io";
 import LinkHoverAnimation from "@/components/ui/LinkHoverAnimation";
+import { Link } from "react-scroll";
 
 const HeroSectionActions = () => (
   <>
@@ -13,9 +14,17 @@ const DesktopVersion = () => {
     <div className="hidden sm:flex absolute bottom-0 xl:bottom-10 justify-between items-center h-20 w-full z-50 opacity-55">
       <div className="relative w-full">
         <LinkHoverAnimation className="left-0 xl:text-xl tracking-wider">
-          <p className="flex justify-between items-center">
-            SEE MY WORK <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
-          </p>
+          <Link
+            to="work-section"
+            smooth="easeInOutQuart"
+            delay={40}
+            offset={0}
+            duration={2500}
+          >
+            <p className="flex justify-between items-center">
+              SEE MY WORK <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
+            </p>
+          </Link>
         </LinkHoverAnimation>
         <LinkHoverAnimation className="right-0 xl:text-xl tracking-wider">
           <p className="flex justify-between items-center">

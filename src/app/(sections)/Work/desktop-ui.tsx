@@ -128,12 +128,10 @@ const DesktopVersion = ({ parentRef }: Props) => {
 
   return (
     <div className="relative hidden lg:flex flex-row justify-between min-h-[53rem] xl:min-h-0 xl:h-[40rem] mt-32 mx-auto w-10/12 xl:w-full">
-      <div className="flex flex-col justify-between h-[50rem] xl:h-[40rem]">
+      <div className="flex flex-col h-[50rem] xl:h-[40rem]">
         <div className="w-[40rem] 2xl:w-full">
-          <div>
             <WorkTitle workIndex={workIndex} />
             <WorkJobTitle workIndex={workIndex} />
-          </div>
         </div>
         <div className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden">
           <motion.div
@@ -142,26 +140,29 @@ const DesktopVersion = ({ parentRef }: Props) => {
               top: workIndex * -100 + "%",
               transition: "top 0.5s cubic-bezier(0.76, 0, 0.24, 1)",
             }}
-            className="relative 3xl:h-[120rem] bg-cyan-400"
+            className="relative 3xl:h-[120rem]"
           >
-            <div className="flex justify-center items-center 3xl:h-[40rem] w-full bg-lime-400">
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem]  bg-[#a6ee1f]">
               <Image
+                className="w-5/6 aspect-video"
                 src={images[0].url}
                 height={700}
                 width={800}
                 alt="work-image"
               />
             </div>
-            <div className="flex justify-center items-center 3xl:h-[40rem] w-full bg-slate-300">
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-slate-300">
               <Image
+                className="w-5/6 aspect-video"
                 src={images[1].url}
                 height={700}
                 width={800}
                 alt="work-image"
               />
             </div>
-            <div className="flex justify-center items-center 3xl:h-[40rem] w-full bg-gray-800">
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-gray-800">
               <Image
+                className="w-5/6 aspect-video"
                 src={images[2].url}
                 height={700}
                 width={800}
@@ -178,28 +179,12 @@ const DesktopVersion = ({ parentRef }: Props) => {
 
 export default DesktopVersion;
 
-interface DescriptionLineProps {
-  description: string[];
-}
-
-const DescriptionLine = ({ description }: DescriptionLineProps) => {
-  return (
-    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl list-disc lg:pl-6">
-      {description.map((message, i) => (
-        <div key={i} className="relative overflow-hidden my-2 ">
-          <li className="">{message}</li>
-        </div>
-      ))}
-    </ul>
-  );
-};
-
 interface TextAnimationProps {
   workIndex: number;
 }
 
 const WorkTitle = ({ workIndex }: TextAnimationProps) => (
-  <AnimatePresence mode="wait">
+  <AnimatePresence key={"work title"} mode="wait">
     {workIndex === 0 && (
       <motion.h3
         variants={textLineAnimation}
@@ -272,15 +257,6 @@ const WorkJobTitle = ({ workIndex }: TextAnimationProps) => (
       </motion.h4>
     )}
   </AnimatePresence>
-  // <motion.h4
-  //   variants={textLineAnimation}
-  //   initial="initial"
-  //   animate="animate"
-  //   exit="exit"
-  //   className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold"
-  // >
-  //   {currentWork.jobTitle}
-  // </motion.h4>
 );
 
 const WorkDescription = ({ workIndex }: TextAnimationProps) => (
@@ -291,6 +267,7 @@ const WorkDescription = ({ workIndex }: TextAnimationProps) => (
       animate="animate"
       exit="exit"
       key={workIndex}
+      className="lg:mt-5 xl:mt-10 2xl:mt-20 3xl:mt-40"
     >
       {workIndex === 0 && (
         <DescriptionLine description={WORK_DATA[0].description} />
@@ -304,3 +281,19 @@ const WorkDescription = ({ workIndex }: TextAnimationProps) => (
     </motion.div>
   </AnimatePresence>
 );
+
+interface DescriptionLineProps {
+  description: string[];
+}
+
+const DescriptionLine = ({ description }: DescriptionLineProps) => {
+  return (
+    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl list-disc lg:pl-6">
+      {description.map((message, i) => (
+        <div key={i} className="relative overflow-hidden my-2 ">
+          <li className="">{message}</li>
+        </div>
+      ))}
+    </ul>
+  );
+};
