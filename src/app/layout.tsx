@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/app/(sections)/Navbar";
+import Image from "next/image";
 import Providers from "./providers";
 import localFont from "next/font/local";
 import Cursor from "@/components/Cursor";
@@ -15,9 +16,9 @@ const Catalunya = localFont({
     {
       path: "../../public/fonts/catalunya.ttf",
       weight: "400",
-    }
-  ]
-})
+    },
+  ],
+});
 
 const Hauora = localFont({
   variable: "--font-hauora",
@@ -50,7 +51,6 @@ const Hauora = localFont({
   ],
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,8 +59,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Hauora.variable} ${Catalunya.variable} font-hauora bg-[#d8d8d8ff]`}
+        className={`${Hauora.variable} ${Catalunya.variable} font-hauora bg-[#d8d8d8ff] `}
       >
+        {/* grainy overlay */}
+        <Image
+          src={"/texture/grainy.svg"}
+          height={1000}
+          width={2000}
+          alt="grainy-bg"
+          className="h-screen w-screen fixed inset-0 pointer-events-none object-cover"
+        />
         <Providers>
           <Navbar />
           {children}

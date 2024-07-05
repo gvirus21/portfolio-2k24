@@ -36,7 +36,7 @@ export const AboutSection = ({ timeline }: Props) => {
           </>
 
           {/* Profile photo */}
-          <div className="absolute top-20 md:top-28 lg:top-1/2 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-translate-y-[45%] 2xl:-translate-y-[40%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] bg-white rounded-md lg:rounded-lg">
+          <div className="absolute top-20 md:top-28 lg:top-1/2 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-translate-y-[45%] 2xl:-translate-y-[40%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] rounded-md lg:rounded-lg">
             <Image
               src={profileImage}
               fill

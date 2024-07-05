@@ -17,9 +17,10 @@
 }
 
 body {
-  background: #eaeaea;
+  position: relative;
   color: black;
 }
+
 
 @layer utilities {
   .text-balance {

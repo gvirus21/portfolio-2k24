@@ -14,7 +14,7 @@ interface Props {
 
 const MainPage = ({ timeline }: Props) => {
   return (
-    <div className="relative --overflow-x-hidden">
+    <div className="relative">
       <HeroSection timeline={timeline} />
       {/* <div className="absolute top-[85vh] ---top-[110vh] left-1/2 -translate-x-1/2 w-[85%] aspect-video rounded-xl glassmorphism"></div> */}
       <AboutSection timeline={timeline} />
