@@ -24,7 +24,7 @@ export const AboutSection = ({ timeline }: Props) => {
       >
         <div className="flex flex-col justify-between">
           <>
-            <TextReveal className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl md:mb-10 lg:mb-0">
+            <TextReveal className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl md:mb-10 lg:mb-0 uppercase">
               About Me
             </TextReveal>
             <p className="w-[40rem] hidden lg:block lg:w-[26rem] xl:w-[40rem] lg:text-xl 2xl:text-xl lg:mt-8 xl:mt-12 2xl:mt-16 capitalize font-medium tracking-wider">
