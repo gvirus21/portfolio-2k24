@@ -22,7 +22,7 @@
       >
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.09"
+          baseFrequency="0.08"
           numOctaves="4"
           seed="15"
           stitchTiles="stitch"

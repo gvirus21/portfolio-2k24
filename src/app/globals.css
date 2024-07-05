@@ -21,6 +21,15 @@ body {
   color: black;
 }
 
+.primary-graident {
+  background: linear-gradient(
+    320deg,
+    rgba(108, 255, 97, 0.5) 20%,
+    rgb(244, 222, 222) 55%,
+    rgba(255, 174, 243, 0.8) 100%
+  );
+  opacity: 0.8;
+}
 
 @layer utilities {
   .text-balance {

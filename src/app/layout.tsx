@@ -67,8 +67,9 @@ export default function RootLayout({
           height={1000}
           width={2000}
           alt="grainy-bg"
-          className="h-screen w-screen fixed inset-0 pointer-events-none object-cover"
+          className="fixed inset-0 h-screen w-screen pointer-events-none object-cover"
         />
+        <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
         <Providers>
           <Navbar />
           {children}
