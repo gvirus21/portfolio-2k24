@@ -2,6 +2,7 @@ import { Element } from "react-scroll";
 import DesktopVersion from "./desktop-ui";
 import MobileVersion from "./mobile-ui";
 import { useRef } from "react";
+import TextReveal from "@/components/TextReveal";
 
 interface Props {
   timeline: gsap.core.Timeline | null;
@@ -19,7 +20,7 @@ export const WorkSection = ({ timeline }: Props) => {
       >
         <div className="relative left-1/2 transform -translate-x-1/2 flex justify-between lg:min-h-[80vh] w-11/12 max-w-[140rem]">
           <h2 className="absolute left-0 lg:left-auto lg:right-0 text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-            My Work
+            <TextReveal>My Work</TextReveal>
           </h2>
           <DesktopVersion parentRef={workSectionContainer} />
           <MobileVersion />

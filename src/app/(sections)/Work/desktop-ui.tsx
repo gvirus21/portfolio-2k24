@@ -1,7 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { WORK_DATA } from "./work-data";
 import { AnimatePresence, motion } from "framer-motion";
+import { RxDotFilled } from "react-icons/rx";
+
+import { WORK_DATA } from "./work-data";
+import { BsDot } from "react-icons/bs";
 
 const images = [
   {
@@ -130,8 +133,8 @@ const DesktopVersion = ({ parentRef }: Props) => {
     <div className="relative hidden lg:flex flex-row justify-between min-h-[53rem] xl:min-h-0 xl:h-[40rem] mt-32 mx-auto w-10/12 xl:w-full">
       <div className="flex flex-col h-[50rem] xl:h-[40rem]">
         <div className="w-[40rem] 2xl:w-full">
-            <WorkTitle workIndex={workIndex} />
-            <WorkJobTitle workIndex={workIndex} />
+          <WorkTitle workIndex={workIndex} />
+          <WorkJobTitle workIndex={workIndex} />
         </div>
         <div className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden">
           <motion.div
@@ -288,10 +291,11 @@ interface DescriptionLineProps {
 
 const DescriptionLine = ({ description }: DescriptionLineProps) => {
   return (
-    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl list-disc lg:pl-6">
+    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl list-none lg:pl-2">
       {description.map((message, i) => (
-        <div key={i} className="relative overflow-hidden my-2 ">
-          <li className="">{message}</li>
+        <div key={i} className="relative flex items-center overflow-hidden my-2">
+          <BsDot className="h-10 w-10 mr-4 mt-1" />
+          <li className="w-[97%]">{message}</li>
         </div>
       ))}
     </ul>

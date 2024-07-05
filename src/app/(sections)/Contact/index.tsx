@@ -1,8 +1,9 @@
-import AnimatedButton from "@/components/ui/AnimatedButton";
-import { motion, useTransform, useScroll } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { Element } from "react-scroll";
+import AnimatedButton from "@/components/ui/AnimatedButton";
+import TextReveal from "@/components/TextReveal";
 
 interface Props {
   timeline: gsap.core.Timeline | null;
@@ -26,7 +27,9 @@ export const ContactSection = ({}: Props) => {
           className="flex flex-col sm:flex-row justify-between items-center w-full mx-auto"
         >
           <div className="flex flex-col w-full md:w-5/6">
-            <h2 className="text-3xl md:text-5xl lg:text-7xl">Contact Me</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-7xl">
+              <TextReveal>Contact Me</TextReveal>
+            </h2>
             <p className="text-sm lg:text-base max-w-[15rem] sm:max-w-[24rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4">
               I WOULD LOVE TO HEAR FROM YOU, LET&apos;S WORK — TOGETHER.
             </p>
