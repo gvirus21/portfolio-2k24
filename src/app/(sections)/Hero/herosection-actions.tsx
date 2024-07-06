@@ -2,23 +2,13 @@ import { IoIosArrowRoundForward as ArrowIcon } from "react-icons/io";
 import LinkHoverAnimation from "@/components/ui/LinkHoverAnimation";
 import { Link } from "react-scroll";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
 import gsap from "gsap";
 
-const HeroSectionActions = () => (
-  <>
-    <MobileVersion />
-    <DesktopVersion />
-  </>
-);
-
-const DesktopVersion = () => {
-  const actionButtonRef = useRef(null);
-
+const HeroSectionActions = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.to(
-      actionButtonRef.current,
+      ".action-buttons-container",
       {
         bottom: 40,
         opacity: 0.55,
@@ -29,10 +19,16 @@ const DesktopVersion = () => {
   }, []);
 
   return (
-    <div
-      ref={actionButtonRef}
-      className="hidden sm:flex absolute bottom-0 justify-between items-center h-20 w-full z-50 opacity-0"
-    >
+    <>
+      <MobileVersion />
+      <DesktopVersion />
+    </>
+  );
+};
+
+const DesktopVersion = () => {
+  return (
+    <div className="action-buttons-container hidden sm:flex absolute bottom-0 justify-between items-center h-20 w-full z-50 opacity-0">
       <div className="relative w-full">
         <LinkHoverAnimation className="left-0 xl:text-xl tracking-wider">
           <Link
@@ -59,7 +55,7 @@ const DesktopVersion = () => {
 
 const MobileVersion = () => {
   return (
-    <div className="sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5">
+    <div className="action-buttons-container sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5 opacity-0">
       <button className="flex justify-between items-center h-12 w-full border border-black px-4 my-2 ">
         SEE MY WORK <ArrowIcon className="h-8 w-10" />
       </button>

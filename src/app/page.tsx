@@ -20,17 +20,12 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen max-w-full px-5 text-black">
-      {loaderFinished ? (
+      {/* {loaderFinished ? (
         <MainPage timeline={timeline} />
       ) : (
         <Loader timeline={timeline} />
-      )}
-      {/* <MainPage timeline={timeline} /> */}
+      )} */}
+      <MainPage timeline={timeline} />
     </main>
   );
 }
-
-// update text content
-// add text animation / scroll animations
-
-// add works section animation.

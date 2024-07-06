@@ -9,7 +9,6 @@ import { Link } from "react-scroll";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-
 export const menuLinks = [
   {
     id: "home",
@@ -44,7 +43,7 @@ export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [activeState, setActiveState] = useState<ActiveState>("home"); //TODO: use activeState
 
-  const navRef = useRef(null)
+  const navRef = useRef(null);
 
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { duration: 1 } });
@@ -78,7 +77,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {menuIsOpen && <MobileExpandedMenu setMenuIsOpen={setMenuIsOpen} />}
       </AnimatePresence>
-      <nav ref={navRef} className="fixed flex justify-center items-center top-0 pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase opacity-0 -mt-2">
+      <nav
+        ref={navRef}
+        className="fixed top-0 left-0 flex justify-center items-center pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase opacity-0 -mt-2"
+      >
         <div className="flex justify-between items-start h-full w-full max-w-[140rem] mx-6 sm:mx-10">
           <p>gourav kumar</p>
           <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">
