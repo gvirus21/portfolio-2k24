@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import AnimatedButton from "@/components/ui/AnimatedButton";
-import TextReveal from "@/components/TextReveal";
+import TextReveal from "@/components/helpers/TextReveal";
 
 interface Props {
   timeline: gsap.core.Timeline | null;

@@ -1,8 +1,7 @@
 "use client";
 
 import {
-  HeroSectionAlt,
-  // HeroSection,
+  HeroSection,
   AboutSection,
   WorkSection,
   FeaturedWorkSection,
@@ -18,8 +17,7 @@ const MainPage = ({ timeline }: Props) => {
   return (
     <div className="relative">
       <Navbar />
-      <HeroSectionAlt timeline={timeline} />
-      {/* <HeroSection timeline={timeline} /> */}
+      <HeroSection timeline={timeline} />
       <AboutSection timeline={timeline} />
       <WorkSection timeline={timeline} />
       <FeaturedWorkSection timeline={timeline} />

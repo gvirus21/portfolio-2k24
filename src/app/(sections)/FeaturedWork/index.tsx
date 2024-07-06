@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import DesktopCardsLayout from "./DesktopCardLayout";
 import MobileCardsLayout from "./MobileCardLayout";
-import TextReveal from "@/components/TextReveal";
+import TextReveal from "@/components/helpers/TextReveal";
 
 interface Props {
   timeline: gsap.core.Timeline | null;

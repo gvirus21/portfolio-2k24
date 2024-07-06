@@ -2,7 +2,7 @@ import { Element } from "react-scroll";
 import DesktopVersion from "./desktop-ui";
 import MobileVersion from "./mobile-ui";
 import { useRef } from "react";
-import TextReveal from "@/components/TextReveal";
+import TextReveal from "@/components/helpers/TextReveal";
 
 interface Props {
   timeline: gsap.core.Timeline | null;

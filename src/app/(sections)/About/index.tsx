@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import Image from "next/image";
 import profileImage from "/public/assets/gourav-kumar.webp";
-import TextReveal from "@/components/TextReveal";
+import TextReveal from "@/components/helpers/TextReveal";
 
 interface Props {
   timeline: gsap.core.Timeline | null;
