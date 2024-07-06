@@ -33,20 +33,25 @@ const Loader = ({ timeline }: Props) => {
       ref={loaderContainerRef}
       className="absolute inset-0 flex justify-center items-center h-screen w-screen z-[9999] opacity-0"
     >
-      <div className="relative h-[15.6rem] w-[20rem] overflow-hidden text-black ml-36">
-        <div ref={collapseWordsRef} className="loader h-full w-full">
-          <div className="absolute top-0 left-0 h-[6.5rem] w-full z-50" />
-          <div ref={wordGroupRef}>
-            {GREETING_WORDS.map((word, index) => (
-              <p key={index} className="text-2xl my-1 lowercase">
-                {word}
-              </p>
-            ))}
+      <div className="relative h-screen w-screen">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[15.6rem] overflow-hidden text-black">
+          <div
+            ref={collapseWordsRef}
+            className="loader h-full md:w-[8rem] lg:w-[10rem]"
+          >
+            <div className="absolute top-0 left-0 h-[6.5rem] w-full z-50" />
+            <div ref={wordGroupRef}>
+              {GREETING_WORDS.map((word, index) => (
+                <p key={index} className="text-xl md:text-2xl my-1 lowercase">
+                  {word}
+                </p>
+              ))}
+            </div>
+            <div className="absolute bottom-0 left-0 h-[6.5rem] w-full z-50" />
           </div>
-          <div className="absolute bottom-0 left-0 h-[6.5rem] w-full z-50" />
         </div>
+        <NumberLoader timeline={timeline} />
       </div>
-      <NumberLoader timeline={timeline} />
     </div>
   );
 };
