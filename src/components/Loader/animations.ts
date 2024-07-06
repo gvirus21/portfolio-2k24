@@ -1,5 +1,19 @@
 import gsap from "gsap";
 
+export const loaderAppearAnimation = ({
+  loaderContainerRef,
+}: {
+  loaderContainerRef: React.MutableRefObject<null>;
+}) => {
+  const tl = gsap.timeline();
+  tl.to(loaderContainerRef.current, {
+    opacity: 1,
+    ease: "power1.in",
+    duration: 0.5,
+  });
+  return tl;
+};
+
 export const wordsAnimation = ({
   wordGroupRef,
 }: {
@@ -46,8 +60,7 @@ export const thirdDigitLoaingAnimation = () => {
   });
 
   return tl;
-}
-
+};
 
 interface CollapseWordsAnimationProps {
   collapseWordsRef: React.MutableRefObject<null>;
@@ -66,16 +79,13 @@ export const collapseWordsAnimation = ({
   return tl;
 };
 
-interface ExitLoadingDigitAnimationProps {
-  loadingNumberRefContainer: React.MutableRefObject<null>;
-}
-
-export const exitLoadingDigitAnimation = ({
-  loadingNumberRefContainer,
-}: ExitLoadingDigitAnimationProps) => {
+export const exitLoadingDigitAnimation = () => {
   const tl = gsap.timeline();
 
-  tl.to(loadingNumberRefContainer.current, {
-    yPercent: -80,
+  tl.to(".for-gsap-loading-number-container", {
+    yPercent: -40,
+    opacity: 0,
   });
+
+  return tl;
 };

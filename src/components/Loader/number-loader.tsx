@@ -4,6 +4,7 @@ import {
   thirdDigitLoaingAnimation,
   firstDigitLoaingAnimation,
   secondDigitLoaingAnimation,
+  exitLoadingDigitAnimation,
 } from "./animations";
 
 const FIRST_DIGITS_SET = [0, 1];
@@ -15,8 +16,6 @@ const THIRD_DIGITS_SET = Array(10)
   .split("")
   .map(Number);
 
-console.log(THIRD_DIGITS_SET);
-
 interface Props {
   timeline: gsap.core.Timeline | null;
 }
@@ -27,15 +26,16 @@ const NumberLoader = ({ timeline }: Props) => {
   useGSAP(() => {
     timeline &&
       timeline
-        .add(thirdDigitLoaingAnimation(), )
+        .add(thirdDigitLoaingAnimation())
         .add(secondDigitLoaingAnimation(), 1)
-        .add(firstDigitLoaingAnimation(),2);
+        .add(firstDigitLoaingAnimation(), 2)
+        .add(exitLoadingDigitAnimation(), 6);
   }, [timeline]);
 
   return (
     <div
       ref={loadingNumberRefContainer}
-      className="absolute bottom-10 left-20 flex h-[5rem] w-[9rem] text-black text-[3.5rem] overflow-hidden"
+      className="for-gsap-loading-number-container absolute bottom-10 left-20 flex h-[5rem] w-[9rem] text-black text-[3.5rem] overflow-hidden"
     >
       <div className="flex justify-center items-start h-[5rem] w-[3rem] overflow-hidden">
         <div className="for-gsap-first-digit">
