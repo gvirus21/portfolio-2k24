@@ -30,7 +30,7 @@ export const menuLinks = [
   },
   {
     id: "contact-us",
-    value: "Contact us",
+    value: "Contact me",
     target: "contact-section",
   },
 ];
@@ -59,7 +59,7 @@ export const Navbar = () => {
       <AnimatePresence>
         {menuIsOpen && <MobileExpandedMenu setMenuIsOpen={setMenuIsOpen} />}
       </AnimatePresence>
-      <nav className="fixed flex justify-center items-center top-0 pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50">
+      <nav className="fixed flex justify-center items-center top-0 pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase">
         <div className="flex justify-between items-start h-full w-full max-w-[140rem] mx-6 sm:mx-10">
           <p>gourav kumar</p>
           <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">

@@ -21,13 +21,13 @@ const DesktopVersion = () => {
             offset={0}
             duration={2500}
           >
-            <p className="flex justify-between items-center">
+            <p className="flex justify-between items-center cursor-pointer">
               SEE MY WORK <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
             </p>
           </Link>
         </LinkHoverAnimation>
         <LinkHoverAnimation className="right-0 xl:text-xl tracking-wider">
-          <p className="flex justify-between items-center">
+          <p className="flex justify-between items-center cursor-pointer">
             BOOK A FREE CALL <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
           </p>
         </LinkHoverAnimation>

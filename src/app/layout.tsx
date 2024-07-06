@@ -6,21 +6,29 @@ import localFont from "next/font/local";
 import Cursor from "@/components/Cursor";
 import "./globals.css";
 
+import { Quattrocento, Send_Flowers } from "next/font/google";
+
+const quattrocento = Quattrocento({
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-quattrocento",
+});
+
+const sendFlowers = Send_Flowers({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-send-flowers",
+});
+
 export const metadata: Metadata = {
   title: "Gourav kumar",
 };
 
-const Catalunya = localFont({
-  variable: "--font-catalunya",
-  src: [
-    {
-      path: "../../public/fonts/catalunya.ttf",
-      weight: "400",
-    },
-  ],
-});
-
-const Hauora = localFont({
+const hauora = localFont({
   variable: "--font-hauora",
   src: [
     {
@@ -59,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Hauora.variable} ${Catalunya.variable} font-hauora bg-[#d8d8d8ff] `}
+        className={`${hauora.variable} ${quattrocento.variable} ${sendFlowers.variable} font-quattrocento bg-[#d8d8d8ff] `}
       >
         {/* grainy overlay */}
         <Image
@@ -67,7 +75,7 @@ export default function RootLayout({
           height={1000}
           width={2000}
           alt="grainy-bg"
-          className="fixed inset-0 h-screen w-screen pointer-events-none object-cover"
+          className="fixed inset-0 h-screen w-screen pointer-events-none object-cover z-[0]"
         />
         <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
         <Providers>

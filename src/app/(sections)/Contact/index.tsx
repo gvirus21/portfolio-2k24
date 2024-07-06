@@ -30,10 +30,10 @@ export const ContactSection = ({}: Props) => {
             <h2 className="text-3xl md:text-5xl lg:text-7xl">
               <TextReveal>Contact Me</TextReveal>
             </h2>
-            <p className="text-sm lg:text-base max-w-[15rem] sm:max-w-[24rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4">
+            <p className="text-sm lg:text-base max-w-[15rem] sm:max-w-[24rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4 ">
               I WOULD LOVE TO HEAR FROM YOU, LET&apos;S WORK — TOGETHER.
             </p>
-            <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full capitalize">
+            <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full capitalize font-hauora">
               Email Me
             </AnimatedButton>
           </div>

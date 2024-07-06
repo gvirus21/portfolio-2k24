@@ -22,13 +22,18 @@ const config: Config = {
         "3xl": "2000px",
       },
       fontFamily: {
+        quattrocento: "var(--font-quattrocento)",
         hauora: "var(--font-hauora)",
-        catalunya: "var(--font-catalunya)",
+        sendflowers: "var(--font-send-flowers)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+
+      lineHeight: {
+        "12": "2.5rem",
       },
     },
   },

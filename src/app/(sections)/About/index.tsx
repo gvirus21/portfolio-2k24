@@ -27,7 +27,10 @@ export const AboutSection = ({ timeline }: Props) => {
             <TextReveal className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl md:mb-10 lg:mb-0 uppercase">
               About Me
             </TextReveal>
-            <p className="w-[40rem] hidden lg:block lg:w-[26rem] xl:w-[40rem] lg:text-xl 2xl:text-xl lg:mt-8 xl:mt-12 2xl:mt-16 capitalize font-medium tracking-wider">
+            <p
+              style={{ lineHeight: "2.5rem" }}
+              className="w-[40rem] hidden lg:block lg:w-[26rem] xl:w-[40rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-12 2xl:mt-16 capitalize font-medium tracking-wider"
+            >
               Hey, I&apos;m Gourav! I&apos;m a frontend developer from India. I
               enjoy creating web projects that are both functional and
               aesthetically pleasing, with a focus on great user experience. In
@@ -36,7 +39,7 @@ export const AboutSection = ({ timeline }: Props) => {
           </>
 
           {/* Profile photo */}
-          <div className="absolute top-20 md:top-28 lg:top-1/2 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-translate-y-[45%] 2xl:-translate-y-[40%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] rounded-md lg:rounded-lg">
+          <div className="absolute top-20 md:top-28 lg:top-1/2 left-1/2 lg:left-auto -translate-x-1/2 lg:translate-x-0 lg:right-0 lg:-translate-y-[45%] 2xl:-translate-y-[40%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] rounded-md lg:rounded-lg z-[9999] bg-blend-multiply">
             <Image
               src={profileImage}
               fill
@@ -48,10 +51,12 @@ export const AboutSection = ({ timeline }: Props) => {
           {/* Desktop text seciton */}
           <div className="hidden lg:flex flex-col">
             <div className="mt-20 xl:mt-[5rem] 2xl:mt-[16rem]">
-              <h3 className="font-medium text-4xl">My Experience: </h3>
-              <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] mt-10 xl:mt-12 2xl:mt-16 text-lg 2xl:text-xl tracking-wide list-disc">
+              <h3 className="font-medium text-5xl font-sendflowers">
+                My Experience:{" "}
+              </h3>
+              <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] mt-10 xl:mt-12 2xl:mt-16 text-lg 2xl:text-xl tracking-wider  list-disc">
                 {aboutPoints.map((point, i) => (
-                  <li key={i} className="mb-3">
+                  <li key={i} className="mb-3 capitalize">
                     {point}
                   </li>
                 ))}
@@ -68,7 +73,7 @@ export const AboutSection = ({ timeline }: Props) => {
               my downtime, I love watching anime and picking up new skills.
             </p>
             <div>
-              <h3 className="font-medium text-3xl mt-[5rem] text-center md:text-left">
+              <h3 className="font-medium text-3xl mt-[5rem] text-center md:text-left font-sendflowers">
                 My Experience{" "}
               </h3>
               <ul className="flex flex-col justify-between min-h-[22rem] mt-12 text-lg list-disc">

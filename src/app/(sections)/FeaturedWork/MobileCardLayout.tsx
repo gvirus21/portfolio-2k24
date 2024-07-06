@@ -29,7 +29,7 @@ export const MobileCardsLayout = () => {
   });
 
   return (
-    <div className="flex lg:hidden flex-col justify-between items-center mx-auto mt-[16rem]">
+    <div className="flex lg:hidden flex-col justify-between items-center mx-auto mt-[16rem] font-hauora">
       {/* Cards */}
       {projects.map((project) => (
         <motion.div

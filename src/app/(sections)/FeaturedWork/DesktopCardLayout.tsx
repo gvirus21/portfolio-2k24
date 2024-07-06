@@ -32,7 +32,7 @@ export const DesktopCardsLayout = () => {
   return (
     <div
       ref={container}
-      className="hidden lg:block relative mx-auto h-[80rem] lg:h-[65rem] xl:h-[75rem] 2xl:h-[75rem] 3xl:h-[92rem] w-11/12 mt-[30rem]"
+      className="hidden lg:block relative mx-auto h-[80rem] lg:h-[65rem] xl:h-[75rem] 2xl:h-[75rem] 3xl:h-[92rem] w-11/12 mt-[30rem] font-hauora"
     >
       {projects.map((project) => (
         <motion.div

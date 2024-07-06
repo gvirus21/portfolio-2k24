@@ -186,37 +186,19 @@ interface TextAnimationProps {
 }
 
 const WorkTitle = ({ workIndex }: TextAnimationProps) => (
-  <>
-    {workIndex === 0 && (
-      <h3 className="text-5xl xl:text-6xl font-thin">{WORK_DATA[0].title}</h3>
-    )}
-    {workIndex === 1 && (
-      <h3 className="text-5xl xl:text-6xl font-thin">{WORK_DATA[1].title}</h3>
-    )}
-    {workIndex === 2 && (
-      <h3 className="text-5xl xl:text-6xl font-thin">{WORK_DATA[3].title}</h3>
-    )}
-  </>
+  <div className="text-5xl xl:text-6xl font-thin">
+    {workIndex === 0 && <h3>{WORK_DATA[0].title}</h3>}
+    {workIndex === 1 && <h3>{WORK_DATA[1].title}</h3>}
+    {workIndex === 2 && <h3>{WORK_DATA[3].title}</h3>}
+  </div>
 );
 
 const WorkJobTitle = ({ workIndex }: TextAnimationProps) => (
-  <>
-    {workIndex === 0 && (
-      <h4 className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold">
-        {WORK_DATA[0].jobTitle}
-      </h4>
-    )}
-    {workIndex === 1 && (
-      <h4 className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold">
-        {WORK_DATA[1].jobTitle}
-      </h4>
-    )}
-    {workIndex === 2 && (
-      <h4 className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold">
-        {WORK_DATA[3].jobTitle}
-      </h4>
-    )}
-  </>
+  <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold font-sendflowers tracking-widest">
+    {workIndex === 0 && <h4>{WORK_DATA[0].jobTitle}</h4>}
+    {workIndex === 1 && <h4>{WORK_DATA[1].jobTitle}</h4>}
+    {workIndex === 2 && <h4>{WORK_DATA[3].jobTitle}</h4>}
+  </div>
 );
 
 const WorkDescription = ({ workIndex }: TextAnimationProps) => (
@@ -248,7 +230,7 @@ interface DescriptionLineProps {
 
 const DescriptionLine = ({ description }: DescriptionLineProps) => {
   return (
-    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl list-none lg:pl-2">
+    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl 2xl:text-2xl list-none lg:pl-2">
       {description.map((message, i) => (
         <div
           key={i}
