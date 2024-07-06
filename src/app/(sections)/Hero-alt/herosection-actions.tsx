@@ -1,6 +1,9 @@
 import { IoIosArrowRoundForward as ArrowIcon } from "react-icons/io";
 import LinkHoverAnimation from "@/components/ui/LinkHoverAnimation";
 import { Link } from "react-scroll";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import gsap from "gsap";
 
 const HeroSectionActions = () => (
   <>
@@ -10,8 +13,26 @@ const HeroSectionActions = () => (
 );
 
 const DesktopVersion = () => {
+  const actionButtonRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.to(
+      actionButtonRef.current,
+      {
+        bottom: 40,
+        opacity: 0.55,
+        ease: "power1.out",
+      },
+      1
+    );
+  }, []);
+
   return (
-    <div className="hidden sm:flex absolute bottom-0 xl:bottom-10 justify-between items-center h-20 w-full z-50 opacity-55">
+    <div
+      ref={actionButtonRef}
+      className="hidden sm:flex absolute bottom-0 justify-between items-center h-20 w-full z-50 opacity-0"
+    >
       <div className="relative w-full">
         <LinkHoverAnimation className="left-0 xl:text-xl tracking-wider">
           <Link

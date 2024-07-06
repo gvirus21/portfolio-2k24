@@ -7,6 +7,7 @@ import {
   WorkSection,
   FeaturedWorkSection,
   ContactSection,
+  Navbar,
 } from "@/app/(sections)";
 
 interface Props {
@@ -16,6 +17,7 @@ interface Props {
 const MainPage = ({ timeline }: Props) => {
   return (
     <div className="relative">
+      <Navbar />
       <HeroSectionAlt timeline={timeline} />
       {/* <HeroSection timeline={timeline} /> */}
       <AboutSection timeline={timeline} />

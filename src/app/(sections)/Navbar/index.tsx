@@ -1,11 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import HamburgerMenu from "./hamburger-menu";
 import MobileExpandedMenu from "./mobile-expanded-menu";
 import { cn } from "@/lib/utils";
 import { Link } from "react-scroll";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 
 export const menuLinks = [
   {
@@ -41,6 +44,22 @@ export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [activeState, setActiveState] = useState<ActiveState>("home"); //TODO: use activeState
 
+  const navRef = useRef(null)
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { duration: 1 } });
+    // infinite scroll button animation.
+    tl.to(
+      navRef.current,
+      {
+        opacity: 1,
+        marginTop: 0,
+        ease: "power3.out",
+      },
+      1 //delay
+    );
+  });
+
   // Disable scrolling when modal is open
   useEffect(() => {
     if (menuIsOpen) {
@@ -59,7 +78,7 @@ export const Navbar = () => {
       <AnimatePresence>
         {menuIsOpen && <MobileExpandedMenu setMenuIsOpen={setMenuIsOpen} />}
       </AnimatePresence>
-      <nav className="fixed flex justify-center items-center top-0 pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase">
+      <nav ref={navRef} className="fixed flex justify-center items-center top-0 pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase opacity-0 -mt-2">
         <div className="flex justify-between items-start h-full w-full max-w-[140rem] mx-6 sm:mx-10">
           <p>gourav kumar</p>
           <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">

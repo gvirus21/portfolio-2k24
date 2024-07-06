@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import MainPage from "./main-page";
-// import Loader from "@/components/Loader";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null);
@@ -20,17 +20,15 @@ export default function Home() {
 
   return (
     <main className="h-screen w-screen max-w-full px-5 text-black">
-      {/* {loaderFinished ? (
+      {loaderFinished ? (
         <MainPage timeline={timeline} />
       ) : (
         <Loader timeline={timeline} />
-      )} */}
-      <MainPage timeline={timeline} />
+      )}
+      {/* <MainPage timeline={timeline} /> */}
     </main>
   );
 }
-
-
 
 // update text content
 // add text animation / scroll animations

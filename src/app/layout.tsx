@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/app/(sections)/Navbar";
 import Image from "next/image";
 import Providers from "./providers";
 import localFont from "next/font/local";
@@ -79,7 +78,6 @@ export default function RootLayout({
         />
         <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
         <Providers>
-          <Navbar />
           {children}
           <Cursor />
         </Providers>

@@ -31,9 +31,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-
       lineHeight: {
         "12": "2.5rem",
+      },
+      animation: {
+        loopL: "loopTextLeft 4s linear infinite",
+      },
+      keyframes: {
+        loopTextLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
       },
     },
   },
