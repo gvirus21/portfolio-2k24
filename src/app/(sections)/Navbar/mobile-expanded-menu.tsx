@@ -10,6 +10,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { RiGithubLine, RiLinkedinBoxFill } from "react-icons/ri";
 import { IoCall } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
+import Image from "next/image";
 
 interface IProps {
   setMenuIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -159,8 +160,16 @@ const MobileExpandedMenu = (props: IProps) => {
         opacity: 0,
         transition: { duration: 0.5, delay: 0.5, ease: "easeInOut" },
       }}
-      className="fixed top-0 left-0 h-screen w-screen bg-white z-50 pl-8 pt-20 pb-10 flex flex-col justify-between"
+      className="fixed top-0 left-0 h-screen w-screen z-50 pl-8 pt-20 pb-10 flex flex-col justify-between bg-white"
     >
+      <Image
+        src={"/texture/grainy.svg"}
+        height={1000}
+        width={2000}
+        alt="grainy-bg"
+        className="fixed inset-0 h-screen w-screen pointer-events-none object-cover z-[0]"
+      />
+      <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
       <MenuLinks />
 
       <div className="relative w-[20rem] mb-10">
