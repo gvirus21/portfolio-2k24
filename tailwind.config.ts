@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss";
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
   content: [
@@ -36,15 +39,33 @@ const config: Config = {
       },
       animation: {
         loopL: "loopTextLeft 4s linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         loopTextLeft: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
 export default config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

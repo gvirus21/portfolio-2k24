@@ -8,6 +8,8 @@ import {
   ContactSection,
   Navbar,
 } from "@/app/(sections)";
+import TestimonialSection from "./(sections)/Testimonials";
+import WhyChooseMeSection from "./(sections)/WhyChooseMe";
 
 interface Props {
   timeline: gsap.core.Timeline | null;
@@ -18,7 +20,9 @@ const MainPage = ({ timeline }: Props) => {
     <div className="relative">
       <Navbar />
       <HeroSection timeline={timeline} />
-      <AboutSection timeline={timeline} />
+      <AboutSection />
+      <WhyChooseMeSection />
+      <TestimonialSection />
       <WorkSection timeline={timeline} />
       <FeaturedWorkSection timeline={timeline} />
       <ContactSection timeline={timeline} />
