@@ -2,7 +2,7 @@ import { WORK_DATA } from "./work-data";
 
 const MobileVersion = () => {
   return (
-    <div className="flex flex-col items-center lg:hidden mt-24">
+    <div className="flex flex-col items-center xl:hidden mt-24">
       {WORK_DATA.map((work) => (
         <div key={work.id} className="mt-12 sm:mt-10">
           <div className="h-[12rem] xs:h-[16rem] sm:h-[20rem] aspect-[14/9] bg-white/50 -z-10 mb-16 mx-auto " />

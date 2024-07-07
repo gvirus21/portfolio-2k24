@@ -23,9 +23,9 @@ const MainPage = ({ timeline }: Props) => {
       <AboutSection />
       <WhyChooseMeSection />
       <TestimonialSection />
-      <WorkSection timeline={timeline} />
-      {/* <FeaturedWorkSection timeline={timeline} />
-      <ContactSection timeline={timeline} /> */}
+      <WorkSection />
+      <FeaturedWorkSection />
+      <ContactSection />
     </div>
   );
 };

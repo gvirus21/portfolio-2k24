@@ -5,11 +5,7 @@ import { Element } from "react-scroll";
 import AnimatedButton from "@/components/ui/AnimatedButton";
 import TextReveal from "@/components/helpers/TextReveal";
 
-interface Props {
-  timeline: gsap.core.Timeline | null;
-}
-
-export const ContactSection = ({}: Props) => {
+export const ContactSection = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
     setWindowWidth(window.innerWidth);

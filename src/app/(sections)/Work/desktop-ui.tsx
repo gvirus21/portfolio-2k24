@@ -122,7 +122,7 @@ const DesktopVersion = ({ parentRef }: Props) => {
   }, [scrolling, workIndex]);
 
   return (
-    <div className="relative hidden lg:flex flex-row justify-between min-h-[53rem] xl:min-h-0 xl:h-[40rem] mt-32 mx-auto w-10/12 xl:w-full">
+    <div className="relative hidden xl:flex flex-row justify-between min-h-[53rem] xl:min-h-0 xl:h-[40rem] mt-32 mx-auto w-10/12 xl:w-full">
       <div className="flex flex-col h-[50rem] xl:h-[40rem]">
         <AnimatePresence mode="wait">
           <motion.div
