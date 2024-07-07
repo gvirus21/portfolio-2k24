@@ -87,7 +87,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
             className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0  px-8 py-6 md:w-[450px] glassmorphism"
             key={item.name}
@@ -97,7 +97,7 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_20px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 leading-[1.6] text-black capitalize font-hauora font-normal">
+              <span className="relative z-20 leading-[1.6] text-black capitalize text-lg font-normal">
                 &quot;{item.quote}&quot;
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">

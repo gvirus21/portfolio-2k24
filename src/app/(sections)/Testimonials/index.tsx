@@ -21,7 +21,8 @@ const items = [
     profileUrl: "https://www.linkedin.com/in/garance-buricatu-9a6a50147/",
   },
   {
-    quote: "Suvendu sekhar Sahoo",
+    quote:
+      "I've had the pleasure of working with Gourav, and I can confidently say he's exceptional with frontend technologies. His skills in crafting animations and minimalist designs are impressive. Gourav's attention to detail ensures aesthetically pleasing interfaces and a stable, high-quality codebase. I highly recommend him for any project needing top-notch frontend skills and a keen eye for design.",
     name: "Suvendu sekhar Sahoo",
     title: "Senior Backend Engineer, VISA",
     profileUrl: "https://www.linkedin.com/in/suvendu-sekhar-sahoo/",
