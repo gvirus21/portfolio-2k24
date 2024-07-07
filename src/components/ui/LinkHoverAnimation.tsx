@@ -16,10 +16,10 @@ export const LinkHoverAnimation = ({
   const [isLinkHovered, setIsLinkHovered] = useState(false);
   const [isAnimationStarting, setIsAnimationStarting] = useState(false);
 
-  useEffect(() => {
-    console.log("is linkhovered: ", isLinkHovered);
-    console.log("is animation starting: ", isAnimationStarting);
-  }, [isLinkHovered, isAnimationStarting]);
+  // useEffect(() => {
+  //   console.log("is linkhovered: ", isLinkHovered);
+  //   console.log("is animation starting: ", isAnimationStarting);
+  // }, [isLinkHovered, isAnimationStarting]);
 
   return (
     <div

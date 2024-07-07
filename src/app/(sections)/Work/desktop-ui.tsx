@@ -42,7 +42,7 @@ interface Props {
   parentRef: React.MutableRefObject<null>;
 }
 
-const DesktopVersion = ({ parentRef }: Props) => {
+const DesktopVersion = () => {
   const [scrolling, setScrolling] = useState(false);
   const [workIndex, setWorkIndex] = useState(0);
   const innerContainer = useRef(null);
@@ -50,7 +50,6 @@ const DesktopVersion = ({ parentRef }: Props) => {
   useEffect(() => {
     const handleScroll = () => {
       if (scrolling) return;
-
       const workSection = document.getElementById("work-section");
       const workSectionScrollY = workSection?.offsetTop || 0; // scroll value from the work section
       const workSectionViewportHeight = workSection?.offsetHeight || 0; // height of the visible work section
@@ -190,7 +189,7 @@ interface TextAnimationProps {
 }
 
 const WorkTitle = ({ workIndex }: TextAnimationProps) => (
-  <div className="text-5xl xl:text-6xl font-thin">
+  <div className="text-4xl xl:text-5xl font-thin">
     {workIndex === 0 && <h3>{WORK_DATA[0].title}</h3>}
     {workIndex === 1 && <h3>{WORK_DATA[1].title}</h3>}
     {workIndex === 2 && <h3>{WORK_DATA[2].title}</h3>}
@@ -199,7 +198,7 @@ const WorkTitle = ({ workIndex }: TextAnimationProps) => (
 );
 
 const WorkJobTitle = ({ workIndex }: TextAnimationProps) => (
-  <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold font-sendflowers tracking-widest">
+  <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-6 font-semibold font-sendflowers tracking-widest">
     {workIndex === 0 && <h4>{WORK_DATA[0].jobTitle}</h4>}
     {workIndex === 1 && <h4>{WORK_DATA[1].jobTitle}</h4>}
     {workIndex === 2 && <h4>{WORK_DATA[2].jobTitle}</h4>}
@@ -215,7 +214,7 @@ const WorkDescription = ({ workIndex }: TextAnimationProps) => (
       animate="animate"
       exit="exit"
       key={workIndex}
-      className="lg:mt-5 xl:mt-10 2xl:mt-20 3xl:mt-40"
+      className="lg:mt-5 xl:mt-10 2xl:mt-12 3xl:mt-40"
     >
       {workIndex === 0 && (
         <DescriptionLine description={WORK_DATA[0].description} />
