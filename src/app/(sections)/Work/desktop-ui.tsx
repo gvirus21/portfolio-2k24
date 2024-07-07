@@ -59,12 +59,15 @@ const DesktopVersion = ({ parentRef }: Props) => {
         setScrolling(true);
         let newIndex = workIndex;
 
-        const thresholdHeight = workSectionViewportHeight / 3;
-        
+        const thresholdHeight = workSectionViewportHeight / 4;
+
         const firstThreshold = thresholdHeight;
         const secondThreshold = thresholdHeight * 2;
+        const thirdThreshold = thresholdHeight * 3;
 
-        if (workSectionScrollY >= secondThreshold) {
+        if (workSectionScrollY >= thirdThreshold) {
+          setWorkIndex(3);
+        } else if (workSectionScrollY >= secondThreshold) {
           setWorkIndex(2);
         } else if (workSectionScrollY >= firstThreshold) {
           setWorkIndex(1);
