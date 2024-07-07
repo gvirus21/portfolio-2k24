@@ -5,7 +5,7 @@ const MobileVersion = () => {
     <div className="flex flex-col items-center lg:hidden mt-24">
       {WORK_DATA.map((work) => (
         <div key={work.id} className="mt-12 sm:mt-10">
-          <div className="h-[14rem] sm:h-[20rem] aspect-[14/9] bg-white/50 -z-10 mb-16" />
+          <div className="h-[12rem] xs:h-[16rem] sm:h-[20rem] aspect-[14/9] bg-white/50 -z-10 mb-16 mx-auto " />
           <h3 className="text-3xl md:text-5xl font-bold">{work.title}</h3>
           <h4 className="text-lg md:text-xl my-4 font-semibold">
             {work.jobTitle}

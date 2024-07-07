@@ -35,7 +35,7 @@ const items = [
   },
 ];
 
-const TestimonialSection = () => {
+export const TestimonialSection = () => {
   return (
     <section className="flex flex-col justify-center items-center h-[50vh] w-screen max-w-full">
       <h2 className="font-medium text-5xl font-sendflowers w-11/12 text-left">

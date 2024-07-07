@@ -1,6 +1,6 @@
 import React from "react";
 
-const WhyChooseMeSection = () => {
+export const WhyChooseMeSection = () => {
   return (
     <div className="flex flex-col justify-center items-center h-[70vh] sm:h-[50vh] 3xl:h-[30vh] w-screen max-w-full mt-32 mb-20">
       <div className="w-5/6">

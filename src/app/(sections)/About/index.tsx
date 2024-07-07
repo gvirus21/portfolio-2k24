@@ -72,9 +72,9 @@ export const AboutSection = () => {
               <h3 className="font-medium text-3xl mt-[5rem] text-center md:text-left font-sendflowers">
                 My Experience{" "}
               </h3>
-              <ul className="flex flex-col justify-between min-h-[22rem] mt-12 text-lg list-disc">
+              <ul className="flex flex-col justify-between min-h-[22rem] lg:min-h-[17rem] mt-12 text-lg list-disc">
                 {aboutPoints.map((point, i) => (
-                  <li key={i} className="mb-3">
+                  <li key={i} className="mb-3 sm:mb-0">
                     {point}
                   </li>
                 ))}

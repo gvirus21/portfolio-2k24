@@ -60,6 +60,7 @@ const DesktopVersion = ({ parentRef }: Props) => {
         let newIndex = workIndex;
 
         const thresholdHeight = workSectionViewportHeight / 3;
+        
         const firstThreshold = thresholdHeight;
         const secondThreshold = thresholdHeight * 2;
 
@@ -189,7 +190,8 @@ const WorkTitle = ({ workIndex }: TextAnimationProps) => (
   <div className="text-5xl xl:text-6xl font-thin">
     {workIndex === 0 && <h3>{WORK_DATA[0].title}</h3>}
     {workIndex === 1 && <h3>{WORK_DATA[1].title}</h3>}
-    {workIndex === 2 && <h3>{WORK_DATA[3].title}</h3>}
+    {workIndex === 2 && <h3>{WORK_DATA[2].title}</h3>}
+    {workIndex === 3 && <h3>{WORK_DATA[3].title}</h3>}
   </div>
 );
 
@@ -197,7 +199,8 @@ const WorkJobTitle = ({ workIndex }: TextAnimationProps) => (
   <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-10 font-semibold font-sendflowers tracking-widest">
     {workIndex === 0 && <h4>{WORK_DATA[0].jobTitle}</h4>}
     {workIndex === 1 && <h4>{WORK_DATA[1].jobTitle}</h4>}
-    {workIndex === 2 && <h4>{WORK_DATA[3].jobTitle}</h4>}
+    {workIndex === 2 && <h4>{WORK_DATA[2].jobTitle}</h4>}
+    {workIndex === 3 && <h4>{WORK_DATA[3].jobTitle}</h4>}
   </div>
 );
 
@@ -219,6 +222,9 @@ const WorkDescription = ({ workIndex }: TextAnimationProps) => (
       )}
       {workIndex === 2 && (
         <DescriptionLine description={WORK_DATA[2].description} />
+      )}
+      {workIndex === 3 && (
+        <DescriptionLine description={WORK_DATA[3].description} />
       )}
     </motion.div>
   </AnimatePresence>
