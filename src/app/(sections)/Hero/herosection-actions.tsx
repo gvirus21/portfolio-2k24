@@ -10,7 +10,7 @@ const HeroSectionActions = () => {
     tl.to(
       ".action-buttons-container",
       {
-        bottom: 40,
+        bottom: 20,
         opacity: 0.55,
         ease: "power1.out",
       },
@@ -55,7 +55,7 @@ const DesktopVersion = () => {
 
 const MobileVersion = () => {
   return (
-    <div className="action-buttons-container sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5 opacity-0">
+    <div className="action-buttons-container absolute bottom-0 sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5 opacity-0">
       <button className="flex justify-between items-center h-12 w-full border border-black px-4 my-2 ">
         SEE MY WORK <ArrowIcon className="h-8 w-10" />
       </button>
