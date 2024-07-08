@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { WORK_DATA } from "./work-data";
 
 const MobileVersion = () => {
@@ -5,9 +6,17 @@ const MobileVersion = () => {
     <div className="flex flex-col items-center xl:hidden mt-24">
       {WORK_DATA.map((work) => (
         <div key={work.id} className="mt-12 sm:mt-10 md:mt-16 w-11/12">
-          <div className="w-full max-w-[40rem] aspect-[14/9] bg-white/50 -z-10 mb-16 mx-auto" />
+          <div className="flex justify-center items-center w-full max-w-[40rem] aspect-[14/9] bg-black -z-10 mb-16 mx-auto">
+            <Image
+              className="w-full aspect-video bg-cover"
+              src={work.image}
+              height={700}
+              width={800}
+              alt="work-image"
+            />
+          </div>
           <h3 className="text-3xl md:text-5xl font-bold">{work.title}</h3>
-          <h4 className="text-lg md:text-xl my-4 font-semibold">
+          <h4 className="text-2xl md:text-4xl my-4 font-semibold font-sendflowers">
             {work.jobTitle}
           </h4>
           <ul className="flex flex-col justify-between text-base font-thin list-disc">

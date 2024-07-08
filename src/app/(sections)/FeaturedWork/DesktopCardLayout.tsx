@@ -47,14 +47,15 @@ export const DesktopCardsLayout = () => {
             <p>{project.slNo}</p>
             <p className="max-w-[80%]">{project.title}</p>
           </div>
-          <div className={cn(project.desktopImageStyle, "shadow-md")}>
+          <div className={cn(project.desktopImageStyle, "flex justify-center items-center shadow-md")}>
             {/* image should be here */}
-            {/* <Image
+            <Image
               src={project.image}
-              fill
-              className="object-cover"
+              height={700}
+              width={1000}
+              className="object-contain"
               alt="project"
-            /> */}
+            />
           </div>
           <div>
             <div className="h-[1px] w-full bg-black mt-6 mb-4" />

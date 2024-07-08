@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { BsDot } from "react-icons/bs";
 import { WORK_DATA } from "./work-data";
 
+
 const images = [
   {
     id: 0,
@@ -146,28 +147,37 @@ const DesktopVersion = () => {
             }}
             className="relative 3xl:h-[120rem]"
           >
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem]  bg-[#a6ee1f]">
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem]  bg-slate-800">
               <Image
                 className="w-5/6 aspect-video"
-                src={images[0].url}
+                src={WORK_DATA[0].image}
                 height={700}
                 width={800}
                 alt="work-image"
               />
             </div>
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-slate-300">
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-red-950">
               <Image
                 className="w-5/6 aspect-video"
-                src={images[1].url}
+                src={WORK_DATA[1].image}
                 height={700}
                 width={800}
                 alt="work-image"
               />
             </div>
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-gray-800">
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-black">
               <Image
                 className="w-5/6 aspect-video"
-                src={images[2].url}
+                src={WORK_DATA[2].image}
+                height={700}
+                width={800}
+                alt="work-image"
+              />
+            </div>
+            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-gray-950">
+              <Image
+                className="w-5/6 aspect-video"
+                src={WORK_DATA[3].image}
                 height={700}
                 width={800}
                 alt="work-image"

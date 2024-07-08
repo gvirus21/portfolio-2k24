@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { RiGithubLine } from "react-icons/ri";
@@ -48,7 +49,15 @@ export const MobileCardsLayout = () => {
             <p>{project.slNo}</p>
             <p className="max-w-[80%]">{project.title}</p>
           </div>
-          <div className="aspect-[8/5] w-full bg-slate-600 my-3"></div>
+          <div className="flex justify-center items-center aspect-[8/5] w-full my-3">
+            <Image
+              className="w-full aspect-video"
+              src={project.image}
+              height={700}
+              width={800}
+              alt="work-image"
+            />
+          </div>
           <div>
             <div className="h-[1px] w-full bg-black mt-6 mb-4" />
             <div className="flex flex-row justify-between items-center">
