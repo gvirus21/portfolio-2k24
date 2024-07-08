@@ -2,6 +2,8 @@ import { Element } from "react-scroll";
 import Image from "next/image";
 import profileImage from "/public/assets/gourav-kumar.webp";
 import TextReveal from "@/components/helpers/TextReveal";
+import AnimatedButton from "@/components/ui/AnimatedButton";
+import { RxDownload } from "react-icons/rx";
 
 const aboutPoints = [
   "I started my career as an iOS dev but later transitioned to a Frontend developer.",
@@ -32,6 +34,11 @@ export const AboutSection = () => {
               aesthetically pleasing, with a focus on great user experience. In
               my downtime, I love watching anime and picking up new skills.
             </p>
+            <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] lg:w-[16rem] mt-5 lg:mt-10 text-sm md:text-base text-black border border-black rounded-full capitalize font-hauora">
+              <span className="flex justify-between items-center">
+                <span className="mr-3">My Resume</span> <RxDownload size={16} />
+              </span>
+            </AnimatedButton>
           </>
 
           {/* Profile photo */}

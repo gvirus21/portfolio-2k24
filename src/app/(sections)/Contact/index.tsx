@@ -26,8 +26,8 @@ export const ContactSection = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase">
               <TextReveal>Contact Me</TextReveal>
             </h2>
-            <p className="text-sm lg:text-base max-w-[15rem] sm:max-w-[24rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4 ">
-              I WOULD LOVE TO HEAR FROM YOU, LET&apos;S WORK — TOGETHER.
+            <p className="text-sm lg:text-base xl:text-xl max-w-[15rem] sm:max-w-[30rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4">
+              I would love to hear from you, let&apos;s work — together.
             </p>
             <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full capitalize font-hauora">
               Email Me
@@ -51,7 +51,9 @@ export const ContactSection = () => {
             </div>
 
             <div className="lg:text-left">
-              <h3 className="text-lg md:text-xl mb-4 font-medium">Contact Details</h3>
+              <h3 className="text-lg md:text-xl mb-4 font-medium">
+                Contact Details
+              </h3>
               <ul className="text-[12px] md:text-sm">
                 <li className="mb-2 underline-link-hover-effect">
                   <a href="mailto:gouravkumar21.dev@gmail.com">
