@@ -16,7 +16,7 @@ export const ContactSection = () => {
     <Element name="contact-section">
       <section
         ref={container}
-        className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-20 md:mt-[5rem] lg:pt-[4rem] mb-10"
+        className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-20 sm:mt-40 md:mt-[12rem] lg:mt-[8rem] mb-10 lg:mb-0"
       >
         <motion.div
           // style={{ y: windowWidth > 1024 ? 0 : -200 }}

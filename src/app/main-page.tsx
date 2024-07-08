@@ -24,7 +24,7 @@ const MainPage = ({ timeline }: Props) => {
       <WhyChooseMeSection />
       <TestimonialSection />
       <WorkSection />
-      {/* <FeaturedWorkSection /> */}
+      <FeaturedWorkSection />
       <ContactSection />
     </div>
   );

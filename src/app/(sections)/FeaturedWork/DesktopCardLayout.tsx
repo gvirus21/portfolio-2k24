@@ -15,10 +15,10 @@ export const DesktopCardsLayout = () => {
     offset: ["start end", "end start"],
   });
 
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -700]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -700]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -700]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, -700]);
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -500]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -500]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, -500]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, -500]);
 
   const yValues = [y1, y2, y3, y4];
 
@@ -32,7 +32,7 @@ export const DesktopCardsLayout = () => {
   return (
     <div
       ref={container}
-      className="hidden lg:block relative mx-auto h-[80rem] lg:h-[65rem] xl:h-[75rem] 2xl:h-[75rem] 3xl:h-[92rem] w-[95%] mt-[30rem] font-hauora"
+      className="hidden lg:block relative mx-auto h-[80rem] lg:h-[65rem] xl:h-[75rem] 2xl:h-[75rem] 3xl:h-[92rem] w-[95%] mt-[20rem] font-hauora"
     >
       {projects.map((project) => (
         <motion.div
@@ -45,7 +45,7 @@ export const DesktopCardsLayout = () => {
         >
           <div className="flex justify-between items-center text-xl font-medium">
             <p>{project.slNo}</p>
-            <p>{project.title}</p>
+            <p className="max-w-[80%]">{project.title}</p>
           </div>
           <div className={cn(project.desktopImageStyle, "shadow-md")}>
             {/* image should be here */}
