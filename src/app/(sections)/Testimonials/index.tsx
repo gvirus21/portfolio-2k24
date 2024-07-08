@@ -38,8 +38,8 @@ const items = [
 
 export const TestimonialSection = () => {
   return (
-    <section className="flex flex-col justify-center items-center h-[50vh] w-screen max-w-full">
-      <h2 className="font-medium text-5xl font-sendflowers w-11/12 text-left">
+    <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full mt-[5rem] sm:mt-[12rem] 3xl:mt-40">
+      <h2 className="font-medium text-5xl font-sendflowers w-10/12 text-left">
         Testimonials
       </h2>
       <div className="w-full lg:w-11/12 mt-10 sm:mt-20">

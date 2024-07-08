@@ -2,7 +2,7 @@ import React from "react";
 
 export const WhyChooseMeSection = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-[70vh] sm:h-[50vh] 3xl:h-[30vh] w-screen max-w-full mt-32 mb-20">
+    <div className="flex flex-col justify-center items-center h-[70vh] sm:h-[50vh] 3xl:h-[30vh] w-screen max-w-full mt-28 xs:mt-6 sm:mt-36 mb-20">
       <div className="w-5/6">
         <h3 className="font-medium text-4xl xl:text-5xl font-sendflowers w-full text-center">
           Why Choose Me?

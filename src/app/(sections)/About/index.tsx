@@ -16,7 +16,7 @@ export const AboutSection = () => {
     <Element name="about-section">
       <section
         className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between min-h-[90vh] lg:min-h-[70vh] 
-      2xl:min-h-[40vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-40 lg:mt-[8rem] 2xl:mt-[14rem]"
+      2xl:min-h-[40vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-20 md:mt-20 lg:mt-[8rem] 2xl:mt-[14rem]"
       >
         <div className="flex flex-col justify-between">
           <>

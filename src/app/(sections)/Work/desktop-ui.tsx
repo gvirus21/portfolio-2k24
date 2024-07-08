@@ -238,7 +238,7 @@ interface DescriptionLineProps {
 
 const DescriptionLine = ({ description }: DescriptionLineProps) => {
   return (
-    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[36rem] 3xl:w-[50rem] text-base lg:text-xl 2xl:text-2xl list-none lg:pl-2">
+    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[35rem] 3xl:w-[50rem] text-base lg:text-xl 3xl:text-2xl list-none lg:pl-2">
       {description.map((message, i) => (
         <div
           key={i}
