@@ -16,14 +16,14 @@ export const ContactSection = () => {
     <Element name="contact-section">
       <section
         ref={container}
-        className="h-0 md:h-[5rem] lg:h-[24rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-0 md:mt-[5rem] lg:pt-[4rem] mb-10"
+        className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-20 md:mt-[5rem] lg:pt-[4rem] mb-10"
       >
         <motion.div
-          style={{ y: windowWidth > 1024 ? 0 : -200 }}
+          // style={{ y: windowWidth > 1024 ? 0 : -200 }}
           className="flex flex-col sm:flex-row justify-between items-center w-full mx-auto"
         >
           <div className="flex flex-col w-full md:w-5/6">
-            <h2 className="text-3xl md:text-5xl lg:text-7xl">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase">
               <TextReveal>Contact Me</TextReveal>
             </h2>
             <p className="text-sm lg:text-base max-w-[15rem] sm:max-w-[24rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4 ">
@@ -34,10 +34,10 @@ export const ContactSection = () => {
             </AnimatedButton>
           </div>
 
-          <div className="hidden sm:flex text-sm md:text-base justify-between w-[30rem] lg:w-[26rem] xl:w-[22rem] mt-10">
+          <div className="hidden sm:flex text-sm lg:text-base justify-between w-[30rem] lg:w-[26rem] xl:w-[22rem] lg:mt-10">
             <div className="md:text-left">
-              <h3 className="text-xl mb-4 font-medium">Social</h3>
-              <ul className="text-sm">
+              <h3 className="text-lg md:text-xl mb-4 font-medium">Social</h3>
+              <ul className="text-[12px] md:text-sm">
                 <li className="mb-2 underline-link-hover-effect">
                   <Link href="">X / Twitter</Link>
                 </li>
@@ -51,8 +51,8 @@ export const ContactSection = () => {
             </div>
 
             <div className="lg:text-left">
-              <h3 className="text-xl mb-4 font-medium">Contact Details</h3>
-              <ul className="text-sm">
+              <h3 className="text-lg md:text-xl mb-4 font-medium">Contact Details</h3>
+              <ul className="text-[12px] md:text-sm">
                 <li className="mb-2 underline-link-hover-effect">
                   <a href="mailto:gouravkumar21.dev@gmail.com">
                     gouravkumar21.dev@gmail.com
