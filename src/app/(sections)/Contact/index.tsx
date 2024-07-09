@@ -27,7 +27,12 @@ export const ContactSection = () => {
               <TextReveal>Contact Me</TextReveal>
             </h2>
             <p className="text-sm lg:text-base xl:text-xl max-w-[15rem] sm:max-w-[30rem] sm:w-[16rem] lg:w-[20rem] xl:w-full my-4">
+              
+              
+              <TextReveal animationDelay={0.01}>
               I would love to hear from you, let&apos;s work — together.
+
+              </TextReveal>
             </p>
             <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[7rem] sm:w-[10rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full capitalize font-hauora">
               Email Me

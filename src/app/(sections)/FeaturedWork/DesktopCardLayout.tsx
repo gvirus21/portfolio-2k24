@@ -6,6 +6,7 @@ import { RiGithubLine } from "react-icons/ri";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Projects } from "./projects";
 import { cn } from "@/lib/utils";
+import TextReveal from "@/components/helpers/TextReveal";
 
 export const DesktopCardsLayout = () => {
   const container = useRef(null);
@@ -47,7 +48,12 @@ export const DesktopCardsLayout = () => {
             <p>{project.slNo}</p>
             <p className="max-w-[80%]">{project.title}</p>
           </div>
-          <div className={cn(project.desktopImageStyle, "flex justify-center items-center shadow-md")}>
+          <div
+            className={cn(
+              project.desktopImageStyle,
+              "flex justify-center items-center shadow-md"
+            )}
+          >
             {/* image should be here */}
             <Image
               src={project.image}
@@ -60,7 +66,9 @@ export const DesktopCardsLayout = () => {
           <div>
             <div className="h-[1px] w-full bg-black mt-6 mb-4" />
             <div className="flex flex-row justify-between items-start">
-              <p className="text-sm w-11/12">{project.description}</p>
+              <p className="text-sm w-11/12">
+                <TextReveal animationDelay={0.01}>{project.description}</TextReveal>
+              </p>
               {project?.status ? (
                 <></>
               ) : (

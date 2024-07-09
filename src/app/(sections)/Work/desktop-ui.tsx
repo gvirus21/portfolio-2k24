@@ -1,24 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { BsDot } from "react-icons/bs";
+
+import { SimpleTextReveal, TextReveal } from "@/components/helpers";
 import { WORK_DATA } from "./work-data";
-
-
-const images = [
-  {
-    id: 0,
-    url: "/assets/projects/meron.webp",
-  },
-  {
-    id: 1,
-    url: "/assets/projects/nepom.webp",
-  },
-  {
-    id: 2,
-    url: "/assets/projects/vmeet.webp",
-  },
-];
 
 const textAnimation = {
   initial: {
@@ -138,7 +124,26 @@ const DesktopVersion = () => {
           </motion.div>
         </AnimatePresence>
 
-        <div className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden">
+        {/* image container */}
+        <motion.div
+          variants={{
+            initial: {
+              y: 40,
+              opacity: 0,
+            },
+            animate: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeOut",
+              },
+            },
+          }}
+          initial="initial"
+          animate="animate"
+          className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden"
+        >
           <motion.div
             ref={innerContainer}
             style={{
@@ -184,7 +189,7 @@ const DesktopVersion = () => {
               />
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         <WorkDescription workIndex={workIndex} />
       </div>
@@ -200,19 +205,52 @@ interface TextAnimationProps {
 
 const WorkTitle = ({ workIndex }: TextAnimationProps) => (
   <div className="text-4xl xl:text-5xl font-thin">
-    {workIndex === 0 && <h3>{WORK_DATA[0].title}</h3>}
-    {workIndex === 1 && <h3>{WORK_DATA[1].title}</h3>}
-    {workIndex === 2 && <h3>{WORK_DATA[2].title}</h3>}
-    {workIndex === 3 && <h3>{WORK_DATA[3].title}</h3>}
+    {workIndex === 0 && (
+      <h3>
+        <SimpleTextReveal>{WORK_DATA[0].title}</SimpleTextReveal>
+      </h3>
+    )}
+    {workIndex === 1 && (
+      <h3>
+        <SimpleTextReveal>{WORK_DATA[1].title}</SimpleTextReveal>
+      </h3>
+    )}
+    {workIndex === 2 && (
+      <h3>
+        <SimpleTextReveal>{WORK_DATA[2].title}</SimpleTextReveal>
+      </h3>
+    )}
+    {workIndex === 3 && (
+      <h3>
+        <SimpleTextReveal>{WORK_DATA[3].title}</SimpleTextReveal>
+      </h3>
+    )}
   </div>
 );
 
 const WorkJobTitle = ({ workIndex }: TextAnimationProps) => (
   <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-6 font-semibold font-sendflowers tracking-widest">
-    {workIndex === 0 && <h4>{WORK_DATA[0].jobTitle}</h4>}
-    {workIndex === 1 && <h4>{WORK_DATA[1].jobTitle}</h4>}
-    {workIndex === 2 && <h4>{WORK_DATA[2].jobTitle}</h4>}
-    {workIndex === 3 && <h4>{WORK_DATA[3].jobTitle}</h4>}
+    {workIndex === 0 && (
+      <h4>
+        {" "}
+        <SimpleTextReveal>{WORK_DATA[0].jobTitle}</SimpleTextReveal>
+      </h4>
+    )}
+    {workIndex === 1 && (
+      <h4>
+        <SimpleTextReveal>{WORK_DATA[1].jobTitle}</SimpleTextReveal>
+      </h4>
+    )}
+    {workIndex === 2 && (
+      <h4>
+        <SimpleTextReveal>{WORK_DATA[2].jobTitle}</SimpleTextReveal>
+      </h4>
+    )}
+    {workIndex === 3 && (
+      <h4>
+        <SimpleTextReveal>{WORK_DATA[3].jobTitle}</SimpleTextReveal>
+      </h4>
+    )}
   </div>
 );
 
@@ -255,7 +293,9 @@ const DescriptionLine = ({ description }: DescriptionLineProps) => {
           className="relative flex items-center overflow-hidden my-2"
         >
           <BsDot className="h-10 w-10 mr-4 mt-1" />
-          <li className="w-[97%]">{message}</li>
+          <li className="w-[97%]">
+            <TextReveal animationDelay={0.005}>{message}</TextReveal>
+          </li>
         </div>
       ))}
     </ul>

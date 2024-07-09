@@ -1,5 +1,7 @@
+import { SimpleTextReveal } from "@/components/helpers";
 import { InfiniteMovingCards } from "@/components/ui/Infinite-moving-cards";
-import React from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const items = [
   {
@@ -36,19 +38,43 @@ const items = [
   },
 ];
 
+const containerVariants = {
+  initial: {
+    y: 60,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: "easeIn",
+    },
+  },
+};
+
 export const TestimonialSection = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { amount: 0.8, once: true });
+
   return (
     <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full mt-[5rem] sm:mt-[12rem] 3xl:mt-40">
       <h2 className="font-medium text-5xl font-sendflowers w-10/12 text-left">
-        Testimonials
+        <SimpleTextReveal delay={0.5}>Testimonials</SimpleTextReveal>
       </h2>
-      <div className="w-full lg:w-11/12 mt-10 sm:mt-20">
+      <motion.div
+        ref={containerRef}
+        variants={containerVariants}
+        initial="initial"
+        animate={isInView ? "animate" : "hidden"}
+        className="w-full lg:w-11/12 mt-10 sm:mt-20"
+      >
         <InfiniteMovingCards
           className="w-screen max-w-full"
           items={items}
           direction="left"
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -12,7 +12,7 @@ interface Props {
   type?: "word" | "letter";
 }
 
-const TextReveal = ({
+export const TextReveal = ({
   children,
   className,
   animationDelay = 0.2,
@@ -22,7 +22,7 @@ const TextReveal = ({
   exitDelay = 5000,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { amount: 0.2, once: true });
+  const isInView = useInView(containerRef, { amount: 0.4, once: true });
 
   const [show, setShow] = useState(true);
 

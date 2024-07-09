@@ -1,7 +1,7 @@
-import { Element } from "react-scroll";
 import Image from "next/image";
+import { Element } from "react-scroll";
+import { TextReveal, SimpleTextReveal } from "@/components/helpers";
 import profileImage from "/public/assets/gourav-kumar.webp";
-import TextReveal from "@/components/helpers/TextReveal";
 
 const aboutPoints = [
   "I started my career as an iOS dev but later transitioned to a Frontend developer.",
@@ -27,10 +27,12 @@ export const AboutSection = () => {
               style={{ lineHeight: "2.5rem" }}
               className="w-[40rem] hidden xl:block xl:w-[37rem] 2xl:w-[40rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-3 2xl:mt-16 capitalize font-medium tracking-wider"
             >
-              Hey, I&apos;m Gourav! I&apos;m a frontend developer from India. I
-              enjoy creating web projects that are both functional and
-              aesthetically pleasing, with a focus on great user experience. In
-              my downtime, I love watching anime and picking up new skills.
+              <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                Hey, I&apos;m Gourav! I&apos;m a frontend developer from India.
+                I enjoy creating web projects that are both functional and
+                aesthetically pleasing, with a focus on great user experience.
+                In my downtime, I love watching anime and picking up new skills.
+              </TextReveal>
             </p>
           </>
 
@@ -48,12 +50,14 @@ export const AboutSection = () => {
           <div className="hidden xl:flex flex-col">
             <div className="mt-20 xl:mt-[3rem] 2xl:mt-[16rem]">
               <h3 className="font-medium text-5xl font-sendflowers">
-                My Experience:{" "}
+                <SimpleTextReveal delay={1}>My Experience:</SimpleTextReveal>
               </h3>
               <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] mt-10 xl:mt-12 2xl:mt-16 text-lg 2xl:text-xl tracking-wider  list-disc">
                 {aboutPoints.map((point, i) => (
                   <li key={i} className="mb-3 capitalize">
-                    {point}
+                    <TextReveal containerDelay={1.5} animationDelay={0.03}>
+                      {point}
+                    </TextReveal>
                   </li>
                 ))}
               </ul>
@@ -70,7 +74,7 @@ export const AboutSection = () => {
             </p>
             <div>
               <h3 className="font-medium text-3xl mt-[5rem] text-center md:text-left font-sendflowers">
-                My Experience{" "}
+                <SimpleTextReveal>My Experience</SimpleTextReveal>
               </h3>
               <ul className="flex flex-col justify-between min-h-[22rem] lg:min-h-[17rem] mt-12 text-lg list-disc">
                 {aboutPoints.map((point, i) => (
