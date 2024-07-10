@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { BsDot } from "react-icons/bs";
-
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { SimpleTextReveal, TextReveal } from "@/components/helpers";
 import { WORK_DATA } from "./work-data";
 
@@ -25,14 +23,29 @@ const textAnimation = {
   },
 };
 
-interface Props {
-  parentRef: React.MutableRefObject<null>;
-}
+const imageVariants = {
+  initial: {
+    y: 40,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
+};
 
 const DesktopVersion = () => {
   const [scrolling, setScrolling] = useState(false);
   const [workIndex, setWorkIndex] = useState(0);
+
+  const imageContainerRef = useRef(null);
   const innerContainer = useRef(null);
+
+  const isInView = useInView(imageContainerRef, { amount: 0.4, once: true });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -126,22 +139,10 @@ const DesktopVersion = () => {
 
         {/* image container */}
         <motion.div
-          variants={{
-            initial: {
-              y: 40,
-              opacity: 0,
-            },
-            animate: {
-              y: 0,
-              opacity: 1,
-              transition: {
-                duration: 1,
-                ease: "easeOut",
-              },
-            },
-          }}
+          ref={imageContainerRef}
+          variants={imageVariants}
           initial="initial"
-          animate="animate"
+          animate={isInView ? "animate" : "initial"}
           className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden"
         >
           <motion.div
@@ -286,15 +287,16 @@ interface DescriptionLineProps {
 
 const DescriptionLine = ({ description }: DescriptionLineProps) => {
   return (
-    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[35rem] 3xl:w-[50rem] text-base lg:text-xl 3xl:text-2xl list-none lg:pl-2">
+    <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[35rem] 3xl:w-[50rem] text-base lg:text-xl list-none lg:pl-2">
       {description.map((message, i) => (
         <div
           key={i}
           className="relative flex items-center overflow-hidden my-2"
         >
-          <BsDot className="h-10 w-10 mr-4 mt-1" />
-          <li className="w-[97%]">
-            <TextReveal animationDelay={0.005}>{message}</TextReveal>
+          <li className="w-[97%] my-2">
+            <TextReveal animationDelay={0.005} className="leading">
+              {message}
+            </TextReveal>
           </li>
         </div>
       ))}

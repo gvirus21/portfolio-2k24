@@ -5,10 +5,12 @@ import { cn } from "@/lib/utils";
 interface Props {
   children: string;
   className?: string;
+  animationDuration?: number;
   animationDelay?: number;
   containerDelay?: number;
   exitAnimation?: boolean;
   exitDelay?: number;
+  offsetAmount?: number;
   type?: "word" | "letter";
 }
 
@@ -16,13 +18,15 @@ export const TextReveal = ({
   children,
   className,
   animationDelay = 0.2,
+  animationDuration,
   containerDelay,
   type = "word",
   exitAnimation,
+  offsetAmount,
   exitDelay = 5000,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { amount: 0.4, once: true });
+  const isInView = useInView(containerRef, { amount: offsetAmount ?? 0.4, once: true });
 
   const [show, setShow] = useState(true);
 
@@ -58,7 +62,7 @@ export const TextReveal = ({
     animate: (i: number) => ({
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: animationDuration ?? 0.6,
         delay:
           (containerDelay ?? 0) +
           (animationDelay ? animationDelay * i : 0.2 * i),
@@ -78,12 +82,12 @@ export const TextReveal = ({
 
   const lettersVariant = {
     initial: {
-      y: 150,
+      y: 80,
     },
     animate: (i: number) => ({
       y: 10,
       transition: {
-        duration: 0.8,
+        duration: animationDuration ?? 0.4,
         delay:
           (containerDelay ?? 0) +
           (animationDelay ? animationDelay * i : 0.2 * i),

@@ -12,7 +12,7 @@ export const WorkSection = () => {
       >
         <div className="relative left-1/2 transform -translate-x-1/2 flex justify-between lg:min-h-[80vh] w-11/12 max-w-[140rem]">
           <h2 className="absolute left-0 xl:left-auto xl:right-0 text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase">
-            <TextReveal>My Work</TextReveal>
+            <TextReveal type="letter" containerDelay={0.5} animationDelay={0.06}>My Work</TextReveal>
           </h2>
           <DesktopVersion />
           <MobileVersion />
