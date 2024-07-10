@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import { TextReveal, SimpleTextReveal } from "@/components/helpers";
 import profileImage from "/public/assets/gourav-kumar.webp";
 import { motion, useInView } from "framer-motion";
+import useCursorState from "@/store/useCursorState";
 
 const aboutPoints = [
   "I started my career as an iOS dev but later transitioned to a Frontend developer.",
@@ -55,6 +56,8 @@ export const AboutSection = () => {
     window.innerWidth > 1280 ? true : false
   );
   const imageContainerRef = useRef(null);
+  const { setCursorState } = useCursorState();
+
   const isInView = useInView(imageContainerRef, { amount: 0.4, once: true });
 
   useEffect(() => {
@@ -79,14 +82,23 @@ export const AboutSection = () => {
       >
         <div className="flex flex-col justify-between">
           <>
-            <TextReveal
-              type="letter"
-              animationDelay={0.07}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
+            <h3
+              onMouseEnter={() => setCursorState("lg-hovered")}
+              onMouseLeave={() => setCursorState("regular")}
             >
-              About Me
-            </TextReveal>
-            <p className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-16 capitalize font-medium tracking-wider">
+              <TextReveal
+                type="letter"
+                animationDelay={0.07}
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
+              >
+                About Me
+              </TextReveal>
+            </h3>
+            <p
+              onMouseEnter={() => setCursorState("md-hovered")}
+              onMouseLeave={() => setCursorState("regular")}
+              className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-16 capitalize font-medium tracking-wider"
+            >
               <TextReveal containerDelay={0.5} animationDelay={0.02}>
                 Hey, I&apos;m Gourav! I&apos;m a frontend developer from India.
                 I enjoy creating web projects that are both functional and
@@ -109,18 +121,29 @@ export const AboutSection = () => {
               fill
               alt="profile-image"
               className="object-cover"
+              onMouseEnter={() => setCursorState("xl-hovered")}
+              onMouseLeave={() => setCursorState("regular")}
             />
           </motion.div>
 
           {/* Desktop text seciton */}
           <div className="hidden xl:flex flex-col">
             <div className="mt-20 xl:mt-[5rem] 2xl:mt-[14rem] 3xl:mt-[12rem]">
-              <h3 className="font-medium xl:text-4xl 2xl:text-5xl font-sendflowers">
+              <h3
+                onMouseEnter={() => setCursorState("lg-hovered")}
+                onMouseLeave={() => setCursorState("regular")}
+                className="font-medium xl:text-4xl 2xl:text-5xl font-sendflowers"
+              >
                 <SimpleTextReveal delay={1}>My Experience:</SimpleTextReveal>
               </h3>
               <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] 3xl:w-[48rem] mt-10 xl:mt-8 2xl:mt-16 text-lg 2xl:text-xl tracking-wider">
                 {aboutPoints.map((point, i) => (
-                  <li key={i} className="capitalize xl:my-2 2xl:my-3 leading-6">
+                  <li
+                    onMouseEnter={() => setCursorState("md-hovered")}
+                    onMouseLeave={() => setCursorState("regular")}
+                    key={i}
+                    className="capitalize xl:my-2 2xl:my-3 leading-6"
+                  >
                     <TextReveal
                       offsetAmount={0.01}
                       containerDelay={1.1}

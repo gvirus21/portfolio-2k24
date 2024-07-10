@@ -1,7 +1,8 @@
+import { useRef } from "react";
 import { SimpleTextReveal } from "@/components/helpers";
 import { InfiniteMovingCards } from "@/components/ui/Infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import useCursorState from "@/store/useCursorState";
 
 const items = [
   {
@@ -56,10 +57,15 @@ const containerVariants = {
 export const TestimonialSection = () => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { amount: 0.8, once: true });
+  const { setCursorState } = useCursorState();
 
   return (
     <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full mt-[5rem] sm:mt-[12rem] 3xl:mt-40">
-      <h2 className="font-medium text-5xl font-sendflowers w-10/12 text-left">
+      <h2
+        onMouseEnter={() => setCursorState("lg-hovered")}
+        onMouseLeave={() => setCursorState("regular")}
+        className="font-medium text-5xl font-sendflowers w-10/12 text-left"
+      >
         <SimpleTextReveal delay={0.5}>Testimonials</SimpleTextReveal>
       </h2>
       <motion.div

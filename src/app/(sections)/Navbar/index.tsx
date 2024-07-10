@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-scroll";
 import { AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import HamburgerMenu from "./hamburger-menu";
 import MobileExpandedMenu from "./mobile-expanded-menu";
+import useCursorState from "@/store/useCursorState";
 import { cn } from "@/lib/utils";
-import { Link } from "react-scroll";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 
 export const menuLinks = [
   {
@@ -42,12 +43,12 @@ type ActiveState = "home" | "projects" | "work" | "contact-us";
 export const Navbar = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [activeState, setActiveState] = useState<ActiveState>("home"); //TODO: use activeState
+  const { setCursorState } = useCursorState();
 
   const navRef = useRef(null);
 
   useGSAP(() => {
     const tl = gsap.timeline({ defaults: { duration: 1 } });
-    // infinite scroll button animation.
     tl.to(
       navRef.current,
       {
@@ -79,11 +80,17 @@ export const Navbar = () => {
       </AnimatePresence>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 flex justify-center items-center pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase opacity-0 -mt-2"
+        className="fixed top-0 left-0 flex justify-center items-center pt-6 md:pt-8 pb-3 h-10 md:h-40 w-full font-medium z-50 uppercase opacity-0 -mt-2 pointer-events-none"
       >
         <div className="flex justify-between items-start h-full w-full max-w-[140rem] mx-6 sm:mx-10">
-          <p>gourav kumar</p>
-          <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem]">
+          <p
+            className="pointer-events-auto"
+            onMouseEnter={() => setCursorState("sm-hovered")}
+            onMouseLeave={() => setCursorState("regular")}
+          >
+            gourav kumar
+          </p>
+          <ul className="h-full hidden md:flex flex-col justify-between items-end text-[0.7rem] pointer-events-auto">
             {menuLinks.map((link) => (
               <Link
                 smooth="easeInOutQuart"
@@ -96,6 +103,8 @@ export const Navbar = () => {
                 className={cn(
                   "text-black underline-link-hover-effect tracking-wider hover:font-medium transition-all ease-in-out duration-200 cursor-pointer"
                 )}
+                onMouseEnter={() => setCursorState("sm-hovered")}
+                onMouseLeave={() => setCursorState("regular")}
               >
                 {link.value}
               </Link>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { SimpleTextReveal, TextReveal } from "@/components/helpers";
 import { WORK_DATA } from "./work-data";
+import useCursorState from "@/store/useCursorState";
 
 const textAnimation = {
   initial: {
@@ -204,56 +205,87 @@ interface TextAnimationProps {
   workIndex: number;
 }
 
-const WorkTitle = ({ workIndex }: TextAnimationProps) => (
-  <div className="text-4xl xl:text-5xl font-thin">
-    {workIndex === 0 && (
-      <h3>
-        <SimpleTextReveal>{WORK_DATA[0].title}</SimpleTextReveal>
-      </h3>
-    )}
-    {workIndex === 1 && (
-      <h3>
-        <SimpleTextReveal>{WORK_DATA[1].title}</SimpleTextReveal>
-      </h3>
-    )}
-    {workIndex === 2 && (
-      <h3>
-        <SimpleTextReveal>{WORK_DATA[2].title}</SimpleTextReveal>
-      </h3>
-    )}
-    {workIndex === 3 && (
-      <h3>
-        <SimpleTextReveal>{WORK_DATA[3].title}</SimpleTextReveal>
-      </h3>
-    )}
-  </div>
-);
+const WorkTitle = ({ workIndex }: TextAnimationProps) => {
+  const { setCursorState } = useCursorState();
 
-const WorkJobTitle = ({ workIndex }: TextAnimationProps) => (
-  <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-6 font-semibold font-sendflowers tracking-widest">
-    {workIndex === 0 && (
-      <h4>
-        {" "}
-        <SimpleTextReveal>{WORK_DATA[0].jobTitle}</SimpleTextReveal>
-      </h4>
-    )}
-    {workIndex === 1 && (
-      <h4>
-        <SimpleTextReveal>{WORK_DATA[1].jobTitle}</SimpleTextReveal>
-      </h4>
-    )}
-    {workIndex === 2 && (
-      <h4>
-        <SimpleTextReveal>{WORK_DATA[2].jobTitle}</SimpleTextReveal>
-      </h4>
-    )}
-    {workIndex === 3 && (
-      <h4>
-        <SimpleTextReveal>{WORK_DATA[3].jobTitle}</SimpleTextReveal>
-      </h4>
-    )}
-  </div>
-);
+  return (
+    <div className="text-4xl xl:text-5xl font-thin">
+      {workIndex === 0 && (
+        <h3
+          onMouseEnter={() => setCursorState("lg-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[0].title}</SimpleTextReveal>
+        </h3>
+      )}
+      {workIndex === 1 && (
+        <h3
+          onMouseEnter={() => setCursorState("lg-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[1].title}</SimpleTextReveal>
+        </h3>
+      )}
+      {workIndex === 2 && (
+        <h3
+          onMouseEnter={() => setCursorState("lg-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[2].title}</SimpleTextReveal>
+        </h3>
+      )}
+      {workIndex === 3 && (
+        <h3
+          onMouseEnter={() => setCursorState("lg-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[3].title}</SimpleTextReveal>
+        </h3>
+      )}
+    </div>
+  );
+};
+
+const WorkJobTitle = ({ workIndex }: TextAnimationProps) => {
+  const { setCursorState } = useCursorState();
+  return (
+    <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-6 font-semibold font-sendflowers tracking-widest">
+      {workIndex === 0 && (
+        <h4
+          onMouseEnter={() => setCursorState("md-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          {" "}
+          <SimpleTextReveal>{WORK_DATA[0].jobTitle}</SimpleTextReveal>
+        </h4>
+      )}
+      {workIndex === 1 && (
+        <h4
+          onMouseEnter={() => setCursorState("md-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[1].jobTitle}</SimpleTextReveal>
+        </h4>
+      )}
+      {workIndex === 2 && (
+        <h4
+          onMouseEnter={() => setCursorState("md-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[2].jobTitle}</SimpleTextReveal>
+        </h4>
+      )}
+      {workIndex === 3 && (
+        <h4
+          onMouseEnter={() => setCursorState("md-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+        >
+          <SimpleTextReveal>{WORK_DATA[3].jobTitle}</SimpleTextReveal>
+        </h4>
+      )}
+    </div>
+  );
+};
 
 const WorkDescription = ({ workIndex }: TextAnimationProps) => (
   <AnimatePresence mode="wait">
@@ -286,6 +318,8 @@ interface DescriptionLineProps {
 }
 
 const DescriptionLine = ({ description }: DescriptionLineProps) => {
+  const { setCursorState } = useCursorState();
+
   return (
     <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[35rem] 3xl:w-[50rem] text-base lg:text-xl list-none lg:pl-2">
       {description.map((message, i) => (
@@ -293,7 +327,11 @@ const DescriptionLine = ({ description }: DescriptionLineProps) => {
           key={i}
           className="relative flex items-center overflow-hidden my-2"
         >
-          <li className="w-[97%] my-2">
+          <li
+            onMouseEnter={() => setCursorState("md-hovered")}
+            onMouseLeave={() => setCursorState("regular")}
+            className="w-[97%] my-2"
+          >
             <TextReveal animationDelay={0.005} className="leading">
               {message}
             </TextReveal>

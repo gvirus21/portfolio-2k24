@@ -3,6 +3,7 @@ import LinkHoverAnimation from "@/components/ui/LinkHoverAnimation";
 import { Link } from "react-scroll";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import useCursorState from "@/store/useCursorState";
 
 const HeroSectionActions = () => {
   useGSAP(() => {
@@ -27,6 +28,8 @@ const HeroSectionActions = () => {
 };
 
 const DesktopVersion = () => {
+  const { setCursorState } = useCursorState();
+
   return (
     <div className="action-buttons-container hidden sm:flex absolute bottom-0 justify-between items-center h-20 w-full z-50 opacity-0">
       <div className="relative w-full">
@@ -38,13 +41,21 @@ const DesktopVersion = () => {
             offset={0}
             duration={2500}
           >
-            <p className="flex justify-between items-center cursor-pointer">
+            <p
+              onMouseEnter={() => setCursorState("sm-hovered")}
+              onMouseLeave={() => setCursorState("regular")}
+              className="flex justify-between items-center cursor-pointer"
+            >
               SEE MY WORK <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
             </p>
           </Link>
         </LinkHoverAnimation>
         <LinkHoverAnimation className="right-0 xl:text-xl tracking-wider">
-          <p className="flex justify-between items-center cursor-pointer">
+          <p
+            onMouseEnter={() => setCursorState("sm-hovered")}
+            onMouseLeave={() => setCursorState("regular")}
+            className="flex justify-between items-center cursor-pointer"
+          >
             BOOK A FREE CALL <ArrowIcon className="h-8 xl:h-10 w-8 xl:w-14" />
           </p>
         </LinkHoverAnimation>
