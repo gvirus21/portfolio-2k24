@@ -7,10 +7,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Projects } from "./projects";
 import { cn } from "@/lib/utils";
 import TextReveal from "@/components/helpers/TextReveal";
+import useCursorState from "@/store/useCursorState";
 
 export const DesktopCardsLayout = () => {
   const container = useRef(null);
   const router = useRouter();
+  const { setCursorState, setCursorText } = useCursorState();
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "end start"],
@@ -41,6 +43,18 @@ export const DesktopCardsLayout = () => {
           style={{
             y: project.parallax,
           }}
+          onMouseEnter={() => {
+            if (project.slNo !== "04") {
+              setCursorState("md-hovered");
+              setCursorText("checkout project");
+            } else {
+              setCursorText("coming soon");
+            }
+          }}
+          onMouseLeave={() => {
+            setCursorState("regular");
+            setCursorText("");
+          }}
           onClick={() => router.push(project.link)}
           className={cn(project.desktopContainerStyle, "cursor-pointer")}
         >
@@ -54,7 +68,6 @@ export const DesktopCardsLayout = () => {
               "flex justify-center items-center shadow-md"
             )}
           >
-            {/* image should be here */}
             <Image
               src={project.image}
               height={700}
@@ -67,12 +80,25 @@ export const DesktopCardsLayout = () => {
             <div className="h-[1px] w-full bg-black mt-6 mb-4" />
             <div className="flex flex-row justify-between items-start">
               <p className="text-sm w-11/12">
-                <TextReveal animationDelay={0.01}>{project.description}</TextReveal>
+                <TextReveal animationDelay={0.01}>
+                  {project.description}
+                </TextReveal>
               </p>
               {project?.status ? (
                 <></>
               ) : (
-                <Link href={project.github} className="mt-1 z-50">
+                <Link
+                  href={project.github}
+                  className="mt-1 z-50"
+                  onMouseEnter={() => {
+                    setCursorState("sm-hovered");
+                    setCursorText("source code");
+                  }}
+                  onMouseLeave={() => {
+                    setCursorState("regular");
+                    setCursorText("");
+                  }}
+                >
                   <RiGithubLine size={20} />
                 </Link>
               )}

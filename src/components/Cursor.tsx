@@ -3,9 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import useCursorState from "@/store/useCursorState";
+import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Cursor = () => {
-  const { cursorState } = useCursorState();
+  const { cursorText, cursorState } = useCursorState();
   const [cursorSize, setCursorSize] = useState(16);
 
   useEffect(() => {
@@ -64,7 +66,7 @@ const Cursor = () => {
     const mouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       mouse.current = {
-        x: clientX - window.innerWidth / 2,
+        x: clientX - window.innerWidth / 2 + 3,
         y: clientY - window.innerHeight / 2,
       };
     };
@@ -79,8 +81,38 @@ const Cursor = () => {
         height: cursorSize,
         width: cursorSize,
       }}
-      className="hidden md:block fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-white mix-blend-difference rounded-full z-[999] transition-all duration-300 ease-out pointer-events-none"
-    ></div>
+      className="hidden md:block fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 mix-blend-difference rounded-full z-[999] transition-all duration-300 ease-out pointer-events-none bg-white"
+    >
+      <AnimatePresence>
+        {cursorText !== "" && (
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeOut",
+              },
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            className={cn(
+              "text-white w-[10rem] bg-black transition-all duration-200 ease-linear mix-blend-difference font-hauora",
+              cursorState === "regular" && "-mt-[3px] ml-8",
+              cursorState === "sm-hovered" && "mt-2 ml-14",
+              cursorState === "md-hovered" && "mt-8 ml-24",
+              cursorState === "lg-hovered" && "mt-12 ml-36",
+              cursorState === "xl-hovered" && "mt-[66px] ml-44"
+            )}
+          >
+            {cursorText}
+          </motion.p>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 

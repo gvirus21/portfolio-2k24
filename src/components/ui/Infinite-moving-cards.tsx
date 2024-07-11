@@ -25,7 +25,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
-  const { setCursorState } = useCursorState();
+  const { setCursorState, setCursorText } = useCursorState();
 
   useEffect(() => {
     addAnimation();
@@ -109,9 +109,15 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <Link
-                    onMouseEnter={() => setCursorState("sm-hovered")}
-                    onMouseLeave={() => setCursorState("regular")}
-                    className="underline-link-hover-effect inline-block"
+                    onMouseEnter={() => {
+                      setCursorState("sm-hovered");
+                      setCursorText("visit profile");
+                    }}
+                    onMouseLeave={() => {
+                      setCursorState("regular");
+                      setCursorText("");
+                    }}
+                    className="underline-link-hover-effect inline-block max-w-[12rem]"
                     href={item.profileUrl}
                   >
                     <span className="text-sm leading-[1.6] text-black font-normal italic">
@@ -121,7 +127,7 @@ export const InfiniteMovingCards = ({
                   <span
                     onMouseEnter={() => setCursorState("sm-hovered")}
                     onMouseLeave={() => setCursorState("regular")}
-                    className=" text-sm leading-[1.6] text-black font-normal italic"
+                    className="text-sm leading-[1.6] text-black font-normal italic"
                   >
                     {item.title}
                   </span>

@@ -4,7 +4,7 @@ export const WORK_DATA = [
     title: "Playgrounds Analytics",
     jobTitle: "Lead Frontend developer",
     image: "/assets/work/playgrounds.webp",
-    website: "",
+    website: "https://playgrounds.network/",
     description: [
       "At Playgrounds, I led the frontend development for our products.",
       "I developed a variety of web applications, including proprietary web products, web tools, and landing pages.",
@@ -17,7 +17,7 @@ export const WORK_DATA = [
     id: 1,
     title: "Bankless DAO",
     image: "/assets/work/bankless.webp",
-    website: "",
+    website: "https://www.bankless.community/",
     jobTitle: "Freelance Frontend developer",
     description: [
       "I contributed to BanklessDAO as a paid open-source contributor, focusing on the frontend development of their upcoming official website.",
@@ -30,7 +30,7 @@ export const WORK_DATA = [
     id: 2,
     title: "Forefront DAO",
     image: "/assets/work/forefront.webp",
-    website: "",
+    website: "https://www.forefront.market/",
     jobTitle: "Freelance Frontend developer",
     description: [
       "Collaborated with the Forefront team as a freelance developer to build their &#8216;Squads&#8217; app.",
@@ -43,7 +43,7 @@ export const WORK_DATA = [
     id: 3,
     title: "Codewalla",
     image: "/assets/work/codewalla.webp",
-    website: "",
+    website: "https://codewalla.com/",
     jobTitle: "IOS developer - Intern",
     description: [
       "At Codewalla, I began my development career as an iOS developer intern.",

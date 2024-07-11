@@ -4,6 +4,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import { SimpleTextReveal, TextReveal } from "@/components/helpers";
 import { WORK_DATA } from "./work-data";
 import useCursorState from "@/store/useCursorState";
+import Link from "next/link";
 
 const textAnimation = {
   initial: {
@@ -45,6 +46,8 @@ const DesktopVersion = () => {
 
   const imageContainerRef = useRef(null);
   const innerContainer = useRef(null);
+
+  const { setCursorState, setCursorText } = useCursorState();
 
   const isInView = useInView(imageContainerRef, { amount: 0.4, once: true });
 
@@ -154,7 +157,18 @@ const DesktopVersion = () => {
             }}
             className="relative 3xl:h-[120rem]"
           >
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem]  bg-slate-800">
+            <Link
+              href={WORK_DATA[0].website}
+              onMouseEnter={() => {
+                setCursorState("md-hovered");
+                setCursorText("visit website");
+              }}
+              onMouseLeave={() => {
+                setCursorState("regular");
+                setCursorText("");
+              }}
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem]  bg-slate-800"
+            >
               <Image
                 className="w-5/6 aspect-video"
                 src={WORK_DATA[0].image}
@@ -162,8 +176,19 @@ const DesktopVersion = () => {
                 width={800}
                 alt="work-image"
               />
-            </div>
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-red-950">
+            </Link>
+            <Link
+              href={WORK_DATA[1].website}
+              onMouseEnter={() => {
+                setCursorState("md-hovered");
+                setCursorText("visit website");
+              }}
+              onMouseLeave={() => {
+                setCursorState("regular");
+                setCursorText("");
+              }}
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-red-950"
+            >
               <Image
                 className="w-5/6 aspect-video"
                 src={WORK_DATA[1].image}
@@ -171,8 +196,19 @@ const DesktopVersion = () => {
                 width={800}
                 alt="work-image"
               />
-            </div>
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-black">
+            </Link>
+            <Link
+              href={WORK_DATA[2].website}
+              onMouseEnter={() => {
+                setCursorState("md-hovered");
+                setCursorText("visit website");
+              }}
+              onMouseLeave={() => {
+                setCursorState("regular");
+                setCursorText("");
+              }}
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-black"
+            >
               <Image
                 className="w-5/6 aspect-video"
                 src={WORK_DATA[2].image}
@@ -180,8 +216,19 @@ const DesktopVersion = () => {
                 width={800}
                 alt="work-image"
               />
-            </div>
-            <div className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-gray-950">
+            </Link>
+            <Link
+              href={WORK_DATA[3].website}
+              onMouseEnter={() => {
+                setCursorState("md-hovered");
+                setCursorText("visit website");
+              }}
+              onMouseLeave={() => {
+                setCursorState("regular");
+                setCursorText("");
+              }}
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-gray-950"
+            >
               <Image
                 className="w-5/6 aspect-video"
                 src={WORK_DATA[3].image}
@@ -189,7 +236,7 @@ const DesktopVersion = () => {
                 width={800}
                 alt="work-image"
               />
-            </div>
+            </Link>
           </motion.div>
         </motion.div>
 

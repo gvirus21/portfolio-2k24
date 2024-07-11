@@ -10,11 +10,15 @@ export type CursorState =
 interface CursorStateType {
   cursorState: CursorState;
   setCursorState: (val: CursorState) => void;
+  cursorText: string;
+  setCursorText: (val: string) => void;
 }
 
 export const useCursorState = create<CursorStateType>((set) => ({
   cursorState: "regular",
   setCursorState: (val) => set(() => ({ cursorState: val })),
+  cursorText: "",
+  setCursorText: (val) => set(() => ({ cursorText: val })),
 }));
 
 export default useCursorState;
