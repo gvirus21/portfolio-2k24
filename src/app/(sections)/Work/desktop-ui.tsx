@@ -147,7 +147,7 @@ const DesktopVersion = () => {
           variants={imageVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden"
+          className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden"
         >
           <motion.div
             ref={innerContainer}
@@ -167,7 +167,7 @@ const DesktopVersion = () => {
                 setCursorState("regular");
                 setCursorText("");
               }}
-              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem]  bg-slate-800"
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem]  bg-slate-800"
             >
               <Image
                 className="w-5/6 aspect-video"
@@ -187,7 +187,7 @@ const DesktopVersion = () => {
                 setCursorState("regular");
                 setCursorText("");
               }}
-              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-red-950"
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem] w-full bg-red-950"
             >
               <Image
                 className="w-5/6 aspect-video"
@@ -207,7 +207,7 @@ const DesktopVersion = () => {
                 setCursorState("regular");
                 setCursorText("");
               }}
-              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-black"
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem] w-full bg-black"
             >
               <Image
                 className="w-5/6 aspect-video"
@@ -227,7 +227,7 @@ const DesktopVersion = () => {
                 setCursorState("regular");
                 setCursorText("");
               }}
-              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[32rem] 3xl:h-[40rem] w-full bg-gray-950"
+              className="flex justify-center items-center lg:h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem] w-full bg-gray-950"
             >
               <Image
                 className="w-5/6 aspect-video"
@@ -342,7 +342,7 @@ const WorkDescription = ({ workIndex }: TextAnimationProps) => (
       animate="animate"
       exit="exit"
       key={workIndex}
-      className="lg:mt-5 xl:mt-10 2xl:mt-12 3xl:mt-40"
+      className="lg:mt-5 2xl:mt-20 3xl:mt-40"
     >
       {workIndex === 0 && (
         <DescriptionLine description={WORK_DATA[0].description} />
@@ -372,12 +372,12 @@ const DescriptionLine = ({ description }: DescriptionLineProps) => {
       {description.map((message, i) => (
         <div
           key={i}
-          className="relative flex items-center overflow-hidden my-2"
+          className="relative flex items-center overflow-hidden"
         >
           <li
             onMouseEnter={() => setCursorState("md-hovered")}
             onMouseLeave={() => setCursorState("regular")}
-            className="w-[97%] my-2"
+            className="leading-6 w-[97%] my-2 3xl:my-4"
           >
             <TextReveal animationDelay={0.005} className="leading">
               {message}
