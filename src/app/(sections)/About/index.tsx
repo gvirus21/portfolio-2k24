@@ -88,20 +88,18 @@ const xxxlImageVariants = {
 
 export const AboutSection = () => {
   const getInitialScreenSize = () => {
-    if (window.innerWidth > 2000) {
+    if (typeof window !== "undefined" && window.innerWidth > 2000) {
       return "3xl";
-    } else if (window.innerWidth > 1536) {
+    } else if (typeof window !== "undefined" && window.innerWidth > 1536) {
       return "2xl";
-    } else if (window.innerWidth > 1280) {
+    } else if (typeof window !== "undefined" && window.innerWidth > 1280) {
       return "xl";
     } else {
       return "small";
     }
   };
 
-  const [screenSize, setScreenSize] = useState<
-    "" | "small" | "xl" | "2xl" | "3xl"
-  >(getInitialScreenSize);
+  const [screenSize, setScreenSize] = useState(getInitialScreenSize);
   const imageContainerRef = useRef(null);
   const { setCursorState } = useCursorState();
 
