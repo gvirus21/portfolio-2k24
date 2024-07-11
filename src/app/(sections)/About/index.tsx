@@ -36,13 +36,48 @@ const smallImageVariants = {
   },
 };
 
-const largeImageVariants = {
+const xlImageVariants = {
   initial: {
+    x: 0,
     y: -200,
     opacity: 0,
   },
   animate: {
-    y: -0,
+    x: 0,
+    y: -300,
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: "easeOut",
+    },
+  },
+};
+
+const xxlImageVariants = {
+  initial: {
+    x: 0,
+    y: -200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: -360,
+    opacity: 1,
+    transition: {
+      duration: 0.9,
+      ease: "easeOut",
+    },
+  },
+};
+const xxxlImageVariants = {
+  initial: {
+    x: 0,
+    y: -200,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: -340,
     opacity: 1,
     transition: {
       duration: 0.9,
@@ -52,22 +87,55 @@ const largeImageVariants = {
 };
 
 export const AboutSection = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(
-    window.innerWidth > 1280 ? true : false
-  );
+  const getInitialScreenSize = () => {
+    if (window.innerWidth > 2000) {
+      return "3xl";
+    } else if (window.innerWidth > 1536) {
+      return "2xl";
+    } else if (window.innerWidth > 1280) {
+      return "xl";
+    } else {
+      return "small";
+    }
+  };
+
+  const [screenSize, setScreenSize] = useState<
+    "" | "small" | "xl" | "2xl" | "3xl"
+  >(getInitialScreenSize);
   const imageContainerRef = useRef(null);
   const { setCursorState } = useCursorState();
 
   const isInView = useInView(imageContainerRef, { amount: 0.4, once: true });
 
+  const getVariants = () => {
+    switch (screenSize) {
+      case "small":
+        return smallImageVariants;
+      case "xl":
+        return xlImageVariants;
+      case "2xl":
+        return xxlImageVariants;
+      case "3xl":
+        return xxxlImageVariants;
+      default:
+        return {};
+    }
+  };
+  const variants = getVariants();
+
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1280) {
-        setIsLargeScreen(true);
-      } else {
-        setIsLargeScreen(false);
+      if (window.innerWidth > 2000) {
+        setScreenSize("3xl");
+      } else if (window.innerWidth > 1536) {
+        setScreenSize("2xl");
+      } else if (window.innerWidth > 2000) {
+        setScreenSize("xl");
+      } else if (window.innerWidth < 1280) {
+        setScreenSize("small");
       }
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -111,7 +179,7 @@ export const AboutSection = () => {
           {/* Profile photo */}
           <motion.div
             ref={imageContainerRef}
-            variants={isLargeScreen ? largeImageVariants : smallImageVariants}
+            variants={variants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             className="absolute top-20 md:top-28 xl:top-1/2 left-1/2 xl:left-auto -translate-x-1/2 xl:translate-x-0 xl:right-0 xl:-translate-y-[45%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] rounded-md lg:rounded-lg z-[999] bg-blend-multiply"
@@ -121,7 +189,7 @@ export const AboutSection = () => {
               fill
               alt="profile-image"
               className="object-cover"
-              onMouseEnter={() => setCursorState("xl-hovered")}
+              onMouseEnter={() => setCursorState("md-hovered")}
               onMouseLeave={() => setCursorState("regular")}
             />
           </motion.div>
