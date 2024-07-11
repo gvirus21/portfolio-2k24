@@ -62,7 +62,7 @@ const DesktopVersion = () => {
         setScrolling(true);
         let newIndex = workIndex;
 
-        const thresholdHeight = workSectionViewportHeight / 4;
+        const thresholdHeight = workSectionViewportHeight / 2;
 
         const firstThreshold = thresholdHeight;
         const secondThreshold = thresholdHeight * 2;
@@ -370,10 +370,7 @@ const DescriptionLine = ({ description }: DescriptionLineProps) => {
   return (
     <ul className="flex flex-col justify-between xl:w-[32rem] 2xl:w-[35rem] 3xl:w-[50rem] text-base lg:text-xl list-none lg:pl-2">
       {description.map((message, i) => (
-        <div
-          key={i}
-          className="relative flex items-center overflow-hidden"
-        >
+        <div key={i} className="relative flex items-center overflow-hidden">
           <li
             onMouseEnter={() => setCursorState("md-hovered")}
             onMouseLeave={() => setCursorState("regular")}
