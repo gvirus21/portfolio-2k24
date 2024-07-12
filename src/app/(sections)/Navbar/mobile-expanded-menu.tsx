@@ -63,7 +63,7 @@ const MobileExpandedMenu = (props: IProps) => {
 
   const MenuLinks = () => {
     return (
-      <ul>
+      <ul className="mt-4">
         {menuLinks.map((menuItem, index) => {
           return (
             <motion.li
@@ -85,7 +85,7 @@ const MobileExpandedMenu = (props: IProps) => {
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className="text-black text-5xl my-5 uppercase"
+              className="text-black text-[2.6rem] my-1 uppercase"
             >
               <ScrollLink
                 smooth="easeInOutQuart"

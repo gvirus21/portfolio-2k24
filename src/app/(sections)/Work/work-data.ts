@@ -21,7 +21,7 @@ export const WORK_DATA = [
     jobTitle: "Freelance Frontend developer",
     description: [
       "I contributed to BanklessDAO as a paid open-source contributor, focusing on the frontend development of their upcoming official website.",
-      "In this project, I collaborated closely with fellow developers and the design team to update the site&#8217;s theme.",
+      "In this project, I collaborated closely with fellow developers and the design team to update the site's theme.",
       "I was responsible for building various web pages, including the main homepage.",
       "We utilized Next.js and Chakra UI for this project.",
     ],
@@ -33,8 +33,8 @@ export const WORK_DATA = [
     website: "https://www.forefront.market/",
     jobTitle: "Freelance Frontend developer",
     description: [
-      "Collaborated with the Forefront team as a freelance developer to build their &#8216;Squads&#8217; app.",
-      "Developed various pages for the Squads app.",
+      `Collaborated with the Forefront team as a freelance developer to build their "Squads" app.`,
+      `Developed various pages for the "Squads" app.`,
       "Worked closely with the design team and senior developers on this project.",
       "The project was built using Next.js, MUI, and Styled-components.",
     ],

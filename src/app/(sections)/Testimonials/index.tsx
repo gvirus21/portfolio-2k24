@@ -76,26 +76,28 @@ export const TestimonialSection = () => {
 
   return (
     <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full mt-[5rem] sm:mt-[12rem] 3xl:mt-40">
-      <h2
-        onMouseEnter={() => setCursorState("lg-hovered")}
-        onMouseLeave={() => setCursorState("regular")}
-        className="font-medium text-5xl font-sendflowers w-10/12 text-left"
-      >
-        <SimpleTextReveal delay={0.5}>Testimonials</SimpleTextReveal>
-      </h2>
-      <motion.div
-        ref={containerRef}
-        variants={containerVariants}
-        initial="initial"
-        animate={isInView ? "animate" : "hidden"}
-        className="w-full lg:w-11/12 mt-10 sm:mt-20"
-      >
-        <InfiniteMovingCards
-          className="w-screen max-w-full"
-          items={items}
-          direction="left"
-        />
-      </motion.div>
+      <div className="w-10/12">
+        <h2
+          onMouseEnter={() => setCursorState("lg-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+          className="font-medium text-5xl font-sendflowers text-left w-[14rem]"
+        >
+          <SimpleTextReveal delay={0.5}>Testimonials</SimpleTextReveal>
+        </h2>
+        <motion.div
+          ref={containerRef}
+          variants={containerVariants}
+          initial="initial"
+          animate={isInView ? "animate" : "hidden"}
+          className="w-full lg:w-11/12 mt-10 sm:mt-20"
+        >
+          <InfiniteMovingCards
+            className="w-screen max-w-full"
+            items={items}
+            direction="left"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 };

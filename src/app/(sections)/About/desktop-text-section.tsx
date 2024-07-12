@@ -21,7 +21,7 @@ export const DesktopTextSection = () => {
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium xl:text-4xl 2xl:text-5xl font-sendflowers"
+          className="font-medium xl:text-4xl 2xl:text-5xl xl:w-[14rem] 3xl:w-[18rem] font-sendflowers"
         >
           <SimpleTextReveal delay={1}>My Experience:</SimpleTextReveal>
         </h3>

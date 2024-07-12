@@ -77,6 +77,7 @@ export const AboutSection = () => {
         <div className="flex flex-col justify-between">
           <>
             <h3
+              className="md:w-[16rem] lg:w-[20rem] 3xl:w-[25rem]"
               onMouseEnter={() => setCursorState("lg-hovered")}
               onMouseLeave={() => setCursorState("regular")}
             >

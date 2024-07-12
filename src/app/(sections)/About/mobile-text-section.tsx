@@ -2,9 +2,11 @@ import { TextReveal, SimpleTextReveal } from "@/components/helpers";
 import { aboutPoints } from "./about-points";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import useCursorState from "@/store/useCursorState";
 
 export const MobileTextSection = () => {
   const textContainerRef = useRef(null);
+  const { setCursorState } = useCursorState();
   const isInView = useInView(textContainerRef, {
     amount: 0.4,
     once: true,
@@ -24,7 +26,9 @@ export const MobileTextSection = () => {
       <div>
         <h3
           ref={textContainerRef}
-          className="font-medium text-3xl mt-[4rem] text-center md:text-left font-sendflowers"
+          onMouseEnter={() => setCursorState("lg-hovered")}
+          onMouseLeave={() => setCursorState("regular")}
+          className="font-medium text-3xl mt-[4rem] text-center md:text-left font-sendflowers md:w-[11rem]"
         >
           <SimpleTextReveal delay={1}>My Experience</SimpleTextReveal>
         </h3>

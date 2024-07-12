@@ -19,7 +19,7 @@ export const WhyChooseMeSection = () => {
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium text-4xl xl:text-5xl font-sendflowers w-full text-center"
+          className="font-medium text-4xl xl:text-5xl font-sendflowers text-center w-[18rem] xl:w-[22rem] mx-auto"
         >
           <SimpleTextReveal delay={0.5}>Why Choose Me?</SimpleTextReveal>
         </h3>
