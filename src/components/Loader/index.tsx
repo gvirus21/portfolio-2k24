@@ -31,10 +31,10 @@ const Loader = ({ timeline }: Props) => {
   return (
     <div
       ref={loaderContainerRef}
-      className="absolute inset-0 flex justify-center items-center h-screen w-screen max-h-full max-w-full z-[9999] opacity-0 overflow-hidden"
+      className="absolute inset-0 flex justify-center items-center h-screen w-screen max-h-full max-w-full z-[9999] opacity-0 overflow-hidden bg-green-500"
     >
-      <div className="relative h-screen w-screen">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[80%] md:-translate-y-1/2 h-[15.6rem] overflow-hidden text-black">
+      <div className="relative h-screen w-screen bg-red-600">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[80%] md:-translate-y-1/2 h-[15.6rem] overflow-hidden text-black bg-purple-400">
           <div
             ref={collapseWordsRef}
             className="loader h-full md:w-[8rem] lg:w-[10rem]"
