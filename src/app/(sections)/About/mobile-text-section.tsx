@@ -1,7 +1,15 @@
 import { TextReveal, SimpleTextReveal } from "@/components/helpers";
 import { aboutPoints } from "./about-points";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 export const MobileTextSection = () => {
+  const textContainerRef = useRef(null);
+  const isInView = useInView(textContainerRef, {
+    amount: 0.4,
+    once: true,
+  });
+
   return (
     <div className="flex flex-col xl:hidden mt-[32rem] lg:mt-[40rem] px-4">
       <p className="text-lg lg:text-xl">
@@ -13,16 +21,18 @@ export const MobileTextSection = () => {
         </TextReveal>
       </p>
 
-
-      
       <div>
-        <h3 className="font-medium text-3xl mt-[4rem] text-center md:text-left font-sendflowers">
+        <h3
+          ref={textContainerRef}
+          className="font-medium text-3xl mt-[4rem] text-center md:text-left font-sendflowers"
+        >
           <SimpleTextReveal delay={1}>My Experience</SimpleTextReveal>
         </h3>
         <ul className="flex flex-col justify-between min-h-[22rem] md:min-h-[20rem] lg:min-h-[16rem] leading-[1.3rem] mt-12 text-lg">
           {aboutPoints.map((point, i) => (
             <li key={i} className="mb-3 sm:mb-0">
               <TextReveal
+                isContainerInView={isInView}
                 offsetAmount={0.01}
                 containerDelay={1.1}
                 animationDelay={0.01}

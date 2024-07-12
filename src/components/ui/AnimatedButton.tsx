@@ -18,7 +18,7 @@ const buttonVariant = {
     y: 0,
     transition: {
       duration: 0.5,
-      delay: 1.6,
+      delay: 1.4,
       ease: "easeOut",
     },
   },

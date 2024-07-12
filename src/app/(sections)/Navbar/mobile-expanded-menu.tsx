@@ -58,7 +58,6 @@ const MobileExpandedMenu = (props: IProps) => {
 
   const linkClickHandler = ({ menuItem }: LinkProp) => {
     lenis?.scrollTo(`#${menuItem.id}`, { lerp: 0.05 });
-    console.log("clicked");
     setMenuIsOpen(false);
   };
 
@@ -86,7 +85,7 @@ const MobileExpandedMenu = (props: IProps) => {
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className="text-black text-5xl my-6"
+              className="text-black text-5xl my-5 uppercase"
             >
               <ScrollLink
                 smooth="easeInOutQuart"

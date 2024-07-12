@@ -14,11 +14,10 @@ export const MobileCardsLayout = () => {
     offset: ["start end", "end start"],
   });
 
-  // const y = useTransform(scrollYProgress, [0, 1], [100, -400]);
-  const y1 = useTransform(scrollYProgress, [0, 1], [100, -20]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [100, -20]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [100, -20]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [100, -20]);
+  const y1 = useTransform(scrollYProgress, [0, 0.5], [100, -100]);
+  const y2 = useTransform(scrollYProgress, [0, 0.5], [100, -100]);
+  const y3 = useTransform(scrollYProgress, [0, 0.5], [100, -100]);
+  const y4 = useTransform(scrollYProgress, [0, 0.5], [100, -100]);
 
   const yValues = [y1, y2, y3, y4];
 
@@ -31,9 +30,7 @@ export const MobileCardsLayout = () => {
 
   return (
     <motion.div
-      // style={{
-      //   y: y,
-      // }}
+      ref={container}
       className="flex lg:hidden flex-col justify-between items-center mx-auto mt-[5rem] max-w-[40rem] font-hauora"
     >
       {projects.map((project) => (

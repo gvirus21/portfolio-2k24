@@ -22,7 +22,7 @@ const HamburgerMenu = ({ menuIsOpen, setMenuIsOpen }: HamburgerMenuProps) => {
 
   return (
     <motion.div
-      className="flex flex-col justify-between items-center mt-2 h-4 mr-2 md:hidden z-[9999]"
+      className="flex flex-col justify-between items-center mt-2 h-4 mr-2 md:hidden z-[9999] pointer-events-auto"
       whileHover={{
         scale: 1.1,
         transition: { type: "tween", duration: 0.2 },

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { SimpleTextReveal } from "@/components/helpers";
 import { InfiniteMovingCards } from "@/components/ui/Infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
@@ -55,8 +55,23 @@ const containerVariants = {
 };
 
 export const TestimonialSection = () => {
+  const getInitialScreenSize = () => {
+    if (typeof window !== "undefined" && window.innerWidth > 1280) {
+      return "large";
+    } else {
+      return "small";
+    }
+  };
+
+  const [screenSize] = useState<"small" | "large">(getInitialScreenSize);
   const containerRef = useRef(null);
-  const isInView = useInView(containerRef, { amount: 0.8, once: true });
+
+  const inViewAmount = screenSize === "large" ? 0.8 : 0.3;
+
+  const isInView = useInView(containerRef, {
+    amount: inViewAmount,
+    once: true,
+  });
   const { setCursorState } = useCursorState();
 
   return (
