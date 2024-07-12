@@ -62,7 +62,13 @@ export const MobileCardsLayout = () => {
               {project?.status ? (
                 <></>
               ) : (
-                <Link href={project.github} className="mt-1 z-50">
+                <Link
+                  href={project.github}
+                  className="mt-1 z-50"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
                   <RiGithubLine size={24} />
                 </Link>
               )}

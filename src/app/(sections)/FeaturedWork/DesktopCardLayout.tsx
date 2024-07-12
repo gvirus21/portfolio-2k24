@@ -90,6 +90,9 @@ export const DesktopCardsLayout = () => {
                 <Link
                   href={project.github}
                   className="mt-1 z-50"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
                   onMouseEnter={() => {
                     setCursorState("sm-hovered");
                     setCursorText("source code");
