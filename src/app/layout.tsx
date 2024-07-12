@@ -69,14 +69,14 @@ export default function RootLayout({
         className={`${hauora.variable} ${quattrocento.variable} ${sendFlowers.variable} font-quattrocento bg-[#d8d8d8ff] `}
       >
         {/* grainy overlay */}
-        <Image
+        {/* <Image
           src={"/texture/grainy.svg"}
           height={1000}
           width={2000}
           alt="grainy-bg"
           className="fixed inset-0 h-screen w-screen pointer-events-none object-cover z-[0]"
         />
-        <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
+        <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" /> */}
         <Providers>
           {children}
           <Cursor />
