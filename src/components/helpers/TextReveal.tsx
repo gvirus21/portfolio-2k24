@@ -12,6 +12,7 @@ interface Props {
   exitDelay?: number;
   offsetAmount?: number;
   type?: "word" | "letter";
+  isContainerInView?: boolean;
 }
 
 export const TextReveal = ({
@@ -24,9 +25,22 @@ export const TextReveal = ({
   exitAnimation,
   offsetAmount,
   exitDelay = 5000,
+  isContainerInView,
 }: Props) => {
+  const [isInView, setIsInView] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { amount: offsetAmount ?? 0.4, once: true });
+  const _isInView = useInView(containerRef, {
+    amount: offsetAmount ?? 0.4,
+    once: true,
+  });
+
+  useEffect(() => {
+    if (isContainerInView) {
+      setIsInView(true);
+    } else {
+      setIsInView(_isInView);
+    }
+  }, [isContainerInView, _isInView]);
 
   const [show, setShow] = useState(true);
 

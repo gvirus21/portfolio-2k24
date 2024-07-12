@@ -1,14 +1,21 @@
 import { SimpleTextReveal } from "@/components/helpers";
 import TextReveal from "@/components/helpers/TextReveal";
 import useCursorState from "@/store/useCursorState";
-
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const WhyChooseMeSection = () => {
   const { setCursorState } = useCursorState();
+  const textContainerRef = useRef(null);
+
+  const isInView = useInView(textContainerRef, {
+    amount: 0.4,
+    once: true,
+  });
 
   return (
     <div className="flex flex-col justify-center items-center h-[70vh] sm:h-[50vh] 3xl:h-[30vh] w-screen max-w-full mt-28 xs:mt-6 sm:mt-36 mb-20">
-      <div className="w-5/6">
+      <div ref={textContainerRef} className="w-5/6">
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
@@ -21,7 +28,7 @@ export const WhyChooseMeSection = () => {
           onMouseLeave={() => setCursorState("regular")}
           className="flex  flex-col text-lg sm:text-2xl sm:w-11/12 xl:w-[56rem] text-center mx-auto mt-10 sm:mt-20"
         >
-          <TextReveal animationDelay={0.02}>
+          <TextReveal isContainerInView={isInView} animationDelay={0.02}>
             With years of frontend web development experience and numerous
             Freelance projects under my belt, I deliver exactly what clients
             need, often ahead of schedule. My work is pixel-perfect, and
@@ -29,7 +36,11 @@ export const WhyChooseMeSection = () => {
             committed, detail-oriented, and passionate about creating seamless
             user experiences. Let&apos;s build something amazing together!
           </TextReveal>
-          <TextReveal containerDelay={1} className="mt-4 inline-block">
+          <TextReveal
+            isContainerInView={isInView}
+            containerDelay={1}
+            className="mt-4 inline-block"
+          >
             :)
           </TextReveal>
         </p>
