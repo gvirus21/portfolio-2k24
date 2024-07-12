@@ -50,7 +50,7 @@ const Loader = ({ timeline }: Props) => {
             <div className="absolute bottom-0 left-0 h-[6.5rem] w-full z-50" />
           </div>
         </div>
-        <NumberLoader timeline={timeline} />
+        {/* <NumberLoader timeline={timeline} /> */}
       </div>
     </div>
   );
