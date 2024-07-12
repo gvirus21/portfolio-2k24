@@ -10,7 +10,7 @@ export const ContactSection = () => {
 
   return (
     <Element name="contact-section">
-      <section className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-20 sm:mt-40 md:mt-[12rem] lg:mt-[8rem] xl:mt-[10rem] 2xl:mt-[14rem] mb-10 lg:mb-0">
+      <section className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-0 sm:mt-40 md:mt-[12rem] lg:mt-[8rem] xl:mt-[10rem] 2xl:mt-[14rem] mb-10 lg:mb-0">
         <motion.div className="flex flex-col sm:flex-row justify-between items-center w-full mx-auto ">
           <div className="flex flex-col w-full md:w-5/6">
             <h2
@@ -35,14 +35,15 @@ export const ContactSection = () => {
                 I would love to hear from you, let&apos;s work — together.
               </SimpleTextReveal>
             </p>
-            <div className="w-[10rem] sm:w-[13rem]"
+            <a
               onMouseEnter={() => setCursorState("sm-hovered")}
               onMouseLeave={() => setCursorState("regular")}
+              href="mailto:gouravkumar21.dev@gmail.com"
             >
               <AnimatedButton className="flex justify-center items-center h-[2.5rem] sm:h-[3rem] w-[10rem] sm:w-[13rem] mt-3 lg:mt-5 text-sm md:text-base text-black border border-black rounded-full capitalize font-hauora">
                 Email Me
               </AnimatedButton>
-            </div>
+            </a>
           </div>
 
           <div className="hidden sm:flex text-sm lg:text-base justify-between w-[30rem] lg:w-[26rem] xl:w-[22rem] lg:mt-10">
@@ -57,7 +58,7 @@ export const ContactSection = () => {
               <ul className="text-[12px] md:text-sm">
                 <li className="mb-2 underline-link-hover-effect">
                   <Link
-                    href=""
+                    href="https://x.com/GouravKumarDev"
                     onMouseEnter={() => setCursorState("sm-hovered")}
                     onMouseLeave={() => setCursorState("regular")}
                   >
@@ -66,7 +67,7 @@ export const ContactSection = () => {
                 </li>
                 <li className="mb-2 underline-link-hover-effect">
                   <Link
-                    href=""
+                    href="https://github.com/gvirus21"
                     onMouseEnter={() => setCursorState("sm-hovered")}
                     onMouseLeave={() => setCursorState("regular")}
                   >
@@ -75,7 +76,7 @@ export const ContactSection = () => {
                 </li>
                 <li className="mb-2 underline-link-hover-effect">
                   <Link
-                    href=""
+                    href="https://www.linkedin.com/in/gouravkumar-21/"
                     onMouseEnter={() => setCursorState("sm-hovered")}
                     onMouseLeave={() => setCursorState("regular")}
                   >

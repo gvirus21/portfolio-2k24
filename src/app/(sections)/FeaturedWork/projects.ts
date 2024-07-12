@@ -39,8 +39,8 @@ export const Projects = [
     slNo: "04",
     title: "Under Construction Project 🚧👷‍♂️",
     image: "/assets/projects/under-construction.webp",
-    link: "",
-    github: "",
+    link: "#",
+    github: "#",
     status: "building",
     description:
       "This project is under construction and will be deployed soon :)",
