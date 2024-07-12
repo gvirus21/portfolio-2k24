@@ -31,7 +31,7 @@ const Loader = ({ timeline }: Props) => {
   return (
     <div
       ref={loaderContainerRef}
-      className="absolute inset-0 flex justify-center items-center h-screen w-screen z-[9999] opacity-0"
+      className="absolute inset-0 flex justify-center items-center h-screen w-screen z-[9999] opacity-0 overflow-hidden"
     >
       <div className="relative h-screen w-screen">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[80%] md:-translate-y-1/2 h-[15.6rem] overflow-hidden text-black">
