@@ -168,7 +168,7 @@ const MobileExpandedMenu = (props: IProps) => {
         alt="grainy-bg"
         className="fixed inset-0 h-screen w-screen pointer-events-none object-cover z-[0]"
       />
-      <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
+      <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken pointer-events-none" />
       <MenuLinks />
 
       <div className="relative w-[20rem] mb-10">
