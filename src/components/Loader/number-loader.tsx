@@ -35,7 +35,7 @@ const NumberLoader = ({ timeline }: Props) => {
   return (
     <div
       ref={loadingNumberRefContainer}
-      className="for-gsap-loading-number-container absolute bottom-0 md:bottom-10 left-1/2 -translate-x-1/2 md:left-20 md:translate-x-0 flex h-[5rem] w-[9rem] text-black text-[3.5rem] overflow-hidden"
+      className="for-gsap-loading-number-container absolute bottom-24 md:bottom-10 left-1/2 -translate-x-1/2 md:left-20 md:translate-x-0 flex h-[5rem] w-[9rem] text-black text-[3.5rem] overflow-hidden"
     >
       <div className="flex justify-center items-start h-[5rem] w-[3rem] overflow-hidden">
         <div className="for-gsap-first-digit">
