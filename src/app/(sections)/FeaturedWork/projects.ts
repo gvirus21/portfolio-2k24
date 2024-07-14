@@ -30,7 +30,7 @@ export const Projects = [
     link: "https://nepom-agency.vercel.app/",
     github: "https://github.com/gvirus21/Nepom",
     description:
-      "Project Descrioption, adipisicing elit. Voluptatibus ex sapiente omnis consequuntur.",
+      "Nepom is a fictional tour agency offering exceptional tour and travel packages.",
     desktopContainerStyle:
       "absolute top-[30rem] xl:top-[36rem] 2xl:top-[36rem] 3xl:top-[48rem] left-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     desktopImageStyle: "w-full aspect-[8/5] bg-slate-600 my-3 bg-[#fff]",
