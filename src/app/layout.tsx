@@ -6,6 +6,7 @@ import Cursor from "@/components/Cursor";
 import "./globals.css";
 
 import { Quattrocento, Send_Flowers } from "next/font/google";
+import GrainyImageOverlay from "./grainy-image-overlay";
 
 const quattrocento = Quattrocento({
   weight: ["400", "700"],
@@ -68,14 +69,7 @@ export default function RootLayout({
       <body
         className={`${hauora.variable} ${quattrocento.variable} ${sendFlowers.variable} font-quattrocento bg-[#d8d8d8ff] `}
       >
-        {/* grainy overlay */}
-        <Image
-          src={"/texture/grainy.svg"}
-          height={1000}
-          width={2000}
-          alt="grainy-bg"
-          className="fixed inset-0 h-screen w-screen pointer-events-none object-cover z-[0]"
-        />
+        <GrainyImageOverlay />
         <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />
         <Providers>
           {children}
