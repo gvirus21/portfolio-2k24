@@ -41,7 +41,7 @@ export const InfiniteMovingCards = ({
   
         getDirection();
         getSpeed();
-        setStart(true);
+        // setStart(true);
       }
     }
     const getDirection = () => {
@@ -72,7 +72,7 @@ export const InfiniteMovingCards = ({
     };
     addAnimation();
   }, [direction, speed]);
-  const [start, setStart] = useState(false);
+  // const [start, setStart] = useState(false);
 
   return (
     <div
@@ -85,8 +85,8 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
-          start && "animate-scroll ",
+          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll",
+          // start && "animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
