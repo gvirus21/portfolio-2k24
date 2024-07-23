@@ -69,7 +69,6 @@ export const TestimonialSection = () => {
   const [screenSize] = useState<"small" | "large" | "xl">(getInitialScreenSize);
   const containerRef = useRef(null);
 
-  // const inViewAmount = screenSize === "large" ? 0.8 : 0.3;
   let inViewAmount = 0;
 
   if (screenSize === "xl") {
@@ -79,10 +78,6 @@ export const TestimonialSection = () => {
   } else if (screenSize === "small") {
     inViewAmount = 0.3
   }
-
-  // inViewAmount = screenSize === "xl" && 1;
-  // inViewAmount = screenSize === "large" && 0.8;
-  // inViewAmount = screenSize === "small" && 0.3;
 
   const isInView = useInView(containerRef, {
     amount: inViewAmount,
