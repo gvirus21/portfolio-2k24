@@ -31,14 +31,14 @@ export const InfiniteMovingCards = ({
     function addAnimation() {
       if (containerRef.current && scrollerRef.current) {
         const scrollerContent = Array.from(scrollerRef.current.children);
-  
+
         scrollerContent.forEach((item) => {
           const duplicatedItem = item.cloneNode(true);
           if (scrollerRef.current) {
             scrollerRef.current.appendChild(duplicatedItem);
           }
         });
-  
+
         getDirection();
         getSpeed();
         // setStart(true);
@@ -59,6 +59,7 @@ export const InfiniteMovingCards = ({
         }
       }
     };
+
     const getSpeed = () => {
       if (containerRef.current) {
         if (speed === "fast") {
@@ -90,53 +91,66 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item) => (
-          <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0  px-8 py-6 md:w-[450px] glassmorphism"
-            key={item.name}
-          >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_20px)] w-[calc(100%_+_4px)]"
-              ></div>
-              <span
-                onMouseEnter={() => setCursorState("sm-hovered")}
-                onMouseLeave={() => setCursorState("regular")}
-                className="relative z-20 leading-[1.6] text-black capitalize text-lg font-normal"
-              >
-                &quot;{item.quote}&quot;
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <Link
-                    onMouseEnter={() => {
-                      setCursorState("sm-hovered");
-                      setCursorText("visit profile");
-                    }}
-                    onMouseLeave={() => {
-                      setCursorState("regular");
-                      setCursorText("");
-                    }}
-                    className="underline-link-hover-effect inline-block max-w-[12rem]"
-                    href={item.profileUrl}
-                  >
-                    <span className="text-sm leading-[1.6] text-black font-normal italic">
-                      {item.name}
+        {items.map((item) => {
+          const getSentences = (text: string) => {
+            return text.match(/[^.!?]+[.!?]*/g) || [text];
+          };
+
+          const sentences = getSentences(item.quote);
+
+          return (
+            <li
+              className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0  px-8 py-6 md:w-[450px] glassmorphism"
+              key={item.name}
+            >
+              <blockquote>
+                <div
+                  aria-hidden="true"
+                  className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_20px)] w-[calc(100%_+_4px)]"
+                ></div>
+                <div>
+                  {sentences.map((sentence, index) => (
+                    <span
+                      key={index}
+                      onMouseEnter={() => setCursorState("sm-hovered")}
+                      onMouseLeave={() => setCursorState("regular")}
+                      className="relative z-20 leading-[1.6] text-black capitalize font-normal block mb-4"
+                    >
+                      {sentence}
                     </span>
-                  </Link>
-                  <span
-                    onMouseEnter={() => setCursorState("sm-hovered")}
-                    onMouseLeave={() => setCursorState("regular")}
-                    className="text-sm leading-[1.6] text-black font-normal italic"
-                  >
-                    {item.title}
+                  ))}
+                </div>
+                <div className="relative z-20 mt-6 flex flex-row items-center">
+                  <span className="flex flex-col gap-1">
+                    <Link
+                      onMouseEnter={() => {
+                        setCursorState("sm-hovered");
+                        setCursorText("visit profile");
+                      }}
+                      onMouseLeave={() => {
+                        setCursorState("regular");
+                        setCursorText("");
+                      }}
+                      className="underline-link-hover-effect inline-block max-w-[12rem]"
+                      href={item.profileUrl}
+                    >
+                      <span className="text-sm leading-[1.6] text-black font-normal italic">
+                        {item.name}
+                      </span>
+                    </Link>
+                    <span
+                      onMouseEnter={() => setCursorState("sm-hovered")}
+                      onMouseLeave={() => setCursorState("regular")}
+                      className="text-sm leading-[1.6] text-black font-normal italic"
+                    >
+                      {item.title}
+                    </span>
                   </span>
-                </span>
-              </div>
-            </blockquote>
-          </li>
-        ))}
+                </div>
+              </blockquote>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

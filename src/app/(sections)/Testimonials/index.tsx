@@ -5,12 +5,13 @@ import { motion, useInView } from "framer-motion";
 import useCursorState from "@/store/useCursorState";
 
 const items = [
-  // {
-  //   quote: "hello",
-  //   name: "Christophe Vauclair",
-  //   title: "CTO, Co-Founder | Playgrounds Analytics Inc.",
-  //   profileUrl: "https://www.linkedin.com/in/christophe-vauclair-825286161/",
-  // },
+  {
+    quote:
+      "Gourav joined our team in early 2023 as our first and only frontend developer and I had the pleasure of working closely with him over the course of more than a year. During his time at Playgrounds, Gourav was responsible for developing and maintaining our entire frontend, from our landing page to our many products' interfaces, a job he performed admirably well. His deep understanding of the frontend stack was critical in making our ideas become reality. Working for a startup is not always easy, but as his direct supervisor, I was constantly impressed by his ability to adapt and shift gears as our priorities changed and products were dropped and new projects started. His quick thinking and ability to perform under pressure and deliver in time kept us competitive and reactive in the ever changing tech market. Most importantly, his upbeat attitude and enthusiasm kept the team atmosphere positive even when times got tough.Whether it's a large project with millions of lines of code, or a prototype to become first on the market, I wholeheartedly recommend Gourav for any frontend software development role. ",
+    name: "Christophe Vauclair",
+    title: "CTO, Co-Founder | Playgrounds Analytics Inc.",
+    profileUrl: "https://www.linkedin.com/in/christophe-vauclair-825286161/",
+  },
   // {
   //   quote: "hello",
   //   name: "Jephthah (Tachi) Akene",
@@ -25,7 +26,7 @@ const items = [
   // },
   {
     quote:
-      "I've had the pleasure of working with Gourav, and I can confidently say he's exceptional with frontend technologies. His skills in crafting animations and minimalist designs are impressive. Gourav's attention to detail ensures aesthetically pleasing interfaces and a stable, high-quality codebase. I highly recommend him for any project needing top-notch frontend skills and a keen eye for design.",
+      "I have had the pleasure of working with Gaurav, and I can confidently say he is exceptional with frontend technologies. His expertise in crafting animations and creating minimalist designs is truly impressive. Gaurav's attention to detail ensures not only aesthetically pleasing interfaces but also a stable and high-quality codebase. His commitment to maintaining code quality throughout the development process is admirable. I highly recommend Gaurav for any project requiring top-notch frontend skills and a keen eye for design.",
     name: "Suvendu sekhar Sahoo",
     title: "Senior Backend Engineer, VISA",
     profileUrl: "https://www.linkedin.com/in/suvendu-sekhar-sahoo/",
@@ -56,17 +57,32 @@ const containerVariants = {
 
 export const TestimonialSection = () => {
   const getInitialScreenSize = () => {
-    if (typeof window !== "undefined" && window.innerWidth > 1280) {
+    if (typeof window !== "undefined" && window.innerWidth > 1536) {
+      return "xl";
+    } else if (typeof window !== "undefined" && window.innerWidth > 1280) {
       return "large";
     } else {
       return "small";
     }
   };
 
-  const [screenSize] = useState<"small" | "large">(getInitialScreenSize);
+  const [screenSize] = useState<"small" | "large" | "xl">(getInitialScreenSize);
   const containerRef = useRef(null);
 
-  const inViewAmount = screenSize === "large" ? 0.8 : 0.3;
+  // const inViewAmount = screenSize === "large" ? 0.8 : 0.3;
+  let inViewAmount = 0;
+
+  if (screenSize === "xl") {
+    inViewAmount = 0.8
+  } else if (screenSize === "large") {
+    inViewAmount = 0.5
+  } else if (screenSize === "small") {
+    inViewAmount = 0.3
+  }
+
+  // inViewAmount = screenSize === "xl" && 1;
+  // inViewAmount = screenSize === "large" && 0.8;
+  // inViewAmount = screenSize === "small" && 0.3;
 
   const isInView = useInView(containerRef, {
     amount: inViewAmount,
