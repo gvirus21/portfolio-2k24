@@ -26,7 +26,7 @@ const items = [
   // },
   {
     quote:
-      "I have had the pleasure of working with Gaurav, and I can confidently say he is exceptional with frontend technologies. His expertise in crafting animations and creating minimalist designs is truly impressive. Gaurav's attention to detail ensures not only aesthetically pleasing interfaces but also a stable and high-quality codebase. His commitment to maintaining code quality throughout the development process is admirable. I highly recommend Gaurav for any project requiring top-notch frontend skills and a keen eye for design.",
+      "I have had the pleasure of working with Gourav, and I can confidently say he is exceptional with frontend technologies. His expertise in crafting animations and creating minimalist designs is truly impressive. Gourav's attention to detail ensures not only aesthetically pleasing interfaces but also a stable and high-quality codebase. His commitment to maintaining code quality throughout the development process is admirable. I highly recommend Gourav for any project requiring top-notch frontend skills and a keen eye for design.",
     name: "Suvendu sekhar Sahoo",
     title: "Senior Backend Engineer, VISA",
     profileUrl: "https://www.linkedin.com/in/suvendu-sekhar-sahoo/",
