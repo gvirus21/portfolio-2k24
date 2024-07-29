@@ -10,7 +10,7 @@ export const ContactSection = () => {
 
   return (
     <Element name="contact-section">
-      <section className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-0 sm:mt-40 md:mt-[12rem] lg:mt-[8rem] xl:mt-[10rem] 2xl:mt-[14rem] mb-10 lg:mb-0">
+      <section className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-0 sm:mt-40 md:mt-[12rem] lg:mt-[8rem] xl:mt-[12rem] 2xl:mt-[14rem] mb-10 lg:mb-0">
         <motion.div className="flex flex-col sm:flex-row justify-between items-center w-full mx-auto ">
           <div className="flex flex-col w-full md:w-5/6">
             <h2
@@ -46,7 +46,7 @@ export const ContactSection = () => {
             </a>
           </div>
 
-          <div className="hidden sm:flex text-sm lg:text-base justify-between w-[30rem] lg:w-[26rem] xl:w-[22rem] lg:mt-10">
+          <div className="hidden sm:flex text-sm lg:text-base justify-between w-[30rem] lg:w-[26rem] xl:w-[22rem] lg:mt-10 xl:mt-20">
             <div className="md:text-left">
               <h3
                 onMouseEnter={() => setCursorState("sm-hovered")}
