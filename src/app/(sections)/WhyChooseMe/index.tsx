@@ -15,18 +15,18 @@ export const WhyChooseMeSection = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-[70vh] sm:h-[50vh] 3xl:h-[30vh] w-screen max-w-full mt-28 xs:mt-6 sm:mt-36 mb-20">
-      <div ref={textContainerRef} className="w-5/6">
+      <div ref={textContainerRef} className="w-11/12">
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium text-4xl xl:text-5xl font-sendflowers text-center w-[18rem] xl:w-[22rem] mx-auto"
+          className="font-medium text-4xl xl:text-5xl font-sendflowers text-center w-[18rem] xl:w-[22rem]"
         >
           <SimpleTextReveal delay={0.5}>Why Choose Me?</SimpleTextReveal>
         </h3>
         <p
           onMouseEnter={() => setCursorState("md-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="flex  flex-col text-lg sm:text-2xl sm:w-11/12 xl:w-[56rem] text-center mx-auto mt-10 sm:mt-20"
+          className="flex flex-col text-lg sm:text-xl sm:w-11/12 lg:w-10/12 mt-10 sm:mt-20 pl-5"
         >
           <TextReveal isContainerInView={isInView} animationDelay={0.02}>
             With years of frontend web development experience and numerous
@@ -34,14 +34,16 @@ export const WhyChooseMeSection = () => {
             need, often ahead of schedule. My work is pixel-perfect, and
             I&apos;m always learning new skills to stay ahead. I&apos;m
             committed, detail-oriented, and passionate about creating seamless
-            user experiences. Let&apos;s build something amazing together!
+            user experiences.
           </TextReveal>
+
           <TextReveal
             isContainerInView={isInView}
             containerDelay={1}
-            className="mt-4 inline-block"
+            animationDelay={0.02}
+            className="mt-2"
           >
-            :)
+            Let&apos;s build something amazing together! :)
           </TextReveal>
         </p>
       </div>

@@ -79,7 +79,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -100,7 +100,7 @@ export const InfiniteMovingCards = ({
 
           return (
             <li
-              className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0  px-8 py-6 md:w-[450px] glassmorphism"
+              className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 px-8 py-6 md:w-[540px] glassmorphism"
               key={item.name}
             >
               <blockquote>
@@ -114,7 +114,7 @@ export const InfiniteMovingCards = ({
                       key={index}
                       onMouseEnter={() => setCursorState("sm-hovered")}
                       onMouseLeave={() => setCursorState("regular")}
-                      className="relative z-20 leading-[1.6] text-black capitalize font-normal block mb-4"
+                      className="relative z-20 leading-[1.5] text-sm text-black capitalize font-normal block mb-3"
                     >
                       {sentence}
                     </span>

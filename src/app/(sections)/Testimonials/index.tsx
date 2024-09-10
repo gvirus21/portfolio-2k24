@@ -87,7 +87,7 @@ export const TestimonialSection = () => {
 
   return (
     <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full mt-[5rem] sm:mt-[12rem] 3xl:mt-40">
-      <div className="w-10/12">
+      <div className="w-11/12">
         <h2
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
