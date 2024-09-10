@@ -64,6 +64,7 @@ export const TextReveal = ({
     visible: {
       opacity: 1,
       transition: {
+        
         delay: containerDelay || 0,
       },
     },

@@ -13,6 +13,7 @@ import {
   xxlImageVariants,
   xxxlImageVariants,
 } from "./variants";
+import SplitText from "@/components/helpers/SplitText";
 
 export const AboutSection = () => {
   const getInitialScreenSize = () => {
@@ -83,8 +84,8 @@ export const AboutSection = () => {
             >
               <TextReveal
                 type="letter"
-                animationDelay={0.07}
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
+                animationDelay={0.05}
+                className="text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
               >
                 About Me
               </TextReveal>

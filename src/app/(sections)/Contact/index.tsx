@@ -16,7 +16,7 @@ export const ContactSection = () => {
             <h2
               onMouseEnter={() => setCursorState("lg-hovered")}
               onMouseLeave={() => setCursorState("regular")}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase"
+              className="text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
             >
               <TextReveal
                 type="letter"

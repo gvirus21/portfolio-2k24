@@ -12,7 +12,7 @@ export const FeaturedWorkSection = () => {
         <h2
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="absolute left-0 text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-left uppercase"
+          className="absolute left-0 text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
         >
           <TextReveal type="letter" containerDelay={0.5} animationDelay={0.04}>
             Featured Work

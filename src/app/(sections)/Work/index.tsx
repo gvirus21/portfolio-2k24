@@ -17,7 +17,7 @@ export const WorkSection = () => {
           <h2
             onMouseEnter={() => setCursorState("lg-hovered")}
             onMouseLeave={() => setCursorState("regular")}
-            className="absolute left-0 xl:left-auto xl:right-0 text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase"
+            className="absolute left-0 xl:left-auto xl:right-0 text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
           >
             <TextReveal
               type="letter"
