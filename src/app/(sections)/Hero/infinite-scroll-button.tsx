@@ -40,7 +40,7 @@ export const InfiniteScrollButton = () => {
           setCursorState("regular");
           setCursorText("");
         }}
-        className="flex justify-start items-center py-1 sm:h-10 md:h-12 w-[10rem] md:w-[12rem] xl:w-[15rem] border-2 border-black rounded-full mt-9 sm:mt-10 lg:mt-12 xl:mt-16 2xl:mt-20 3xl:mt-32 overflow-hidden opacity-0 ml-10 -mr-10"
+        className="flex justify-start items-center py-1 sm:h-10 md:h-12 w-[10rem] md:w-[12rem] xl:w-[15rem] border-2 border-black rounded-full mt-9 sm:mt-10 lg:mt-12 2xl:mt-20 3xl:mt-32 overflow-hidden opacity-0 ml-10 -mr-10"
       >
         <div className="group md:text-sm xl:text-base font-hauora text-nowrap text-left whitespace-nowrap cursor-pointer">
           <span className="group-hover:pause animate-loopL inline-block">

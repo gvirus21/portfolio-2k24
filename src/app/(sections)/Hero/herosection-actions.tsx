@@ -37,7 +37,7 @@ const DesktopVersion = () => {
   return (
     <div className="action-buttons-container hidden sm:flex absolute bottom-0 justify-between items-center h-20 w-full z-50 opacity-0">
       <div className="relative w-full">
-        <LinkHoverAnimation className="left-0 xl:text-xl tracking-wider">
+        <LinkHoverAnimation className="left-0 xl:text-lg 2xl:text-xl tracking-wider">
           <RsLink
             to="work-section"
             smooth="easeInOutQuart"
