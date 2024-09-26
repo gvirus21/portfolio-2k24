@@ -19,14 +19,14 @@ export const WhyChooseMeSection = () => {
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium text-4xl xl:text-5xl font-sendflowers text-center w-[18rem] xl:w-[22rem]"
+          className="font-medium text-4xl xl:text-5xl font-sendflowers text-left w-[18rem] xl:w-[22rem] mx-auto"
         >
           <SimpleTextReveal delay={0.5}>Why Choose Me?</SimpleTextReveal>
         </h3>
         <p
           onMouseEnter={() => setCursorState("md-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="flex flex-col text-lg sm:text-xl sm:w-11/12 lg:w-10/12 mt-10 sm:mt-20 pl-5"
+          className="flex flex-col text-lg sm:text-2xl sm:w-11/12 lg:w-6/12 mt-10 sm:mt-20 pl-5 mx-auto"
         >
           <TextReveal isContainerInView={isInView} animationDelay={0.02}>
             With years of frontend web development experience and numerous
@@ -41,9 +41,9 @@ export const WhyChooseMeSection = () => {
             isContainerInView={isInView}
             containerDelay={1}
             animationDelay={0.02}
-            className="mt-2"
+            className="mt-6"
           >
-            Let&apos;s build something amazing together! :)
+            Let&apos;s build something Awesome together! :)
           </TextReveal>
         </p>
       </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Providers from "./providers";
 import localFont from "next/font/local";
 import Cursor from "@/components/Cursor";
@@ -67,7 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${hauora.variable} ${quattrocento.variable} ${sendFlowers.variable} font-quattrocento bg-[#d8d8d8ff] `}
+        className={`${hauora.variable} ${quattrocento.variable} ${sendFlowers.variable} font-hauora bg-[#eeededbd] `}
       >
         <GrainyImageOverlay />
         <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken" />

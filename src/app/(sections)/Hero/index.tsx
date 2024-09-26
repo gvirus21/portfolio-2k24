@@ -1,6 +1,5 @@
 import { Element } from "react-scroll";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import CustomEase from "gsap/dist/CustomEase";
 import HeroHeading from "./hero-heading";
 import HeroSectionActions from "./herosection-actions";

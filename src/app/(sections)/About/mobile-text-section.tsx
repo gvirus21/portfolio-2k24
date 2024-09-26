@@ -30,7 +30,7 @@ export const MobileTextSection = () => {
           onMouseLeave={() => setCursorState("regular")}
           className="font-medium text-3xl mt-[4rem] text-center md:text-left font-sendflowers md:w-[11rem]"
         >
-          <SimpleTextReveal delay={1}>My Experience</SimpleTextReveal>
+          <SimpleTextReveal delay={1}>My Work Experience</SimpleTextReveal>
         </h3>
         <ul className="flex flex-col justify-between min-h-[22rem] md:min-h-[20rem] lg:min-h-[16rem] leading-[1.3rem] mt-12 text-lg">
           {aboutPoints.map((point, i) => (

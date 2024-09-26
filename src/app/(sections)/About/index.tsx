@@ -14,8 +14,29 @@ import {
   xxxlImageVariants,
 } from "./variants";
 import SplitText from "@/components/helpers/SplitText";
-
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 export const AboutSection = () => {
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { duration: 1, delay: 0.7 } });
+    const headings = document.querySelectorAll(".section-heading");
+    headings.forEach((heading, index) => {
+      const el = heading.querySelectorAll("span span");
+      const delay = index * 0.08;
+
+      tl.to(
+        el,
+        {
+          y: 0,
+          duration: 1.5,
+          ease: "cubic-text",
+        },
+        delay
+      );
+    });
+  });
+
   const getInitialScreenSize = () => {
     if (typeof window !== "undefined" && window.innerWidth > 2000) {
       return "3xl";
@@ -73,11 +94,11 @@ export const AboutSection = () => {
     <Element name="about-section">
       <section
         className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between min-h-[90vh] lg:min-h-[70vh] 
-      2xl:min-h-[40vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-20 md:mt-20 lg:mt-[8rem] 2xl:mt-[14rem]"
+      2xl:min-h-[40vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-20 md:mt-20 pt-20 lg:mt-[8rem] 2xl:mt-[14rem]"
       >
         <div className="flex flex-col justify-between">
           <>
-            <h3
+            {/* <h3
               className="md:w-[16rem] lg:w-[20rem] 3xl:w-[25rem]"
               onMouseEnter={() => setCursorState("lg-hovered")}
               onMouseLeave={() => setCursorState("regular")}
@@ -89,17 +110,29 @@ export const AboutSection = () => {
               >
                 About Me
               </TextReveal>
+            </h3> */}
+            <h3
+              className="section-heading md:w-[16rem] lg:w-[20rem] 3xl:w-[25rem] font-medium text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
+              onMouseEnter={() => setCursorState("lg-hovered")}
+              onMouseLeave={() => setCursorState("regular")}
+            >
+              <SplitText wordClassName="translate-y-full">About Me</SplitText>
             </h3>
             <p
               onMouseEnter={() => setCursorState("md-hovered")}
               onMouseLeave={() => setCursorState("regular")}
-              className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-16 capitalize font-medium tracking-wider"
+              className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-16 capitalize font-medium tracking-wide text-justify font-hauora"
             >
-              <TextReveal containerDelay={0.5} animationDelay={0.02}>
-                Hey, I&apos;m Gourav! I&apos;m a frontend developer from India.
-                I enjoy creating web projects that are both functional and
-                aesthetically pleasing, with a focus on great user experience.
-                In my downtime, I love watching anime and picking up new skills.
+              <TextReveal
+                containerDelay={0.5}
+                animationDelay={0.02}
+                className=""
+              >
+                Hi, I&apos;m Gourav, a Visual Web Developer & I build Stunning
+                and High Converging websites for SaaS Products &HealthCare. I
+                help clients elevate their businesses by providing valuable
+                creative insights and delivering high-quality, user-centric
+                designs.
               </TextReveal>
             </p>
           </>

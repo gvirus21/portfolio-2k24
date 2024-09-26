@@ -13,7 +13,7 @@ export const DesktopTextSection = () => {
   });
 
   return (
-    <div className="hidden xl:flex flex-col">
+    <div className="hidden xl:flex flex-col -mt-10">
       <div
         ref={textContainerRef}
         className="mt-20 xl:mt-[5rem] 2xl:mt-[14rem] 3xl:mt-[12rem]"
@@ -21,11 +21,11 @@ export const DesktopTextSection = () => {
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium xl:text-4xl 2xl:text-5xl xl:w-[14rem] 3xl:w-[18rem] font-sendflowers"
+          className="xl:text-4xl 2xl:text-5xl xl:w-[14rem] 3xl:w-full"
         >
-          <SimpleTextReveal delay={1}>My Experience:</SimpleTextReveal>
+          <SimpleTextReveal delay={1}>My Experience</SimpleTextReveal>
         </h3>
-        <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] 3xl:w-[48rem] mt-10 xl:mt-8 2xl:mt-16 text-lg 2xl:text-xl tracking-wider">
+        <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] 3xl:w-[48rem] mt-10 xl:mt-8 2xl:mt-16 text-xl 2xl:text-xl tracking-wider">
           {aboutPoints.map((point, i) => (
             <li
               onMouseEnter={() => setCursorState("md-hovered")}
