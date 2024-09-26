@@ -31,7 +31,7 @@ export const DesktopTextSection = () => {
               onMouseEnter={() => setCursorState("md-hovered")}
               onMouseLeave={() => setCursorState("regular")}
               key={i}
-              className="capitalize xl:my-2 2xl:my-3 leading-6"
+              className="capitalize xl:my-2 2xl:my-3 leading-6 font-medium"
             >
               <TextReveal
                 isContainerInView={isInView}

@@ -122,6 +122,7 @@ export const TextReveal = ({
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           exit="exit"
+          className="h-full"
         >
           {type === "word"
             ? words.map((word, i) => (

@@ -147,7 +147,7 @@ const DesktopVersion = () => {
           variants={imageVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden"
+          className="xl:absolute xl:top-[12%] 2xl:top-14 3xl:top-0 xl:right-0 h-[12rem] lg:min-h-[24rem] 2xl:h-[28rem] 3xl:h-[40rem] aspect-[14/9] bg-white/50 my-10 mx-auto overflow-hidden rounded-3xl"
         >
           <motion.div
             ref={innerContainer}
@@ -256,7 +256,7 @@ const WorkTitle = ({ workIndex }: TextAnimationProps) => {
   const { setCursorState } = useCursorState();
 
   return (
-    <div className="text-4xl xl:text-5xl font-thin">
+    <div className="text-4xl xl:text-6xl font-medium">
       {workIndex === 0 && (
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
@@ -296,7 +296,7 @@ const WorkTitle = ({ workIndex }: TextAnimationProps) => {
 const WorkJobTitle = ({ workIndex }: TextAnimationProps) => {
   const { setCursorState } = useCursorState();
   return (
-    <div className="text-lg md:text-xl lg:text-4xl my-4 lg:my-6 font-semibold font-sendflowers tracking-widest">
+    <div className="text-lg md:text-xl lg:text-3xl my-4 lg:my-6">
       {workIndex === 0 && (
         <h4
           onMouseEnter={() => setCursorState("md-hovered")}
@@ -374,9 +374,9 @@ const DescriptionLine = ({ description }: DescriptionLineProps) => {
           <li
             onMouseEnter={() => setCursorState("md-hovered")}
             onMouseLeave={() => setCursorState("regular")}
-            className="leading-6 w-[97%] my-2 3xl:my-4"
+            className="text-2xl leading-6 w-[97%] my-2 3xl:my-3"
           >
-            <TextReveal animationDelay={0.005} className="leading">
+            <TextReveal animationDelay={0.005} className="h-8">
               {message}
             </TextReveal>
           </li>

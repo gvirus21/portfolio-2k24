@@ -12,18 +12,6 @@ const items = [
     title: "CTO, Co-Founder | Playgrounds Analytics Inc.",
     profileUrl: "https://www.linkedin.com/in/christophe-vauclair-825286161/",
   },
-  // {
-  //   quote: "hello",
-  //   name: "Jephthah (Tachi) Akene",
-  //   title: "CEO, Co-Founder | Playgrounds Analytics Inc.",
-  //   profileUrl: "https://www.linkedin.com/in/akene/",
-  // },
-  // {
-  //   quote: "hello",
-  //   name: "Garance Buricatu",
-  //   title: "Cloud / Full Stack Developer at Playgrounds Analytics",
-  //   profileUrl: "https://www.linkedin.com/in/garance-buricatu-9a6a50147/",
-  // },
   {
     quote:
       "I have had the pleasure of working with Gourav, and I can confidently say he is exceptional with frontend technologies. His expertise in crafting animations and creating minimalist designs is truly impressive. Gourav's attention to detail ensures not only aesthetically pleasing interfaces but also a stable and high-quality codebase. His commitment to maintaining code quality throughout the development process is admirable. I highly recommend Gourav for any project requiring top-notch frontend skills and a keen eye for design.",
@@ -91,7 +79,7 @@ export const TestimonialSection = () => {
         <h2
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium text-5xl font-sendflowers text-left w-[14rem]"
+          className="text-5xl text-left w-[14rem]"
         >
           <SimpleTextReveal delay={0.5}>Testimonials</SimpleTextReveal>
         </h2>

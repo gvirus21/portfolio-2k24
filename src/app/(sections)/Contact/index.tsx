@@ -2,8 +2,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import AnimatedButton from "@/components/ui/AnimatedButton";
-import { SimpleTextReveal, TextReveal } from "@/components/helpers";
+import { SimpleTextReveal } from "@/components/helpers";
 import useCursorState from "@/store/useCursorState";
+import SectionHeading from "@/components/helpers/SectionHeading";
 
 export const ContactSection = () => {
   const { setCursorState } = useCursorState();
@@ -13,19 +14,7 @@ export const ContactSection = () => {
       <section className="h-[16rem] md:h-[18rem] lg:h-[24rem] xl:h-[26rem] w-11/12 lg:w-10/12 max-w-[140rem] mx-auto mt-0 sm:mt-40 md:mt-[12rem] lg:mt-[8rem] xl:mt-[12rem] 2xl:mt-[14rem] mb-10 lg:mb-0">
         <motion.div className="flex flex-col sm:flex-row justify-between items-center w-full mx-auto ">
           <div className="flex flex-col w-full md:w-5/6">
-            <h2
-              onMouseEnter={() => setCursorState("lg-hovered")}
-              onMouseLeave={() => setCursorState("regular")}
-              className="text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
-            >
-              <TextReveal
-                type="letter"
-                containerDelay={0.5}
-                animationDelay={0.06}
-              >
-                Contact Me
-              </TextReveal>
-            </h2>
+            <SectionHeading id="contact-heading">Contact Me</SectionHeading>
             <p
               onMouseEnter={() => setCursorState("md-hovered")}
               onMouseLeave={() => setCursorState("regular")}

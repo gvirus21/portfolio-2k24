@@ -65,7 +65,7 @@ export const DesktopCardsLayout = () => {
           <div
             className={cn(
               project.desktopImageStyle,
-              "flex justify-center items-center shadow-md"
+              "flex justify-center items-center shadow-md rounded-2xl"
             )}
           >
             <Image
