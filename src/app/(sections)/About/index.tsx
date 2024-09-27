@@ -50,6 +50,8 @@ export const AboutSection = () => {
 
   const variants = getVariants();
 
+  console.log('variants: ', variants)
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 2000) {
@@ -71,35 +73,33 @@ export const AboutSection = () => {
 
   return (
     <Element name="about-section">
-      <section className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between min-h-[90vh] lg:min-h-[70vh] 2xl:min-h-[40vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-20 md:mt-20 pt-20 lg:mt-[8rem] 2xl:mt-[14rem]">
+      <section className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between items-center min-h-[90vh] lg:min-h-[70vh] xl:min-h-[80vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-0 md:mt-20 lg:mt-[4rem] xl:mt-[5rem] 2xl:mt-[14rem]">
         <div className="flex flex-col justify-between">
-          <>
-            <SectionHeading id="about-heading">About Me</SectionHeading>
+          <SectionHeading id="about-heading">About Me</SectionHeading>
 
-            <article
-              onMouseEnter={() => setCursorState("md-hovered")}
-              onMouseLeave={() => setCursorState("regular")}
-              className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-16 capitalize font-medium tracking-wide text-justify font-hauora"
+          <article
+            onMouseEnter={() => setCursorState("md-hovered")}
+            onMouseLeave={() => setCursorState("regular")}
+            className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-lg 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 capitalize font-medium tracking-wide text-justify font-hauora"
+          >
+            <TextReveal
+              containerDelay={0.5}
+              animationDelay={0.02}
             >
-              <TextReveal
-                containerDelay={0.5}
-                animationDelay={0.02}
-                className=""
-              >
-                Hi, I&apos;m Gourav, a Visual Web Developer & I build Stunning
-                and High Converging websites for SaaS Products & HealthCare. I
-                help clients elevate their businesses by providing valuable
-                creative insights and delivering high-quality, user-centric
-                Websites.
-              </TextReveal>
-            </article>
-          </>
+              Hi, I&apos;m Gourav, a Visual Web Developer. I build Stunning
+              and High Converging websites for SaaS Products & HealthCare. I
+              help clients elevate their businesses by providing valuable
+              creative insights and delivering high-quality, user-centric
+              Websites.
+            </TextReveal>
+          </article>
+
           <motion.figure
             ref={imageContainerRef}
             variants={variants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            className="absolute top-20 md:top-28 xl:top-1/2 left-1/2 xl:left-auto -translate-x-1/2 xl:translate-x-0 xl:right-0 xl:-translate-y-[45%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] lg:rounded-lg z-[999] bg-blend-multiply"
+            className="absolute top-40 md:top-28 xl:top-1/2 2xl:top-[45%] 3xl:top-[45%] left-1/2 xl:left-auto -translate-x-1/2 xl:translate-x-0 xl:right-0 xl:-translate-y-[45%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] lg:rounded-lg z-[999] bg-blend-multiply"
           >
             <Image
               src={profileImage}

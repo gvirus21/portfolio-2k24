@@ -3,7 +3,7 @@
 import {
   HeroSection,
   AboutSection,
-  WhyChooseMeSection,
+  MoreInfoSection,
   TestimonialSection,
   WorkSection,
   FeaturedWorkSection,
@@ -21,7 +21,7 @@ const MainPage = ({ timeline }: Props) => {
       <Navbar />
       <HeroSection timeline={timeline} />
       <AboutSection />
-      <WhyChooseMeSection />
+      <MoreInfoSection />
       <TestimonialSection />
       <WorkSection />
       <FeaturedWorkSection />

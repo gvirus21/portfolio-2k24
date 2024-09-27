@@ -100,7 +100,7 @@ const Cursor = () => {
               opacity: 0,
             }}
             className={cn(
-              "text-white w-[10rem] bg-black transition-all duration-200 ease-linear mix-blend-difference font-hauora",
+              "text-white w-[10rem] bg-transparent transition-all duration-200 ease-linear mix-blend-difference font-hauora",
               cursorState === "regular" && "-mt-[3px] ml-8",
               cursorState === "sm-hovered" && "mt-2 ml-14",
               cursorState === "md-hovered" && "mt-8 ml-24",

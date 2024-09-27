@@ -28,7 +28,7 @@ export const MobileTextSection = () => {
           ref={textContainerRef}
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="font-medium text-3xl mt-[4rem] text-center md:text-left font-sendflowers md:w-[11rem]"
+          className="font-medium text-3xl mt-[4rem] text-left md:w-[11rem]"
         >
           <SimpleTextReveal delay={1}>My Work Experience</SimpleTextReveal>
         </h3>

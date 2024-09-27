@@ -16,21 +16,21 @@ export const DesktopTextSection = () => {
     <div className="hidden xl:flex flex-col -mt-10">
       <div
         ref={textContainerRef}
-        className="mt-20 xl:mt-[5rem] 2xl:mt-[14rem] 3xl:mt-[12rem]"
+        className="mt-20 xl:mt-24 xl:mb-20 2xl:mt-[10rem] 3xl:mt-[10rem]"
       >
         <h3
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="xl:text-4xl 2xl:text-5xl xl:w-[14rem] 3xl:w-full"
+          className="xl:text-4xl 2xl:text-5xl xl:w-full"
         >
           <SimpleTextReveal delay={1}>My Experience</SimpleTextReveal>
         </h3>
-        <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] 3xl:w-[48rem] mt-10 xl:mt-8 2xl:mt-16 text-xl 2xl:text-xl tracking-wider">
+        <ul className="flex flex-col justify-between min-h-[18rem] xl:min-h-[22rem] w-[26rem] xl:w-[35rem] 2xl:w-[44rem] 3xl:w-[48rem] mt-10 xl:mt-8 2xl:mt-16 3xl:mt-14 text-g 2xl:text-xl tracking-wider">
           {aboutPoints.map((point, i) => (
             <li
+              key={i}
               onMouseEnter={() => setCursorState("md-hovered")}
               onMouseLeave={() => setCursorState("regular")}
-              key={i}
               className="capitalize xl:my-2 2xl:my-3 leading-6 font-medium"
             >
               <TextReveal
