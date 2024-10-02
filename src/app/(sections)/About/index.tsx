@@ -6,8 +6,7 @@ import profileImage from "/public/assets/gourav-kumar.webp";
 import { motion, useInView } from "framer-motion";
 import SectionHeading from "@/components/helpers/SectionHeading";
 import useCursorState from "@/store/useCursorState";
-import DesktopTextSection from "./desktop-text-section";
-import MobileTextSection from "./mobile-text-section";
+
 import {
   smallImageVariants,
   xlImageVariants,
@@ -50,7 +49,7 @@ export const AboutSection = () => {
 
   const variants = getVariants();
 
-  console.log('variants: ', variants)
+  console.log("variants: ", variants);
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,24 +74,46 @@ export const AboutSection = () => {
     <Element name="about-section">
       <section className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between items-center min-h-[90vh] lg:min-h-[70vh] xl:min-h-[80vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-0 md:mt-20 lg:mt-[4rem] xl:mt-[5rem] 2xl:mt-[14rem]">
         <div className="flex flex-col justify-between">
-          <SectionHeading id="about-heading">About Me</SectionHeading>
+          {/* <SectionHeading id="about-heading" className="">
+            About Me
+          </SectionHeading> */}
+          <h2 className="text-7xl font-medium">ABOUT ME</h2>
+          <article className="text-3xl font-medium w-[40rem] xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] mt-10 leading-10">
+            {" "}
+            Hello! I&apos;m Gourav Kumar, a Web designer specializing in
+            creating modern, intuitive websites that help small businesses
+            establish a strong online presence.
+          </article>
 
-          <article
+          <div
             onMouseEnter={() => setCursorState("md-hovered")}
             onMouseLeave={() => setCursorState("regular")}
-            className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-lg 2xl:text-2xl lg:mt-8 xl:mt-10 2xl:mt-12 3xl:mt-16 capitalize font-medium tracking-wide text-justify font-hauora"
+            className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl xl:text-lg 2xl:text-2xl lg:mt-8 xl:mt-14 2xl:mt-12 3xl:mt-16 font-semibold tracking-wide text-justify font-hauora"
           >
-            <TextReveal
-              containerDelay={0.5}
-              animationDelay={0.02}
-            >
-              Hi, I&apos;m Gourav, a Visual Web Developer. I build Stunning
-              and High Converging websites for SaaS Products & HealthCare. I
-              help clients elevate their businesses by providing valuable
-              creative insights and delivering high-quality, user-centric
-              Websites.
-            </TextReveal>
-          </article>
+            <h3 className="text-3xl font-semibold">My Story</h3>
+            <article className="my-6 leading-[1.3rem]">
+              <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                Born & Raise in India, I Developed a keen intrest in Startups
+                and Businesses from a very young age. I have a strong belief
+                that Small Businesses are the backbone of any Economy.
+              </TextReveal>
+            </article>
+            <article className="mb-6 leading-[1.3rem]">
+              <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                With my Creativity, Technical skills, and experience working
+                with businesses around the world, I&apos;m here to help
+                Buisnesses like yours build a strong and attractive online
+                presence.
+              </TextReveal>
+            </article>
+            <article className="leading-[1.3rem]">
+              <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                From new startups to existing businesses, either you need a new
+                website or just want to refresh your old one, I&apos;m here to
+                bring your vision to life.
+              </TextReveal>
+            </article>
+          </div>
 
           <motion.figure
             ref={imageContainerRef}
@@ -110,8 +131,6 @@ export const AboutSection = () => {
               onMouseLeave={() => setCursorState("regular")}
             />
           </motion.figure>
-          <DesktopTextSection />
-          <MobileTextSection />
         </div>
       </section>
     </Element>
