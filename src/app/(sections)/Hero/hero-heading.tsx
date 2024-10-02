@@ -32,12 +32,9 @@ export const HeroHeading = () => {
         onMouseLeave={() => setCursorState("regular")}
         className="hero-heading"
       >
-        <SplitText wordClassName="translate-y-full">I AM A</SplitText>
-        <span className="overflow-hidden inline-block">
-          <span className="translate-y-full relative inline-block font-sendflowers">
-            CREATIVE
-          </span>
-        </span>
+        <SplitText wordClassName="translate-y-full">
+          I CREATE TAILORED
+        </SplitText>
       </h1>
 
       <h1
@@ -45,9 +42,7 @@ export const HeroHeading = () => {
         onMouseEnter={() => setCursorState("xl-hovered")}
         onMouseLeave={() => setCursorState("regular")}
       >
-        <SplitText wordClassName="translate-y-full">
-          FRONTEND WEB DEVELOPER
-        </SplitText>
+        <SplitText wordClassName="translate-y-full">DESIGNER WEBSITES FOR</SplitText>
       </h1>
       <h1
         className="hero-heading"
@@ -55,7 +50,7 @@ export const HeroHeading = () => {
         onMouseLeave={() => setCursorState("regular")}
       >
         <SplitText wordClassName="translate-y-full">
-          WITH A PASSION FOR
+          SMALL BUSINESSES &
         </SplitText>
       </h1>
       <h1
@@ -63,7 +58,7 @@ export const HeroHeading = () => {
         onMouseEnter={() => setCursorState("xl-hovered")}
         onMouseLeave={() => setCursorState("regular")}
       >
-        <SplitText wordClassName="translate-y-full">BUILDING THE WEB</SplitText>
+        <SplitText wordClassName="translate-y-full">STARTUPS</SplitText>
       </h1>
     </div>
   );
