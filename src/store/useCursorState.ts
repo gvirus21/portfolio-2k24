@@ -7,7 +7,7 @@ export type CursorState =
   | "lg-hovered"
   | "xl-hovered";
 
-interface CursorStateType {
+export interface CursorStateType {
   cursorState: CursorState;
   setCursorState: (val: CursorState) => void;
   cursorText: string;

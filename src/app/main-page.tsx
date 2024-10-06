@@ -7,8 +7,12 @@ import {
   TestimonialSection,
   WorkSection,
   FeaturedWorkSection,
+  HowICanHelpSection,
+  ServicesSection,
   ContactSection,
+  WhyChooseMeSection,
   Navbar,
+  WorkProcess,
 } from "@/app/(sections)";
 
 interface Props {
@@ -21,10 +25,12 @@ const MainPage = ({ timeline }: Props) => {
       <Navbar />
       <HeroSection timeline={timeline} />
       <AboutSection />
-      <MoreInfoSection />
+      {/* <MoreInfoSection /> */}
+      <WhyChooseMeSection />
       <TestimonialSection />
-      <WorkSection />
-      <FeaturedWorkSection />
+      <HowICanHelpSection />
+      <WorkProcess />
+      <ServicesSection />
       <ContactSection />
     </div>
   );

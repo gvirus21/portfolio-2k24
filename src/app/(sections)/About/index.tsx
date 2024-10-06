@@ -49,8 +49,6 @@ export const AboutSection = () => {
 
   const variants = getVariants();
 
-  console.log("variants: ", variants);
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 2000) {
@@ -77,7 +75,7 @@ export const AboutSection = () => {
           {/* <SectionHeading id="about-heading" className="">
             About Me
           </SectionHeading> */}
-          <h2 className="text-7xl font-medium">ABOUT ME</h2>
+          <h2 className="text-7xl font-medium capitalize">About me</h2>
           <article className="text-3xl font-medium w-[40rem] xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] mt-10 leading-10">
             {" "}
             Hello! I&apos;m Gourav Kumar, a Web designer specializing in

@@ -60,11 +60,11 @@ export const TestimonialSection = () => {
   let inViewAmount = 0;
 
   if (screenSize === "xl") {
-    inViewAmount = 0.8
+    inViewAmount = 0.8;
   } else if (screenSize === "large") {
-    inViewAmount = 0.5
+    inViewAmount = 0.5;
   } else if (screenSize === "small") {
-    inViewAmount = 0.3
+    inViewAmount = 0.3;
   }
 
   const isInView = useInView(containerRef, {
@@ -74,21 +74,23 @@ export const TestimonialSection = () => {
   const { setCursorState } = useCursorState();
 
   return (
-    <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full mt-[5rem] sm:mt-[12rem] 3xl:mt-40">
+    <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full py-20">
       <div className="w-11/12">
         <h2
           onMouseEnter={() => setCursorState("lg-hovered")}
           onMouseLeave={() => setCursorState("regular")}
-          className="text-5xl text-left w-[14rem]"
+          className="text-7xl font-medium w-[50rem] leading-[5rem] capitalize"
         >
-          <SimpleTextReveal delay={0.5}>Testimonials</SimpleTextReveal>
+          <SimpleTextReveal delay={0.5}>
+            What My Clients say
+          </SimpleTextReveal>
         </h2>
         <motion.div
           ref={containerRef}
           variants={containerVariants}
           initial="initial"
           animate={isInView ? "animate" : "hidden"}
-          className="w-full lg:w-11/12 mt-10 sm:mt-20"
+          className="w-full lg:w-11/12 mt-10 sm:mt-14"
         >
           <InfiniteMovingCards
             className="w-screen max-w-full"

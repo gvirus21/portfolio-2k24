@@ -7,7 +7,7 @@ export const SimpleTextReveal = ({
   className,
   delay,
 }: {
-  children: string;
+  children: string | React.ReactNode;
   className?: string;
   delay?: number;
 }) => {

@@ -18,6 +18,7 @@ export default function Home() {
     setTimeline(tl);
   }, []);
 
+
   return (
     <main className="h-screen w-screen max-w-full px-5 text-black">
       {/* {loaderFinished ? (
