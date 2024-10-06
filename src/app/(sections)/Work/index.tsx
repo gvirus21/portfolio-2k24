@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import DesktopVersion from "./desktop-ui";
 import MobileVersion from "./mobile-ui";
-import SectionHeading from "@/components/helpers/SectionHeading";
+import SectionHeading from "@/components/helpers/Heading";
 
 export const WorkSection = () => {
   return (

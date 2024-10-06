@@ -1,3 +1,4 @@
+import Heading from "@/components/helpers/Heading";
 import React from "react";
 
 const Points = [
@@ -12,10 +13,7 @@ export const HowICanHelpSection = () => {
   return (
     <section className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between items-center pt-20 pb-28 w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] ">
       <div className="flex flex-col justify-between">
-        <h2 className="text-7xl font-medium capitalize">
-          Here&apos;s how I can help you
-        </h2>
-
+        <Heading id="how-i-can-help-header">Here&apos;s how I can help you</Heading>
         <article className="flex flex-col justify-between w-11/12 mt-16">
           {Points.map((point, index) => (
             <p key={index} className="flex items-start mt-6 text-2xl font-medium">

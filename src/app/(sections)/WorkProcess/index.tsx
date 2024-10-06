@@ -30,16 +30,16 @@ interface StepProps {
 }
 
 const Step = ({ icon: Icon, stepNumber, title, description }: StepProps) => (
-  <div className="mb-8 md:mb-0 xl:mr-3">
-    <div className="flex justify-between items-center p-3 md:p-4 h-10 md:h-12 w-24 md:w-28 rounded-full bg-white/45">
-      <div className="flex justify-center items-center h-5 md:h-6 w-5 md:w-6 rounded-full bg-white">
-        <Icon className="text-black h-2.5 md:h-3 w-2.5 md:w-3" />
+  <div className="mb-8 lg:mb-0 w-full lg:w-1/3 px-4">
+    <div className="flex justify-between items-center p-3 h-12 w-28 rounded-full bg-white/45">
+      <div className="flex justify-center items-center h-6 w-6 rounded-full bg-white">
+        <Icon className="text-black h-3 w-3" />
       </div>
-      <p className="text-sm md:text-base xl:text-sm 2xl:text-sm 3xl:text-base"> Step {stepNumber} </p>
+      <p className="text-sm"> Step {stepNumber} </p>
     </div>
-    <div className="pl-1 mt-4 md:mt-6">
-      <h3 className="text-xl xl:text-2xl 3xl:text-3xl font-medium">{title}</h3>
-      <p className="w-full md:w-[24rem] xl:w-[20rem] 2xl:w-[16rem] 3xl:w-[20rem] mt-2 md:mt-4 text-sm md:text-base xl:text-sm 2xl:text-base 3xl:text-base tracking-wide">
+    <div className="mt-6">
+      <h3 className="text-xl lg:text-2xl font-medium">{title}</h3>
+      <p className="mt-4 text-sm lg:text-base">
         {description}
       </p>
     </div>
@@ -53,16 +53,16 @@ export const WorkProcess = () => {
       variants={containerVariants}
       initial="initial"
       animate="animate"
-      className="h-full w-full md:w-10/12 lg:w-7/12 xl:w-11/12 2xl:w-[68%] mx-auto pt-16"
+      className="w-full px-4 lg:px-8 xl:px-16 pt-16"
     >
       <h3
-        className="text-7xl font-medium capitalize w-full text-right"
+        className="text-4xl md:text-5xl lg:text-7xl font-medium capitalize w-full text-center lg:text-right"
         onMouseEnter={() => setCursorState("lg-hovered")}
         onMouseLeave={() => setCursorState("regular")}
       >
         <SimpleTextReveal delay={0.5}>My Work Process</SimpleTextReveal>
       </h3>
-      <div className="flex flex-col md:flex-row justify-between items-start mt-10 md:mt-20 bg-white/20 rounded-xl py-6 md:py-10 px-6 md:px-10 shadow-xl">
+      <div className="flex flex-col lg:flex-row justify-between items-start sm:w-10/12 md:w-8/12 lg:w-full max-w-[100rem] mx-auto mt-10 lg:mt-20 bg-white/20 rounded-xl py-6 lg:py-10 px-6 lg:px-10 shadow-xl">
         <Step
           icon={FaPaintRoller}
           stepNumber={1}

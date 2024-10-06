@@ -1,4 +1,5 @@
 import PricingContainer from "@/app/(sections)/Services/pricing";
+import Heading from "@/components/helpers/Heading";
 
 const PLANS = [
   {
@@ -50,10 +51,12 @@ const PLANS = [
 export const ServicesSection = () => {
   return (
     <div className="relative w-11/12 pt-32 mx-auto">
-      <h2 className="text-7xl font-medium capitalize w-[40rem]">
-        <span>Explore</span>
-        <p className="mt-2">My Services</p>
-      </h2>
+      <Heading
+        id="services-header"
+        className="h-[5.4rem] sm:h-[3.6rem] md:h-[4.41rem] lg:h-[4.4rem] xl:h-[5rem] w-[12rem] sm:w-[28rem] md:w-[36rem] lg:w-[35rem] xl:w-[42rem]"
+      >
+        Explore My Services
+      </Heading>
       <div className="mt-6 mb-5 italic">
         <p className="text-">
           • I Offer a Various range of Services from building a Landing page

@@ -21,7 +21,7 @@ export const PricingCard = ({ plan }: { plan: PlanProps }) => {
   return (
     <div
       className={cn(
-        "relative flex-1 flex flex-col items-start max-w-[25rem] p-10 gap-5 text-black border-[#eceff133] border border-solid rounded-xl transition-colors shadow-xl ",
+        "relative flex-1 flex flex-col items-start h-full max-w-[25rem] p-6 xl:p-10 gap-5 text-black border-[#eceff133] border border-solid rounded-xl transition-colors shadow-xl ",
         is_popular
           ? "bg-gradient-to-br from-violet-300/20 to-white/10 backdrop-blur-sm shadow-black/20 border-white/20 border-4 border-solid"
           : "bg-white/20 shadow-black/10"

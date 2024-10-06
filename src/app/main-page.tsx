@@ -3,7 +3,6 @@
 import {
   HeroSection,
   AboutSection,
-  MoreInfoSection,
   TestimonialSection,
   WorkSection,
   FeaturedWorkSection,
@@ -22,13 +21,12 @@ interface Props {
 const MainPage = ({ timeline }: Props) => {
   return (
     <div className="relative">
-      <Navbar />
-      <HeroSection timeline={timeline} />
-      <AboutSection />
-      {/* <MoreInfoSection /> */}
-      <WhyChooseMeSection />
-      <TestimonialSection />
-      <HowICanHelpSection />
+      {/* <Navbar /> */}
+      {/* <HeroSection timeline={timeline} /> */}
+      {/* <AboutSection /> */}
+      {/* <WhyChooseMeSection /> */}
+      {/* <TestimonialSection /> */}
+      {/* <HowICanHelpSection /> */}
       <WorkProcess />
       <ServicesSection />
       <ContactSection />

@@ -1,9 +1,8 @@
 import { useState, useRef } from "react";
-import { SimpleTextReveal } from "@/components/helpers";
 import { InfiniteMovingCards } from "@/components/ui/Infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
 import useCursorState from "@/store/useCursorState";
-
+import Heading from "@/components/helpers/Heading";
 const items = [
   {
     quote:
@@ -76,15 +75,11 @@ export const TestimonialSection = () => {
   return (
     <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full py-20">
       <div className="w-11/12">
-        <h2
-          onMouseEnter={() => setCursorState("lg-hovered")}
-          onMouseLeave={() => setCursorState("regular")}
-          className="text-7xl font-medium w-[50rem] leading-[5rem] capitalize"
+        <Heading
+          id="testimonials-header"
         >
-          <SimpleTextReveal delay={0.5}>
-            What My Clients say
-          </SimpleTextReveal>
-        </h2>
+          What My Clients say
+        </Heading>
         <motion.div
           ref={containerRef}
           variants={containerVariants}

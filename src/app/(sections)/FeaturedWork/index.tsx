@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import DesktopCardsLayout from "./DesktopCardLayout";
 import MobileCardsLayout from "./MobileCardLayout";
-import SectionHeading from "@/components/helpers/SectionHeading";
+import SectionHeading from "@/components/helpers/Heading";
 
 export const FeaturedWorkSection = () => {
   return (

@@ -6,13 +6,13 @@ import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
   id: string;
-  children: string;
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }
 
-const SectionHeading = ({ id, children, className }: Props) => {
+const Heading = ({ id, children, className }: Props) => {
   useGSAP(() => {
     animateHeadings();
   });
@@ -42,10 +42,13 @@ const SectionHeading = ({ id, children, className }: Props) => {
   const { setCursorState } = useCursorState();
 
   return (
-    <header className={cn("overflow-hidden inline-block", className)}>
+    <header className="overflow-hidden inline-block w-full">
       <h2
         id={id}
-        className="font-medium text-4xl md:text-5xl 2xl:text-6xl 3xl:text-7xl md:mb-10 lg:mb-0 uppercase"
+        className={cn(
+          "font-medium text-4xl sm:text-5xl md:text-6xl xl:text-7xl",
+          className
+        )}
         onMouseEnter={() => setCursorState("lg-hovered")}
         onMouseLeave={() => setCursorState("regular")}
       >
@@ -55,4 +58,4 @@ const SectionHeading = ({ id, children, className }: Props) => {
   );
 };
 
-export default SectionHeading;
+export default Heading;

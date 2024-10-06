@@ -1,7 +1,6 @@
 export * from "./Navbar";
 export * from "./Hero";
 export * from "./About";
-export * from "./MoreInfo";
 export * from "./WhyChooseMe";
 export * from "./Testimonials";
 export * from "./HowICanHelp";

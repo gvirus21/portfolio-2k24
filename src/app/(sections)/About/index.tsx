@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 import { TextReveal } from "@/components/helpers";
 import profileImage from "/public/assets/gourav-kumar.webp";
 import { motion, useInView } from "framer-motion";
-import SectionHeading from "@/components/helpers/SectionHeading";
+import Heading from "@/components/helpers/Heading";
 import useCursorState from "@/store/useCursorState";
 
 import {
@@ -72,10 +72,9 @@ export const AboutSection = () => {
     <Element name="about-section">
       <section className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between items-center min-h-[90vh] lg:min-h-[70vh] xl:min-h-[80vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-0 md:mt-20 lg:mt-[4rem] xl:mt-[5rem] 2xl:mt-[14rem]">
         <div className="flex flex-col justify-between">
-          {/* <SectionHeading id="about-heading" className="">
+          <Heading id="about-heading" className="">
             About Me
-          </SectionHeading> */}
-          <h2 className="text-7xl font-medium capitalize">About me</h2>
+          </Heading>
           <article className="text-3xl font-medium w-[40rem] xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] mt-10 leading-10">
             {" "}
             Hello! I&apos;m Gourav Kumar, a Web designer specializing in
