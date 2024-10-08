@@ -15,19 +15,7 @@ import {
 } from "./variants";
 
 export const AboutSection = () => {
-  const getInitialScreenSize = () => {
-    if (typeof window !== "undefined" && window.innerWidth > 2000) {
-      return "3xl";
-    } else if (typeof window !== "undefined" && window.innerWidth > 1536) {
-      return "2xl";
-    } else if (typeof window !== "undefined" && window.innerWidth > 1280) {
-      return "xl";
-    } else {
-      return "small";
-    }
-  };
-
-  const [screenSize, setScreenSize] = useState(getInitialScreenSize);
+  const [screenSize, setScreenSize] = useState("small");
   const imageContainerRef = useRef(null);
   const { setCursorState } = useCursorState();
   const isInView = useInView(imageContainerRef, { amount: 0.4, once: true });
@@ -55,9 +43,9 @@ export const AboutSection = () => {
         setScreenSize("3xl");
       } else if (window.innerWidth > 1536) {
         setScreenSize("2xl");
-      } else if (window.innerWidth > 2000) {
+      } else if (window.innerWidth > 1280) {
         setScreenSize("xl");
-      } else if (window.innerWidth < 1280) {
+      } else {
         setScreenSize("small");
       }
     };
@@ -70,46 +58,47 @@ export const AboutSection = () => {
 
   return (
     <Element name="about-section">
-      <section className="relative left-1/2 -translate-x-1/2 flex flex-col lg:flex-row justify-between items-center min-h-[90vh] lg:min-h-[70vh] xl:min-h-[80vh] w-11/12 lg:w-10/12 xl:w-11/12 max-w-[140rem] mt-0 md:mt-20 lg:mt-[4rem] xl:mt-[5rem] 2xl:mt-[14rem]">
-        <div className="flex flex-col justify-between">
-          <Heading id="about-heading" className="">
-            About Me
-          </Heading>
-          <article className="text-3xl font-medium w-[40rem] xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] mt-10 leading-10">
-            {" "}
-            Hello! I&apos;m Gourav Kumar, a Web designer specializing in
-            creating modern, intuitive websites that help small businesses
-            establish a strong online presence.
-          </article>
+      <section className="relative px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-20">
+          <div className="flex flex-col justify-between w-full lg:w-1/2">
+            <Heading id="about-heading" className="mb-6 sm:mb-8">
+              About Me
+            </Heading>
+            <article className="text-xl sm:text-2xl lg:text-3xl font-medium mb-8 sm:mb-10">
+              Hello! I&apos;m Gourav Kumar, a Web designer specializing in
+              creating modern, intuitive websites that help small businesses
+              establish a strong online presence.
+            </article>
 
-          <div
-            onMouseEnter={() => setCursorState("md-hovered")}
-            onMouseLeave={() => setCursorState("regular")}
-            className="w-[40rem] hidden xl:block xl:w-[36rem] 2xl:w-[40rem] 3xl:w-[46rem] lg:text-xl xl:text-lg 2xl:text-2xl lg:mt-8 xl:mt-14 2xl:mt-12 3xl:mt-16 font-semibold tracking-wide text-justify font-hauora"
-          >
-            <h3 className="text-3xl font-semibold">My Story</h3>
-            <article className="my-6 leading-[1.3rem]">
-              <TextReveal containerDelay={0.5} animationDelay={0.02}>
-                Born & Raise in India, I Developed a keen intrest in Startups
-                and Businesses from a very young age. I have a strong belief
-                that Small Businesses are the backbone of any Economy.
-              </TextReveal>
-            </article>
-            <article className="mb-6 leading-[1.3rem]">
-              <TextReveal containerDelay={0.5} animationDelay={0.02}>
-                With my Creativity, Technical skills, and experience working
-                with businesses around the world, I&apos;m here to help
-                Buisnesses like yours build a strong and attractive online
-                presence.
-              </TextReveal>
-            </article>
-            <article className="leading-[1.3rem]">
-              <TextReveal containerDelay={0.5} animationDelay={0.02}>
-                From new startups to existing businesses, either you need a new
-                website or just want to refresh your old one, I&apos;m here to
-                bring your vision to life.
-              </TextReveal>
-            </article>
+            <div
+              onMouseEnter={() => setCursorState("md-hovered")}
+              onMouseLeave={() => setCursorState("regular")}
+              className="text-base sm:text-lg lg:text-xl font-semibold tracking-wide text-justify font-hauora"
+            >
+              <h3 className="text-2xl sm:text-3xl font-semibold mb-4">My Story</h3>
+              <article className="mb-4 sm:mb-6">
+                <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                  Born & Raised in India, I developed a keen interest in Startups
+                  and Businesses from a very young age. I have a strong belief
+                  that Small Businesses are the backbone of any Economy.
+                </TextReveal>
+              </article>
+              <article className="mb-4 sm:mb-6">
+                <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                  With my Creativity, Technical skills, and experience working
+                  with businesses around the world, I&apos;m here to help
+                  Businesses like yours build a strong and attractive online
+                  presence.
+                </TextReveal>
+              </article>
+              <article>
+                <TextReveal containerDelay={0.5} animationDelay={0.02}>
+                  From new startups to existing businesses, whether you need a new
+                  website or just want to refresh your old one, I&apos;m here to
+                  bring your vision to life.
+                </TextReveal>
+              </article>
+            </div>
           </div>
 
           <motion.figure
@@ -117,7 +106,7 @@ export const AboutSection = () => {
             variants={variants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            className="absolute top-40 md:top-28 xl:top-1/2 2xl:top-[45%] 3xl:top-[45%] left-1/2 xl:left-auto -translate-x-1/2 xl:translate-x-0 xl:right-0 xl:-translate-y-[45%] h-[26rem] lg:h-[32rem] xl:h-[40rem] 2xl:h-[50rem] max-w-full aspect-[3/4] lg:rounded-lg z-[999] bg-blend-multiply"
+            className="relative w-full lg:w-1/2 aspect-[3/4] max-w-md lg:max-w-none"
           >
             <Image
               src={profileImage}

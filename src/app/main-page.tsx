@@ -21,12 +21,12 @@ interface Props {
 const MainPage = ({ timeline }: Props) => {
   return (
     <div className="relative">
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <HeroSection timeline={timeline} /> */}
       {/* <AboutSection /> */}
       {/* <WhyChooseMeSection /> */}
-      {/* <TestimonialSection /> */}
-      {/* <HowICanHelpSection /> */}
+      <TestimonialSection />
+      <HowICanHelpSection />
       <WorkProcess />
       <ServicesSection />
       <ContactSection />

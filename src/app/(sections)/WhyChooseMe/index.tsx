@@ -39,62 +39,59 @@ export const WhyChooseMeSection = () => {
   });
 
   return (
-    <div className="flex flex-col 2xl:flex-row justify-between items-center min-h-[30vh] w-screen max-w-full mt-28 xs:mt-6 sm:mt-36 xl:mt-20 lg:px-20 py-20">
-      <div
-        ref={textContainerRef}
-        className="w-full md:w-6/12 lg:w-4/12 xl:w-full 2xl:w-[30%] px-4 md:px-5 xl:px-0"
-      >
-        <h3
-          onMouseEnter={() => setCursorState("lg-hovered")}
-          onMouseLeave={() => setCursorState("regular")}
-          className="text-3xl lg:text-4xl xl:text-7xl 2xl:text-4xl mx-auto text-left font-semibold tracking-wide"
-        >
-          <SimpleTextReveal delay={0.5}>Why Choose Me?</SimpleTextReveal>
-        </h3>
-        <div
-          onMouseEnter={() => setCursorState("md-hovered")}
-          onMouseLeave={() => setCursorState("regular")}
-          className="flex flex-col w-10/12 text-3xl capitalize mx-auto mt-10 lg:mt-16 text-center tracking-wider"
-        >
-          <div className="text-justify">
-            <TextReveal
-              className="h-10"
-              isContainerInView={isInView}
-              animationDelay={0.02}
-            >
-              As a solo web developer, I have a unique perspective on what my
-              clients need for their business. Through my websites, I help them
-              achieve their goals—something big agencies often struggle with.
-            </TextReveal>
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="max-w-3xl mx-auto">
+        <div ref={textContainerRef}>
+          <h3
+            onMouseEnter={() => setCursorState("lg-hovered")}
+            onMouseLeave={() => setCursorState("regular")}
+            className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wide mb-8 text-center"
+          >
+            <SimpleTextReveal delay={0.5}>Why Choose Me?</SimpleTextReveal>
+          </h3>
+          <div
+            onMouseEnter={() => setCursorState("md-hovered")}
+            onMouseLeave={() => setCursorState("regular")}
+            className="space-y-6 text-base sm:text-lg lg:text-xl"
+          >
+            <div>
+              <TextReveal
+                isContainerInView={isInView}
+                animationDelay={0.02}
+              >
+                As a solo web developer, I have a unique perspective on what my
+                clients need for their business. Through my websites, I help them
+                achieve their goals—something big agencies often struggle with.
+              </TextReveal>
+            </div>
+
+            <div>
+              <TextReveal
+                isContainerInView={isInView}
+                animationDelay={0.02}
+              >
+                My top priority is to deliver a high-quality website that not only
+                looks great but also meets the client&apos;s needs.
+              </TextReveal>
+            </div>
           </div>
 
-          <div className="text-left mt-5">
-            <TextReveal
-              className="h-10"
-              isContainerInView={isInView}
-              animationDelay={0.02}
-            >
-              My top priority is to deliver a high-quality website that not only
-              looks great but also meets the client&apos; needs.
-            </TextReveal>
-          </div>
-
-          <div className="mt-32">
-            <h3 className="text-2xl font-semibold text-center uppercase underline underline-offset-4">
+          <div className="mt-16">
+            <h3 className="text-xl sm:text-2xl font-semibold text-center uppercase underline underline-offset-4 mb-8">
               Organizations I&apos;ve Worked With
             </h3>
-            <div className="flex justify-between items-center mt-10 w-9/12 mx-auto">
-              {companyLogos.map((company, index) => (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
+              {companyLogos.map((company) => (
                 <Link
                   key={company.id}
                   href={company.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-16 w-28 relative"
+                  className="w-24 h-24 sm:w-28 sm:h-28 relative"
                 >
                   <Image
                     src={company.src}
-                    alt={`Company ${index + 1}`}
+                    alt={company.id}
                     fill
                     style={{ objectFit: "contain" }}
                     className="filter brightness-0"
@@ -105,7 +102,7 @@ export const WhyChooseMeSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

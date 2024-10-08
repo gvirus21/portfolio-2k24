@@ -3,6 +3,9 @@ import { InfiniteMovingCards } from "@/components/ui/Infinite-moving-cards";
 import { motion, useInView } from "framer-motion";
 import useCursorState from "@/store/useCursorState";
 import Heading from "@/components/helpers/Heading";
+import { FaStar } from "react-icons/fa";
+import Link from "next/link";
+
 const items = [
   {
     quote:
@@ -55,6 +58,7 @@ export const TestimonialSection = () => {
 
   const [screenSize] = useState<"small" | "large" | "xl">(getInitialScreenSize);
   const containerRef = useRef(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   let inViewAmount = 0;
 
@@ -70,22 +74,22 @@ export const TestimonialSection = () => {
     amount: inViewAmount,
     once: true,
   });
-  const { setCursorState } = useCursorState();
+  const { setCursorState, setCursorText } = useCursorState();
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
 
   return (
     <section className="flex flex-col justify-center items-center min-h-[50vh] w-screen max-w-full py-20">
       <div className="w-11/12">
-        <Heading
-          id="testimonials-header"
-        >
-          What My Clients say
-        </Heading>
+        <Heading id="testimonials-header">What My Clients say</Heading>
         <motion.div
           ref={containerRef}
           variants={containerVariants}
           initial="initial"
           animate={isInView ? "animate" : "hidden"}
-          className="w-full lg:w-11/12 mt-10 sm:mt-14"
+          className="hidden md:block w-full lg:w-11/12 mt-10 sm:mt-14"
         >
           <InfiniteMovingCards
             className="w-screen max-w-full"
@@ -93,6 +97,68 @@ export const TestimonialSection = () => {
             direction="left"
           />
         </motion.div>
+        <div className="md:hidden flex flex-col gap-6 mt-10 sm:mt-14">
+          {items.map((item, index) => (
+            <motion.div
+              key={index}
+              ref={containerRef}
+              variants={containerVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "hidden"}
+              className="p-6 rounded-lg backdrop-blur-md glassmorphism shadow-xl overflow-hidden"
+              style={{ minHeight: expandedIndex === index ? "auto" : "200px" }}
+            >
+              <div className="h-full flex flex-col">
+                <p
+                  className={`mb-2 ${
+                    expandedIndex === index ? "" : "line-clamp-[8]"
+                  }`}
+                >
+                  &ldquo;{item.quote}&rdquo;
+                </p>
+                <button
+                  className="mt-1 mb-4 text-sm font-medium text-black/90 underline underline-offset-2 text-left"
+                  onClick={() => toggleExpand(index)}
+                >
+                  {expandedIndex === index ? "Read less" : "Read more"}
+                </button>
+                <div className="flex justify-between items-start">
+                  <div className="relative z-20 flex flex-row items-center">
+                    <span className="flex flex-col">
+                      <Link
+                        onMouseEnter={() => {
+                          setCursorState("sm-hovered");
+                          setCursorText("visit profile");
+                        }}
+                        onMouseLeave={() => {
+                          setCursorState("regular");
+                          setCursorText("");
+                        }}
+                        className="underline-link-hover-effect inline-block max-w-[12rem]"
+                        href={item.profileUrl}
+                      >
+                        <span className="text-sm leading-[1.6] text-black font-normal italic">
+                          {item.name}
+                        </span>
+                      </Link>
+                      <span
+                        onMouseEnter={() => setCursorState("sm-hovered")}
+                        onMouseLeave={() => setCursorState("regular")}
+                        className="text-xs leading-[1.6] text-black font-normal italic"
+                      >
+                        {item.title}
+                      </span>
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1 text-sm">
+                    <p>5</p>
+                    <FaStar />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
