@@ -22,9 +22,9 @@ const MainPage = ({ timeline }: Props) => {
   return (
     <div className="relative">
       <Navbar />
-      {/* <HeroSection timeline={timeline} /> */}
-      {/* <AboutSection /> */}
-      {/* <WhyChooseMeSection /> */}
+      <HeroSection timeline={timeline} />
+      <AboutSection />
+      <WhyChooseMeSection />
       <TestimonialSection />
       <HowICanHelpSection />
       <WorkProcess />

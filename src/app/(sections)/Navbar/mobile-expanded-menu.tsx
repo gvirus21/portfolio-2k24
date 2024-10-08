@@ -10,7 +10,6 @@ import { BsTwitterX } from "react-icons/bs";
 import { RiGithubLine, RiLinkedinBoxFill } from "react-icons/ri";
 import { IoCall } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
-import Image from "next/image";
 
 interface IProps {
   setMenuIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -85,7 +84,7 @@ const MobileExpandedMenu = (props: IProps) => {
                 delay: index * 0.1,
                 ease: "easeInOut",
               }}
-              className="text-black text-[2.6rem] my-1 uppercase"
+              className="text-black text-[2.4rem] my-1 uppercase"
             >
               <ScrollLink
                 smooth="easeInOutQuart"
@@ -161,17 +160,10 @@ const MobileExpandedMenu = (props: IProps) => {
       }}
       className="fixed top-0 left-0 h-screen w-screen z-50 pl-8 pt-12 pb-10 flex flex-col justify-between bg-white"
     >
-      <Image
-        src={"/texture/grainy.svg"}
-        height={1000}
-        width={2000}
-        alt="grainy-bg"
-        className="fixed inset-0 h-screen w-screen pointer-events-none object-cover z-[0]"
-      />
       <div className="fixed inset-0 h-screen w-screen primary-graident mix-blend-darken pointer-events-none" />
       <MenuLinks />
 
-      <div className="relative w-[20rem] mb-10">
+      <div className="relative w-[20rem] mb-16">
         <SocialLinks />
 
         {/* phone & email */}
@@ -194,7 +186,7 @@ const MobileExpandedMenu = (props: IProps) => {
               delay: 0.2,
               ease: "easeInOut",
             }}
-            className="flex items-center my-4 w-[24rem]"
+            className="flex items-center my-1 w-[24rem]"
           >
             <IoCall size={20} />
             <Link href={"tel:+918249894413"} className="ml-4">

@@ -39,7 +39,7 @@ export const WhyChooseMeSection = () => {
   });
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+    <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 xl:py-24">
       <div className="max-w-3xl mx-auto">
         <div ref={textContainerRef}>
           <h3
@@ -77,10 +77,10 @@ export const WhyChooseMeSection = () => {
           </div>
 
           <div className="mt-16">
-            <h3 className="text-xl sm:text-2xl font-semibold text-center uppercase underline underline-offset-4 mb-8">
+            <h3 className="text-lg sm:text-2xl font-semibold text-left md:text-center uppercase underline underline-offset-4 mb-4 md:mb-8">
               Organizations I&apos;ve Worked With
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-items-center">
+            <div className="flex sm:grid-cols-4 gap-6 justify-between">
               {companyLogos.map((company) => (
                 <Link
                   key={company.id}

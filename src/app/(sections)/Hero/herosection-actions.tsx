@@ -73,7 +73,7 @@ const DesktopVersion = () => {
 
 const MobileVersion = () => {
   return (
-    <div className="action-buttons-container absolute bottom-0 sm:hidden flex flex-col justify-between items-center w-full text-sm mb-5 opacity-0">
+    <div className="action-buttons-container absolute bottom-0 sm:hidden flex flex-col justify-between items-center w-full text-sm opacity-0">
       <RsLink
         to="work-section"
         smooth="easeInOutQuart"
