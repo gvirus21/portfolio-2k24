@@ -4,8 +4,6 @@ import {
   HeroSection,
   AboutSection,
   TestimonialSection,
-  WorkSection,
-  FeaturedWorkSection,
   HowICanHelpSection,
   ServicesSection,
   ContactSection,
