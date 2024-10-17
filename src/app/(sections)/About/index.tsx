@@ -19,7 +19,9 @@ export const AboutSection = () => {
   const imageContainerRef = useRef(null);
   const { setCursorState } = useCursorState();
   const isInView = useInView(imageContainerRef, { amount: 0.4, once: true });
+ const variable = "hello"
 
+ 
   const getVariants = () => {
     switch (screenSize) {
       case "small":
@@ -71,10 +73,10 @@ export const AboutSection = () => {
             </article>
 
             <motion.figure
-              // ref={imageContainerRef}
-              // variants={variants}
-              // initial="initial"
-              // animate={isInView ? "animate" : "initial"}
+              ref={imageContainerRef}
+              variants={variants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
               className="lg:hidden relative w-5/6 lg:w-1/2 aspect-[3/4] max-w-md mx-auto mt-3"
             >
               <Image

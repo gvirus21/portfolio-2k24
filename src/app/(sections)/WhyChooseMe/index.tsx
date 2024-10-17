@@ -39,7 +39,7 @@ export const WhyChooseMeSection = () => {
   });
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 xl:py-24">
+    <section className="w-full px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 xl:py-24 2xl:pt-32 2xl:mt-10">
       <div className="max-w-3xl mx-auto">
         <div ref={textContainerRef}>
           <h3
@@ -61,7 +61,7 @@ export const WhyChooseMeSection = () => {
               >
                 As a solo web developer, I have a unique perspective on what my
                 clients need for their business. Through my websites, I help them
-                achieve their goals—something big agencies often struggle with.
+                achieve their goals, something big agencies often struggle with.
               </TextReveal>
             </div>
 

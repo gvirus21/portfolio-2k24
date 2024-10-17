@@ -21,6 +21,10 @@ body {
   color: black;
 }
 
+/* .primary-graident {
+  background: linear-gradient(20deg, #2e236c, #4C3BCF);
+} */
+
 .primary-graident {
   background: linear-gradient(
     320deg,

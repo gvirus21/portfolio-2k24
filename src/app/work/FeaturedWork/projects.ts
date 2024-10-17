@@ -35,17 +35,4 @@ export const Projects = [
       "absolute top-[30rem] xl:top-[36rem] 2xl:top-[36rem] 3xl:top-[48rem] left-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
     desktopImageStyle: "w-full aspect-[8/5] bg-slate-600 my-3 bg-[#fff]",
   },
-  {
-    slNo: "04",
-    title: "Under Construction Project 🚧👷‍♂️",
-    image: "/assets/projects/under-construction.webp",
-    link: "#",
-    github: "#",
-    status: "building",
-    description:
-      "This project is under construction and will be deployed soon :)",
-    desktopContainerStyle:
-      "absolute top-[40rem] xl:top-[43rem] 2xl:top-[41rem] 3xl:top-[54rem] right-0 w-[24rem] xl:w-[30rem] 2xl:w-[38rem] 3xl:w-[48rem]",
-    desktopImageStyle: "w-full aspect-[8/5] bg-slate-600 my-3",
-  },
 ];

@@ -5,9 +5,9 @@ import WorkSection from "./Work";
 
 const WorkPage = () => {
   return (
-    <section className="relative">
+    <section className="">
       <WorkSection />
-      {/* <FeaturedWorkSection /> */}
+      <FeaturedWorkSection />
     </section>
   );
 };
